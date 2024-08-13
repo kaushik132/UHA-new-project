@@ -32,7 +32,12 @@ class SampleController extends AdminController
         $grid->column('module_name', __('Module name'));
         $grid->column('module_title', __('Module title'));
         $grid->column('assignment_title', __('Assignment title'));
-        $grid->column('status', __('Status'));
+      // $grid->column('course_category.name', __('Category'));
+      $states = [
+        'on'  => ['value' => 1, 'text' => 'Enable', 'color' => 'success'],
+        'off' => ['value' => 0, 'text' => 'Disable', 'color' => 'danger'],
+   ];
+   $grid->column('status', __('Status'))->switch($states);
    
 
         return $grid;
@@ -83,7 +88,13 @@ class SampleController extends AdminController
         $form->text('words', __('Words'));
         $form->image('image', __('Image'));
         $form->ckeditor('details', __('Details'));
-        $form->text('status', __('Status'))->default(1);
+        $states = [
+            'off' => ['value' => 0, 'text' => 'Disable', 'color' => 'danger'],
+            'on'  => ['value' => 1, 'text' => 'Enable', 'color' => 'success'],
+        ];
+        
+        $form->switch('status', __('Status'))->options($states);
+        
 
         return $form;
     }
