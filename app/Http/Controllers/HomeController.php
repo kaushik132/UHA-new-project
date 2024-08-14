@@ -226,6 +226,15 @@ public function refund(){
     return view('refundpolicy',compact('seo_data'));
 
 }
+public function placeOrder(){
+    $homepage = Title::first();
+    $seo_data['seo_title'] = $homepage->seo_title_placeorder;
+    $seo_data['seo_description'] = $homepage->seo_des_placeorder;
+    $seo_data['keywords'] = $homepage->seo_key_placeorder;
+   
+    return view('placeyourorder',compact('seo_data'));
+
+}
 public function genraterPDF($id) {
     $sample = Sample::find($id);
 

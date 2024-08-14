@@ -54,6 +54,9 @@ class TitleController extends AdminController
         $grid->column('seo_title_refund', __('Seo title Refund-policy'));
         $grid->column('seo_des_refund', __('Seo des Refund-policy'));
         $grid->column('seo_key_refund', __('Seo key Refund-policy'));
+        $grid->column('seo_title_placeorder', __('Seo title Place Order'));
+        $grid->column('seo_des_placeorder', __('Seo des Place Order'));
+        $grid->column('seo_key_placeorder', __('Seo key Place Order'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
 
@@ -98,6 +101,9 @@ class TitleController extends AdminController
          $show->field('seo_title_refund', __('Seo title refund-policy'));
          $show->field('seo_des_refund', __('Seo des refund-policy'));
          $show->field('seo_key_refund', __('Seo key refund-policy'));
+         $show->field('seo_title_placeorder', __('Seo title Place Order'));
+         $show->field('seo_des_placeorder', __('Seo des Place Order'));
+         $show->field('seo_key_placeorder', __('Seo key Place Order'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -140,6 +146,9 @@ class TitleController extends AdminController
         $form->text('seo_title_refund', __('Seo title Refund Policy'));
         $form->textarea('seo_des_refund', __('Seo des Refund Policy'));
         $form->textarea('seo_key_refund', __('Seo key Refund Policy'));
+        $form->text('seo_title_placeorder', __('Seo title Place Order'));
+        $form->textarea('seo_des_placeorder', __('Seo des Place Order'));
+        $form->textarea('seo_key_placeorder', __('Seo key Place Order'));
 
         return $form;
     }
