@@ -11,6 +11,7 @@ use App\Models\Title;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\sample;
+use PDF;
 
 class HomeController extends Controller
 {
@@ -225,6 +226,22 @@ public function refund(){
     return view('refundpolicy',compact('seo_data'));
 
 }
+public function genraterPDF($id) {
+    $sample = Sample::find($id);
+
+    if (!$sample) {
+        return redirect()->back()->with('error', 'Sample not found.');
+    }
+
+    $data = [
+        'title' => 'Sample PDF',
+        'sample' => $sample
+    ];
+
+    $pdf = PDF::loadView('pdf', $data);
+    return $pdf->download('Sample-file.pdf');
+}
+
 
 
 

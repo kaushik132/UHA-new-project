@@ -24,22 +24,20 @@
     </thead>
     <tbody>
         @foreach ($sample as $item)
-        <tr>
-            <th scope="row">{{$num++}}</th>
-            <td>{{$item->sampleCategory->name}}</td>
-            <td>{{$item->module_name}}</td>
-            <td>{{$item->module_title}}</td>
-            <td>{{$item->price}}</td>
-            <td>{{$item->assignment_title}}</td>
-            <td>{{$item->pages}}</td>
-            <td>{{$item->words}}</td>
-            <td>{!!$item->details!!}</td>
-            <td>Download</td>
-           
-          </tr>
-              
-        @endforeach
-        
+    <tr>
+        <th scope="row">{{$num++}}</th>
+        <td>{{$item->sampleCategory->name}}</td>
+        <td>{{$item->module_name}}</td>
+        <td>{{$item->module_title}}</td>
+        <td>{{$item->price}}</td>
+        <td>{{$item->assignment_title}}</td>
+        <td>{{$item->pages}}</td>
+        <td>{{$item->words}}</td>
+        <td>{!! $item->details !!}</td>
+        <td><a href="{{ route('genrater.pdf', $item->id) }}">Download</a></td>
+    </tr>
+@endforeach
+
     </tbody>
   </table>
 
