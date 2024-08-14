@@ -37,9 +37,13 @@ Route::post('/contact-post',[HomeController::class, 'contactPost'])->name('conta
  
 
 Route::get('/genrater-pdf/{id}', [HomeController::class, 'genraterPDF'])->name('genrater.pdf');
-
 Route::get('/sample-page',[HomeController::class, 'sample']);
+
+Route::get('place-your-order',[HomeController::class, 'placeOrder']);
 Route::get('/refund-policy',[HomeController::class, 'refund']);
 Route::get('/search',[HomeController::class, 'search']);
+
+
+
 
 Route::get('sitemap.xml',[SitemapController::class, 'index']);
