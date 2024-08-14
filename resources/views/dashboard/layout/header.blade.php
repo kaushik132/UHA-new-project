@@ -50,6 +50,10 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    </head>
    <body class="full_content">
+      <?php
+       use Illuminate\Support\Facades\Auth;
+   
+    ?>
       
       <!-- New header -->
       <header class="sticky header-part">
@@ -81,15 +85,37 @@
                      <li>
                         <a href="{{route('casestudies')}}">Case Studies</a>
                      </li>
-                     <!-- <li>
-                        <a href="contact.html">Contact us</a>
-                     </li> -->
+                     <ul class="dropdown-content1" style="width:200px;margin-left:-60px">
+                        @if (Auth::check())
+                      <li>
+                    
+                        <a href="#"><h5 class="text-center mt-2">{{Auth::user()->name ?? ""}}</h5></a><br>
+<form action="{{ route('logout') }}" method="POST" class="" role="search">
+@csrf
+<button class="" type="submit" style="background:#1e748f;border:none; padding:10px;font-size:16px;color:white;width:100%">Logout</button>
+</form>
+
+                      </li>
+                          
+@else
+                        <li>
+                            <a href="{{ route('login') }}">Log In</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('register') }}">Sign Up</a>
+                        </li>
+
+                        @endif
+                    </ul>
                   </ul>
+               
                </nav>
                <a href="{{route('contact')}}" class="btn-outline line-animation">Contact us</a>
                <div class="menu-icon-area d-lg-none">
                   <a href="javascript: ;" class="hummenu" id="hummenu">
                      <div class="site-header-menu-btn  theme_menu">
+                        
+   
                         <span>menu</span>
                         <div class="site-header-menu-btn-circle">
                            <svg id="circle-anim-small" class="circle-anim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
