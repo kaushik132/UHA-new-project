@@ -36,7 +36,7 @@ Route::post('/contact-post',[HomeController::class, 'contactPost'])->name('conta
 
  
 
-Route::get('/sample-file',[HomeController::class, 'sample']);
+Route::get('/sample-page',[HomeController::class, 'sample']);
 Route::get('/refund-policy',[HomeController::class, 'refund']);
 Route::get('/search',[HomeController::class, 'search']);
 

@@ -10,6 +10,7 @@ use App\Models\BlogCategory;
 use App\Models\Title;
 use App\Models\Service;
 use App\Models\ServiceCategory;
+use App\Models\sample;
 
 class HomeController extends Controller
 {
@@ -211,7 +212,8 @@ public function sample(){
     $seo_data['seo_title'] = $homepage->seo_title_sample;
     $seo_data['seo_description'] = $homepage->seo_des_sample;
     $seo_data['keywords'] = $homepage->seo_key_sample;
-    return view('samplefile',compact('seo_data'));
+    $sample = sample::all();
+    return view('samplefile',compact('seo_data','sample'));
 }
 
 public function refund(){
@@ -219,6 +221,7 @@ public function refund(){
     $seo_data['seo_title'] = $homepage->seo_title_refund;
     $seo_data['seo_description'] = $homepage->seo_des_refund;
     $seo_data['keywords'] = $homepage->seo_key_refund;
+   
     return view('refundpolicy',compact('seo_data'));
 
 }
