@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Carbon\Carbon;
 use App\Models\Contact;
 use App\Models\Blog;
 use App\Models\BlogCategory;
@@ -11,6 +15,7 @@ use App\Models\Title;
 use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\sample;
+use App\Models\User;
 use PDF;
 
 class HomeController extends Controller
@@ -249,6 +254,58 @@ public function genraterPDF($id) {
 
     $pdf = PDF::loadView('pdf', $data);
     return $pdf->download('Sample-file.pdf');
+}
+
+
+public function showResetRequestForm()
+    {
+        return view('resetpasswordrequest');
+    }
+    public function handleResetRequest(Request $request)
+{
+    $request->validate([
+        'email' => 'required|email|exists:users,email',
+    ]);
+
+    $user = User::where('email', $request->email)->first();
+    $token = Str::random(60);
+    DB::table('password_resets')->insert([
+        'email' => $request->email,
+        'token' => Hash::make($token),
+        'created_at' => Carbon::now(),
+    ]);
+
+    return redirect()->route('password.reset.form', ['token' => $token, 'email' => $request->email]);
+}
+
+
+
+    public function showResetForm($token, $email)
+    {
+        return view('resetpassword', ['token' => $token, 'email' => $email]);
+    }
+
+    public function resetPassword(Request $request)
+{
+    $request->validate([
+        'token' => 'required',
+        'email' => 'required|email|exists:users,email',
+        'password' => 'required|min:8|confirmed',
+    ]);
+
+    $reset = DB::table('password_resets')->where('email', $request->email)->first();
+
+    if (!$reset || !Hash::check($request->token, $reset->token)) {
+        return back()->withErrors(['email' => 'Invalid token or email!']);
+    }
+
+    $user = User::where('email', $request->email)->first();
+    $user->password = Hash::make($request->password);
+    $user->save();
+
+    DB::table('password_resets')->where(['email'=> $request->email])->delete();
+
+    return redirect()->route('login')->with('status', 'Password has been reset!');
 }
 
 

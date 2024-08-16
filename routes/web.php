@@ -43,6 +43,13 @@ Route::get('/refund-policy',[HomeController::class, 'refund']);
 Route::get('/search',[HomeController::class, 'search']);
 
 
+// Password reset routes
+Route::get('/reset-password', [HomeController::class, 'showResetRequestForm'])->name('password.request');
+Route::post('/reset-password', [HomeController::class, 'handleResetRequest'])->name('password.request.handle');
+Route::get('/reset-password/{token}/{email}', [HomeController::class, 'showResetForm'])->name('password.reset.form');
+Route::post('/reset-password/update', [HomeController::class, 'resetPassword'])->name('password.update');
+
+
 
 
 Route::get('sitemap.xml',[SitemapController::class, 'index']);

@@ -32,6 +32,7 @@
                         </div>
                         <div class="mb-3">
                             <div class="d-grid">
+                                <a href="{{ route('password.request') }}"><label for="">Forget Password</label></a>
                                 <button class="btn btn-primary">Login</button>
                             </div>
                         </div>
