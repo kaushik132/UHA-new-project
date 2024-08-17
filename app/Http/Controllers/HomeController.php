@@ -143,25 +143,19 @@ class HomeController extends Controller
     public function contactPost(Request $request)    
     {
         $this->validate(request(), [
-            'name' => "required",
+            'fname' => "required",
+            'lname' => "required",
             'email' => "required",
             'phone' => "required",
-            'company' => "required",
-            'company_website'  => "required",
-            'subject' => "required",
-            'budget' => "required",
             'message' => "required",
             'image' => "required",
          
           ], [], 
         [
-          'name' => 'Full Name',
+          'fname' => 'First Name',
+          'lname' => 'Last Name',
           'email' => 'Email',
           'phone' => 'Number',
-          'company' => 'Company',
-          'company_website'  => "Company Website",
-            'subject' => "Subject",
-            'budget' => "Budget",
             'message' => "Message",
             'image' => "File",
           
@@ -170,13 +164,10 @@ class HomeController extends Controller
 
         
   $contact_obj = new Contact;
-  $contact_obj->name   =$request->name;
+  $contact_obj->fname   =$request->fname;
+  $contact_obj->lname   =$request->lname;
   $contact_obj->email  =$request->email;
   $contact_obj->phone=$request->phone;
-  $contact_obj->company=$request->company;
-  $contact_obj->company_website=$request->company_website;
-  $contact_obj->subject=$request->subject;
-  $contact_obj->budget=$request->budget;
   $contact_obj->message=$request->message;
   if ($request->hasFile('image')) {
     $file = $request->file('image'); // Get the uploaded file

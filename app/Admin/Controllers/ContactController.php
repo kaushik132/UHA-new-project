@@ -27,19 +27,19 @@ class ContactController extends AdminController
     {
         $grid = new Grid(new Contact());
 
-        $grid->column('id', __('Id'));
-        $grid->column('name', __('Name'));
+        // $grid->column('id', __('Id'));
+        $grid->column('fname', __('Fname Name'));
+        $grid->column('lname', __('Last Name'));
         $grid->column('email', __('Email'));
-        $grid->column('company', __('Company'));
-        $grid->column('company_website', __('Company website'));
-        $grid->column('subject', __('Subject'));
-        $grid->column('budget', __('Budget'));
+        $grid->column('phone', __('Phone'));
+       
         $grid->column('message', __('Message'));
         $grid->column('image', __('Image'))->display(function ($image) {
             return '<img src="' . asset('uploads/' . $image) . '" style="max-height:100px;max-width:100px"/>';
         });
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('Created at'))->display(function ($created_at) {
+            return date(' d F Y', strtotime($created_at));
+        });
 
         return $grid;
     }
@@ -54,13 +54,11 @@ class ContactController extends AdminController
     {
         $show = new Show(Contact::findOrFail($id));
 
-        $show->field('id', __('Id'));
-        $show->field('name', __('Name'));
+        // $show->field('id', __('Id'));
+        $show->field('fname', __('First Name'));
+        $show->field('lname', __('Last Name'));
         $show->field('email', __('Email'));
-        $show->field('company', __('Company'));
-        $show->field('company_website', __('Company website'));
-        $show->field('subject', __('Subject'));
-        $show->field('budget', __('Budget'));
+        $show->field('phone', __('Phone'));
         $show->field('message', __('Message'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
@@ -78,13 +76,12 @@ class ContactController extends AdminController
         $form = new Form(new Contact());
         
 
-        $form->text('name', __('Name'));
+        $form->text('fname', __('Name'));
+        $form->text('lname', __('Name'));
         $form->email('email', __('Email'));
+        $form->text('phone', __('Phone'));
         $form->image('image', __('File'));
-        $form->text('company', __('Company'));
-        $form->text('company_website', __('Company website'));
-        $form->text('subject', __('Subject'));
-        $form->text('budget', __('Budget'));
+
         $form->text('message', __('Message'));
         
 

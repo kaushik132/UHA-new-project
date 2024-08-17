@@ -45,10 +45,18 @@
           <form action="{{route('contactPost')}}" method="POST" enctype="multipart/form-data">
             @csrf
              <div class="row mrg-0">
-                <div class="col-md-12 pd-5">
-                   <input type="text" name="name" placeholder="Name" class="form-control" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('name')}}">
+                <div class="col-md-6 pd-5">
+                   <input type="text" name="fname" placeholder="First Name" class="form-control" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('fname')}}">
                    <span class="text-danger">
-                     @error('name')
+                     @error('fname')
+                        {{$message}}
+                     @enderror
+                   </span>
+                </div>
+                <div class="col-md-6 pd-5">
+                   <input type="text" name="lname" placeholder="Last Name" class="form-control" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('lname')}}">
+                   <span class="text-danger">
+                     @error('lname')
                         {{$message}}
                      @enderror
                    </span>
@@ -69,22 +77,22 @@
                      @enderror
                    </span>
                 </div>
-                <div class="col-md-6 pd-5">
+                {{-- <div class="col-md-6 pd-5">
                    <input type="text" name="company" placeholder="Company" class="form-control" value="{{old('company')}}">
                    <span class="text-danger">
                      @error('company')
                         {{$message}}
                      @enderror
                    </span>
-                </div>
-                <div class="col-md-6 pd-5">
+                </div> --}}
+                {{-- <div class="col-md-6 pd-5">
                    <input type="text" name="company_website" placeholder="Company website" class="form-control"  value="{{old('company_website')}}">
                    <span class="text-danger">
                      @error('company_website')
                         {{$message}}
                      @enderror
                    </span>
-                </div>
+                </div> --}}
                 <div class="col-md-6 pd-5">
                    <input type="file" name="image"  class="form-control"  >
                    <span class="text-danger">
@@ -94,7 +102,7 @@
                    </span>
                 </div>
 
-               <div class="col-md-6 pd-5">
+               {{-- <div class="col-md-6 pd-5">
                    <select name="subject" id="help" required="" class="form-control" >
                       <option>How can we help?</option >
                       <option value="Branding">Branding</option>
@@ -109,8 +117,8 @@
                      {{$message}}
                   @enderror
                 </span>
-               </div>
-
+               </div> --}}
+{{-- 
                 <div class="col-md-6 pd-5">
                    <select name="budget" id="budget" required="" class="form-control">
                       <option>What's your ideal budget?</option>
@@ -126,7 +134,7 @@
                         {{$message}}
                      @enderror
                    </span>
-                </div>
+                </div> --}}
                 <div class="col-md-12 pd-5">
                    <textarea name="message"  class="form-control" placeholder="Anything else?"></textarea>
                    <span class="text-danger">
