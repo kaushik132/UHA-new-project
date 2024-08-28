@@ -5,45 +5,71 @@
     $num = 1;
 @endphp
 
-<h1>sample file</h1>
-
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Servive Category Name</th>
-        <th scope="col">Module Name</th>
-        <th scope="col">Module Title</th>
-        <th scope="col">Price</th>
-        <th scope="col">Assignmet</th>
-        <th scope="col">Pages</th>
-        <th scope="col">Words</th>
-        <th scope="col">Details</th>
-        <th scope="col">Download</th>
-      </tr>
-    </thead>
-    <tbody>
-        @foreach ($sample as $item)
-        @if ($item->status == 1)
-        <tr>  
-          <th scope="row">{{$num++}}</th>
-          <td>{{$item->sampleCategory->name}}</td>
-          <td>{{$item->module_name}}</td>
-          <td>{{$item->module_title}}</td>
-          <td>{{$item->price}}</td>
-          <td>{{$item->assignment_title}}</td>
-          <td>{{$item->pages}}</td>
-          <td>{{$item->words}}</td>
-          <td>{!! $item->details !!}</td>
-          <td><a href="{{ route('genrater.pdf', $item->id) }}">Download</a></td>
-      </tr>
+<section class="page_display_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="page_display_inner">
+          <h3>
+            <span>Sample</span>Paper
+          </h3>
+          <p>Comprehensive Assignment Assistance With a No-AI Guarantee!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sample_p_section">
+  <div class="container">
+    <div class="row">
+      @foreach ($sample as $item)
+      @if ($item->status == 1)
+      <div class="col-xl-4 col-md-6 mb-4">
+        <div class="sample_box">
+          <div class="image">
+            <img src="./assets/images/sample/sample_1.svg" alt="">
+          </div>
+         
+          <div class="content">
+            <a href="{{ route('genrater.pdf', $item->id) }}" style="text-decoration: none">
+            <h3>{{$item->module_name}} {{$item->module_title}}</h3>
+            <p>{{$item->pages}} |{{$item->words}} |24-Feb-2024</p>
+          </a>
+          </div>
+      
+        </div>
+      </div>
+      @endif
+      @endforeach
+   
+     
   
-            
-        @endif
-@endforeach
-
-    </tbody>
-  </table>
+    
+   
+    
+   
+  
+     
+    
+      {{-- <div class="col-xl-12">
+        <div class="panget_button_sample">
+          <ul>
+            <li class="prev">
+              <i class="fa-solid fa-arrow-left-long"></i>
+            </li>
+            <li class="numb">1</li>
+            <li class="numb">2</li>
+            <li class="numb">3</li>
+            <li class="numb">4</li>
+            <li class="next">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </li>
+          </ul>
+        </div>
+      </div> --}}
+    </div>
+  </div>
+</section>
 
 
 @endsection
