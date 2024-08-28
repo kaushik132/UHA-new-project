@@ -15,7 +15,7 @@ Route::group(['middleware' => 'guest'], function () {
 
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/sample-page',[HomeController::class, 'sample']);
+    Route::get('/sample-page',[HomeController::class, 'sample'])->name('sample');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
@@ -28,7 +28,8 @@ Route::get('/blogs/{slug?}',[HomeController::class, 'blogs'])->name('blogs');
 Route::get('/blog-details/{slug?}',[HomeController::class, 'blogDetails'])->name('blogDetails');
 
 
-Route::get('/casestudies',[HomeController::class, 'casestudies'])->name('casestudies');
+
+Route::get('/policy',[HomeController::class, 'policy'])->name('policy');
 Route::get('/contact',[HomeController::class, 'contact'])->name('contact');
 Route::post('/contact-post',[HomeController::class, 'contactPost'])->name('contactPost');
 

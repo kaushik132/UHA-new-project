@@ -1,25 +1,25 @@
 
 <footer class="main-footer-bg">
     <div class="footer-border-1">
-      <img src="./assets/images/Border.png" alt="border" class="img-fluid border-img-size">
+      <img src="{{url('assets/images/Border.png')}}" alt="border" class="img-fluid border-img-size">
     </div>
     <div class="footer-border-2">
-      <img src="./assets/images/Border.png" alt="border" class="img-fluid border-img-size1">
+      <img src="{{url('assets/images/Border.png')}}" alt="border" class="img-fluid border-img-size1">
     </div>
     <div class="footer-border-3">
-      <img src="./assets/images/Border.png" alt="border" class="img-fluid border-img-size1">
+      <img src="{{url('assets/images/Border.png')}}" alt="border" class="img-fluid border-img-size1">
     </div>
     <div class="footer-content">
       <div class="text-md-center">
         <div>
-          <img src="./assets/images/logo/logo.svg" alt="logo" class="img-fluid">
+          <img src="{{url('assets/images/logo/logo.svg')}}" alt="logo" class="img-fluid">
         </div>
       </div>
       <div class="row mt-4">
         <div class="col-md-2 col-12">
           <h6 class="mb-4 footer-title-show mt-2">
             <span>
-              <img src="./assets/images/right.svg" alt="">
+              <img src="{{url('assets/images/right.svg')}}" alt="">
             </span> Pages
           </h6>
           <ul class="ftr-timeline">
@@ -40,7 +40,7 @@
         <div class="col-md-2 col-12">
           <h6 class="mb-4 footer-title-show mt-2">
             <span>
-              <img src="./assets/images/right.svg" alt="">
+              <img src="{{url('assets/images/right.svg')}}" alt="">
             </span> Legal
           </h6>
           <ul class="ftr-timeline">
@@ -61,7 +61,7 @@
         <div class="col-md-5">
           <h6 class="mb-4 footer-title-show mt-2">
             <span>
-              <img src="./assets/images/right.svg" alt="">
+              <img src="{{url('assets/images/right.svg')}}" alt="">
             </span> Services
           </h6>
           <div class="d-flex">
@@ -98,7 +98,7 @@
         <div class="col-md-3">
           <h6 class="mb-4 footer-title-show mt-2">
             <span>
-              <img src="./assets/images/right.svg" alt="">
+              <img src="{{url('assets/images/right.svg')}}" alt="">
             </span> Social Links
           </h6>
           <div class="d-flex">
@@ -137,20 +137,20 @@
       <div class="d-flex justify-content-between flex-wrap">
         <div class="mt-2 copy-right-ftr">© 2021-2024 UAH | Powered by Academic Help &amp; E-Counselling</div>
         <div class="mt-2">
-          <img src="./assets/images/dcma.png" alt="dcma" class="img-fluid">
+          <img src="{{url('assets/images/dcma.png')}}" alt="dcma" class="img-fluid">
         </div>
       </div>
     </div>
   </footer>
   <span class="whatsapp">
-    <img src="./assets/images/vactor/whatsapp.svg" alt="">
+    <img src="{{url('assets/images/vactor/whatsapp.svg')}}" alt="">
   </span>
   <!-------------------------------- bootstrap.min.js ------------------------------------>
-  <script src="./assets/Bootstrap/bootstrap.min.js"></script>
+  <script src="{{url('assets/Bootstrap/bootstrap.min.js')}}"></script>
   <!-------------------------------- swiper ------------------------------------>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-------------------------------- main.js ------------------------------------>
-  <script src="./assets/js/main.js"></script>
+  <script src="{{url('assets/js/main.js')}}"></script>
   <!-------------------------------- jquery-2.2.0.min.js ------------------------------------>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 </body>

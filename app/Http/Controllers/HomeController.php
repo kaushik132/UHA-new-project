@@ -129,6 +129,17 @@ class HomeController extends Controller
         return view('casestudies',compact('seo_data','canocial'));
     }
 
+    public function policy()
+    {
+        $homepage = Title::first();
+        $seo_data['seo_title'] = $homepage->seo_title_policy;
+        $seo_data['seo_description'] = $homepage->seo_des_policy;
+        $seo_data['keywords'] = $homepage->seo_key_policy;
+        $canocial = 'https://codepin.org/casestudies';
+
+        return view('policy',compact('seo_data','canocial'));
+    }
+
 
     public function contact()
     {

@@ -2,8 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UAH </title>
+    @if(isset($seo_data['seo_title']))
+        <title>{{ $seo_data['seo_title'] }}</title>
+        @endif
+      
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   
+        @if(isset($seo_data['seo_description']))
+          <meta name="description" content="{{$seo_data['seo_description']}}" />
+          @endif
+
+          @if(isset($seo_data['keywords']))
+          <meta name="keywords"  content="{{$seo_data['keywords']}}" />
+          @endif  
+  
     <link href="{{url('assets/images/logo/favicon.png')}}" rel="shortcut icon" type="image/x-icon">
     <!-------------------------------- bootstrap.css ------------------------------------>
     <link rel="stylesheet" href="{{url('assets/Bootstrap/bootstrap.min.css')}}">
@@ -75,7 +87,7 @@
       </div>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{{route('index')}}">
             <img src="./assets/images/logo/logo.svg" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,25 +96,25 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav   mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{route('index')}}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./services.html">Services</a>
+                <a class="nav-link" href="{{route('services')}}">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="./blog.html">Blog</a>
+                <a class="nav-link " href="{{route('blogs')}}">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./sample-page.html">Sample page</a>
+                <a class="nav-link" href="{{route('sample')}}">Sample page</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./policy.html">Policy</a>
+                <a class="nav-link" href="{{route('policy')}}">Policy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./contact-us.html">Contact</a>
+                <a class="nav-link" href="{{route('contact')}}">Contact</a>
               </li>
               <li>
-                <a class="nav-link nav_btn" href="./login.html"> Sign IN</a>
+                <a class="nav-link nav_btn" href="{{route('login')}}"> Sign IN</a>
               </li>
             </ul>
           </div>
