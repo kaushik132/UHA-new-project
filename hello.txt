@@ -4,4 +4,4 @@ git user.email = kaushik.dey.ahit@gmail.com
 git password = TEz7dzmi6DZk5Dv
 
 
-hello this is my profile settings
+hello this is my profile setting
