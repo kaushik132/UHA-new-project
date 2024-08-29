@@ -2,159 +2,170 @@
 @section('main-containers')
 
 
-
-<div class="banner-sec inner-banner">
-    <img src="{{url('new/images/inner-banner.jpg')}}" alt="" class="banner-img">
-    <div class="banner-text">
-       <div class="container">
-          <div class="row align-items-center">
-             <div class="col-md-10 mx-auto text-center">
-                <h2>We love hearing about <br> new projects</h2>
-             </div>
-             <div class="down_arrow inner_down show_arrow">
-                <a href="#basic_contact">
-                   <svg class="circle" xmlns="http://www.w3.org/2000/svg">
-                      <g>
-                         <ellipse class="background" ry="40" rx="40" cy="62.5" cx="62.5" stroke-width="1"/>
-                         <ellipse class="foreground" ry="40" rx="40" cy="62.5" cx="62.5" stroke-width="1"/>
-                      </g>
-                   </svg>
-                </a>
-             </div>
-          </div>
+<section class="page_display_area">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-12">
+         <div class="page_display_inner">
+           <h3>Contact <span>Us</span>
+           </h3>
+           <p>Comprehensive Assignment Assistance With a No-AI Guarantee!</p>
+         </div>
        </div>
-    </div>
-    <img src="{{url('new/images/arrow-shape.png')}}" alt="" class="arrow-shape">
-    <img src="{{url('new/images/triangle-shape.png')}}" alt="" class="triangle-shape">
- </div>
-
- <section class="basic_section contact_inner" id="basic_contact">
-    <div class="container">
-       <h3 class="text-center">Please don't hesitate to tell us about yours.</h3>
-       <div class="contact_form_box">
-    <div align="center" style="padding-top: 30px;">
-      @if (session()->has('message'))
+     </div>
+   </div>
+ </section>
+ <section class="contact_area">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-5 my-auto">
+         <div class="contact_inner">
+           <h2>Get Contact us?</h2>
+           <p>Lorem Ipsum has been the industry's standard dummy text since the 1500s, when an unknown printer took a galley of type and scrambled it to make type specimen book has survived not five centuries but also the leap into electronic.</p>
+           <ul>
+             <li>
+               <span>
+                 <i class="fa-solid fa-phone"></i>
+               </span>
+               <div class="content">
+                 <span>Call Us Anytime</span>
+                 <h5>+91 8000306984</h5>
+               </div>
+             </li>
+             <li>
+               <span>
+                 <i class="fa-solid fa-location-dot"></i>
+               </span>
+               <div class="content">
+                 <span>Location :</span>
+                 <h5>JAIPUR</h5>
+               </div>
+             </li>
+             <li>
+               <span>
+                 <i class="fa-solid fa-envelope"></i>
+               </span>
+               <div class="content">
+                 <span>Email</span>
+                 <h5>UAH@gmail.com</h5>
+               </div>
+             </li>
+           </ul>
+         </div>
+       </div>
+       <div class="col-xl-7 mt-xl-0 mt-4">
+         <div class="contact_inner_1">
+            @if (session()->has('message'))
       <div class="alert alert-success">
-         <button type="button" class="close" data-dismiss="alert">x</button>
+         
          
          {{session()->get('message')}}
       </div>
           
       @endif
-    </div>
-          <form action="{{route('contactPost')}}" method="POST" enctype="multipart/form-data">
-            @csrf
-             <div class="row mrg-0">
-                <div class="col-md-6 pd-5">
-                   <input type="text" name="fname" placeholder="First Name" class="form-control" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('fname')}}">
-                   <span class="text-danger">
-                     @error('fname')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div>
-                <div class="col-md-6 pd-5">
-                   <input type="text" name="lname" placeholder="Last Name" class="form-control" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('lname')}}">
-                   <span class="text-danger">
-                     @error('lname')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div>
-                <div class="col-md-6 pd-5">
-                   <input type="email" name="email" placeholder="Email" class="form-control"  value="{{old('email')}}">
-                   <span class="text-danger">
-                     @error('email')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div>
-                <div class="col-md-6 pd-5">
-                   <input type="text" name="phone" placeholder="Phone" class="form-control" maxlength="10" oninput="this.value = this.value.replace(/[^0-9+.]/g, '').replace(/(\..*?)\..*/g, '$1');"  value="{{old('phone')}}">
-                   <span class="text-danger">
-                     @error('phone')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div>
-                {{-- <div class="col-md-6 pd-5">
-                   <input type="text" name="company" placeholder="Company" class="form-control" value="{{old('company')}}">
-                   <span class="text-danger">
-                     @error('company')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div> --}}
-                {{-- <div class="col-md-6 pd-5">
-                   <input type="text" name="company_website" placeholder="Company website" class="form-control"  value="{{old('company_website')}}">
-                   <span class="text-danger">
-                     @error('company_website')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div> --}}
-                <div class="col-md-6 pd-5">
-                   <input type="file" name="image"  class="form-control"  >
-                   <span class="text-danger">
-                     @error('image')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div>
-
-               {{-- <div class="col-md-6 pd-5">
-                   <select name="subject" id="help" required="" class="form-control" >
-                      <option>How can we help?</option >
-                      <option value="Branding">Branding</option>
-                      <option value="ERP or CRM">ERP or CRM</option>
-                      <option value="Web Design / build">Web Design / build</option>
-                      <option value="Mobile App Development">Mobile App Development</option>
-                      <option value="Online Marketing [SEO, SMO]">Online Marketing [SEO, SMO]</option>
-                      <option value="Others">Others</option>
-                 </select>
+            <form action="{{route('contactPost')}}" method="POST" enctype="multipart/form-data">
+               @csrf
+           <div class="row">
+             <div class="col-xl-6 mb-3">
+               <div class="form_box">
+                 <input type="text" name="fname" placeholder="First Name*">
                  <span class="text-danger">
-                  @error('subject')
+                  @error('fname')
                      {{$message}}
                   @enderror
                 </span>
-               </div> --}}
-{{-- 
-                <div class="col-md-6 pd-5">
-                   <select name="budget" id="budget" required="" class="form-control">
-                      <option>What's your ideal budget?</option>
-                      <option value="Less than ₹15,000">Less than ₹15,000</option>
-                      <option value="₹15,000 - ₹30,000">₹15,000 - ₹30,000</option>
-                      <option value="₹30,000 - ₹50,000">₹30,000 - ₹50,000</option>
-                      <option value="₹50,000 - ₹100,000">₹50,000 - ₹100,000</option>
-                      <option value="₹100,000 - ₹250,000">₹100,000 - ₹250,000</option>
-                      <option value="₹250,000+">₹250,000+</option>
-                   </select>
-                   <span class="text-danger">
-                     @error('budget')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div> --}}
-                <div class="col-md-12 pd-5">
-                   <textarea name="message"  class="form-control" placeholder="Anything else?"></textarea>
-                   <span class="text-danger">
-                     @error('message')
-                        {{$message}}
-                     @enderror
-                   </span>
-                </div>
-                <div class="col-md-12 pd-5">
-                   <div class="custome_checkbox">
-                      <input type="checkbox"  id="check">  <label for="check">I agree to the AdSquad <a href="javascript: ;">Privacy Policy</a></label>
-                   </div>
-                </div>
-                <div class="col-md-12 pd-5 text-md-right">
-                   <input type="submit" id="submitBtn" disabled  value="Submit" class="submit_btn">
-                </div>
+               </div>
              </div>
-          </form>
+             <div class="col-xl-6 mb-3">
+               <div class="form_box">
+                 <input type="text" name="lname" placeholder="Last Name*">
+                 <span class="text-danger">
+                  @error('lname')
+                     {{$message}}
+                  @enderror
+                </span>
+               </div>
+             </div>
+             <div class="col-xl-6 mb-3">
+               <div class="form_box">
+                 <input type="email"  name="email" placeholder="Your Email*">
+                 <span class="text-danger">
+                  @error('email')
+                     {{$message}}
+                  @enderror
+                </span>
+               </div>
+             </div>
+             <div class="col-xl-6 mb-3">
+               <div class="form_box">
+                 <input type="file" name="image"  placeholder="Password**">
+                 <span class="text-danger">
+                  @error('image')
+                     {{$message}}
+                  @enderror
+                </span>
+               </div>
+             </div>
+             <div class="col-xl-12 mb-3">
+               <div class="form_box">
+                 <input type="text" name="phone" placeholder="Number*">
+                 <span class="text-danger">
+                  @error('phone')
+                     {{$message}}
+                  @enderror
+                </span>
+               </div>
+             </div>
+             <div class="col-xl-12 mb-3">
+               <div class="form_box">
+                 <textarea name="message" rows="5" id="" placeholder="Message*"></textarea>
+                 <span class="text-danger">
+                  @error('message')
+                     {{$message}}
+                  @enderror
+                </span>
+               </div>
+             </div>
+             <div class="col-xl-12 mb-3">
+               <div class="form_box2">
+                  <input type="submit" id="submitBtn" disabled  value="Submit" class="submit_btn">
+               </div>
+             </div>
+             <div class="col-xl-12">
+               <div class="  form-check mt-0">
+                 <input type="checkbox" id="check" class="form-check-input" id="exampleCheck1">
+                 <label class="form-check-label contact-checklabel" for="exampleCheck1">By Send you agree to our privacy Policy </label>
+               </div>
+             </div>
+           </div>
+         </form>
+         </div>
        </div>
-    </div>
+     </div>
+   </div>
+ </section>
+ <section class="joinnow_area">
+   <div class="container">
+     <div class="row">
+       <div class="col-xl-12">
+         <div class="join_now_box">
+           <div class="box_1 z-11">
+             <span> Join To Your Better Choice </span>
+             <h4>Join Now <span>UAH</span>
+               <img src="{{url('assets/images/icons/line_1.svg')}}" alt="">
+             </h4>
+           </div>
+           <div class="box_2 z-11">
+             <a href="" class="custom_button">Join Now</a>
+           </div>
+           <div class="icons">
+             <img src="{{url('assets/images/vactor/shap_3.svg')}}" alt="">
+             <img src="{{url('assets/images/vactor/shap_4.svg')}}" alt="">
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
  </section>
 
  <script>
@@ -163,9 +174,6 @@
        submitBtn.disabled = !this.checked;
    });
 </script>
-
-
-
 
 
 @endsection

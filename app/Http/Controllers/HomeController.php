@@ -22,7 +22,7 @@ class HomeController extends Controller
 {
     public function index() 
     {
-        $servicelist = Service::latest()->limit(6)->get();
+        $servicelist = Service::latest()->get();
         $homepage = Title::first();
         $seo_data['seo_title'] = $homepage->seo_title_home;
         $seo_data['seo_description'] = $homepage->seo_des_home;
@@ -46,7 +46,8 @@ class HomeController extends Controller
         $homepage = Title::select('seo_title_services','seo_des_services','seo_key_services')->first();
         if($slug!=null){
             $servicesCategory = ServiceCategory::where('slug',$slug)->first();
-            $servicesList = Service::latest()->with('serviceCategory')->where('category_id',$servicesCategory->id)->paginate(6);
+            $servicesall = ServiceCategory::all();
+            $servicesList = Service::latest()->with('serviceCategory')->where('service_category_id',$servicesCategory->id)->paginate(6);
             $seo_data['seo_title'] =$servicesCategory->seo_title;
             $seo_data['seo_description'] =$servicesCategory->seo_description;
            $seo_data['keywords'] =$servicesCategory->seo_keyword;
@@ -55,6 +56,7 @@ class HomeController extends Controller
          
 
         }else{
+            $servicesall = ServiceCategory::all();
             $servicesList = Service::latest()->with('serviceCategory')->paginate(6);
             $seo_data['seo_title'] =$homepage->seo_title_services;
             $seo_data['seo_description'] =$homepage->seo_des_services;
@@ -62,7 +64,7 @@ class HomeController extends Controller
             $canocial ='https://codepin.org/services';
          
          }
-        return view('services',compact('seo_data','servicesList','canocial'));
+        return view('services',compact('seo_data','servicesList','canocial','servicesall'));
     }
 
     public function servicesDetails($slug=null)
@@ -82,6 +84,7 @@ class HomeController extends Controller
         $title = 'All blog Page';
         if($slug!=null){
             $blogCategory = BlogCategory::where('slug',$slug)->first();
+            $newBlog =  BlogCategory::all();
             $blogList = Blog::latest()->with('blogCategory')->where('category_id',$blogCategory->id)->paginate(4);
             $seo_data['seo_title'] =$blogCategory->seo_title;
             $seo_data['seo_description'] =$blogCategory->seo_description;
@@ -91,6 +94,7 @@ class HomeController extends Controller
          
 
         }else{
+            $newBlog =  BlogCategory::all();
             $blogList = Blog::latest()->with('blogCategory')->paginate(4);
             $seo_data['seo_title'] =$homepage->seo_title_blog;
             $seo_data['seo_description'] =$homepage->seo_des_blog;
@@ -98,7 +102,7 @@ class HomeController extends Controller
             $canocial ='https://codepin.org/blogs';
          
          }
-        return view('blogs',compact('title','blogList','seo_data','canocial'));
+        return view('blogs',compact('title','blogList','seo_data','canocial','newBlog'));
     }
 
     public function blogDetails($slug=null)

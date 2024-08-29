@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 12, 2024 at 02:47 PM
+-- Generation Time: Aug 29, 2024 at 07:14 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -447,7 +447,39 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (357, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-12 07:02:07', '2024-08-12 07:02:07'),
 (358, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-12 07:02:12', '2024-08-12 07:02:12'),
 (359, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-12 07:02:44', '2024-08-12 07:02:44'),
-(360, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-12 07:02:48', '2024-08-12 07:02:48');
+(360, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-12 07:02:48', '2024-08-12 07:02:48'),
+(361, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-29 22:05:38', '2024-08-29 22:05:38'),
+(362, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-29 22:16:43', '2024-08-29 22:16:43'),
+(363, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-29 22:20:02', '2024-08-29 22:20:02'),
+(364, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-29 22:20:04', '2024-08-29 22:20:04'),
+(365, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-29 22:22:05', '2024-08-29 22:22:05'),
+(366, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-29 22:22:41', '2024-08-29 22:22:41'),
+(367, 1, 'admin/contacts/20/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 22:22:45', '2024-08-29 22:22:45'),
+(368, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-29 22:23:05', '2024-08-29 22:23:05'),
+(369, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:31:04', '2024-08-29 22:31:04'),
+(370, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2024-08-29 22:31:06', '2024-08-29 22:31:06'),
+(371, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:42:30', '2024-08-29 22:42:30'),
+(372, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 22:45:50', '2024-08-29 22:45:50'),
+(373, 1, 'admin/blogs/5', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"Porro aliquam doloru\",\"slug\":\"porro-aliquam-doloru\",\"short_content\":\"This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:\",\"alt\":\"Optio magni totam e\",\"url\":\"https:\\/\\/www.bore.tv\",\"description\":\"<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<\\/p>\",\"seo_title\":\"In sed itaque offici\",\"seo_description\":\"Pariatur Doloremque\",\"seo_keyword\":\"Exercitationem culpa\",\"question\":\"Sint aut sunt accus\",\"answer\":\"Porro laborum Simil\",\"_token\":\"QpiXhPyXF15eKZ4Vliwt2pKFpR3JN39Ggd3HJ4fp\",\"_method\":\"PUT\"}', '2024-08-29 22:45:59', '2024-08-29 22:45:59'),
+(374, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:45:59', '2024-08-29 22:45:59'),
+(375, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:56:49', '2024-08-29 22:56:49'),
+(376, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 22:56:53', '2024-08-29 22:56:53'),
+(377, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:57:34', '2024-08-29 22:57:34'),
+(378, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:04:49', '2024-08-29 23:04:49'),
+(379, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:06:08', '2024-08-29 23:06:08'),
+(380, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:09:50', '2024-08-29 23:09:50'),
+(381, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:12:54', '2024-08-29 23:12:54'),
+(382, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:13:00', '2024-08-29 23:13:00'),
+(383, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:21:24', '2024-08-29 23:21:24'),
+(384, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:21:27', '2024-08-29 23:21:27'),
+(385, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:21:32', '2024-08-29 23:21:32'),
+(386, 1, 'admin/blogs/5', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"Porro aliquam doloru\",\"slug\":\"porro-aliquam-doloru\",\"short_content\":\"This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:\",\"alt\":\"Optio magni totam e\",\"url\":\"https:\\/\\/www.bore.tv\",\"description\":\"<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<br \\/>\\r\\n<br \\/>\\r\\n&nbsp;<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\",\"seo_title\":\"In sed itaque offici\",\"seo_description\":\"Pariatur Doloremque\",\"seo_keyword\":\"Exercitationem culpa\",\"question\":\"Sint aut sunt accus\",\"answer\":\"Porro laborum Simil\",\"whatapp\":null,\"facebook\":null,\"linkedin\":null,\"_token\":\"QpiXhPyXF15eKZ4Vliwt2pKFpR3JN39Ggd3HJ4fp\",\"_method\":\"PUT\"}', '2024-08-29 23:21:42', '2024-08-29 23:21:42'),
+(387, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:21:42', '2024-08-29 23:21:42'),
+(388, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:22:27', '2024-08-29 23:22:27'),
+(389, 1, 'admin/blogs/5', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"Porro aliquam doloru\",\"slug\":\"porro-aliquam-doloru\",\"short_content\":\"This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:\",\"alt\":\"Optio magni totam e\",\"url\":\"https:\\/\\/www.bore.tv\",\"description\":\"<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<br \\/>\\r\\n<br \\/>\\r\\n&nbsp;<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\",\"seo_title\":\"In sed itaque offici\",\"seo_description\":\"Pariatur Doloremque\",\"seo_keyword\":\"Exercitationem culpa\",\"question\":\"Sint aut sunt accus\",\"answer\":\"Porro laborum Simil\",\"whatapp\":\"https:\\/\\/web.whatsapp.com\\/\",\"facebook\":\"https:\\/\\/web.whatsapp.com\\/\",\"linkedin\":\"https:\\/\\/web.whatsapp.com\\/\",\"_token\":\"QpiXhPyXF15eKZ4Vliwt2pKFpR3JN39Ggd3HJ4fp\",\"_method\":\"PUT\"}', '2024-08-29 23:22:37', '2024-08-29 23:22:37'),
+(390, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:22:38', '2024-08-29 23:22:38'),
+(391, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-29 23:54:36', '2024-08-29 23:54:36'),
+(392, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:55:28', '2024-08-29 23:55:28');
 
 -- --------------------------------------------------------
 
@@ -620,6 +652,9 @@ CREATE TABLE `blogs` (
   `answer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
   `created_at` timestamp NULL DEFAULT NULL,
+  `whatapp` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facebook` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -627,11 +662,11 @@ CREATE TABLE `blogs` (
 -- Dumping data for table `blogs`
 --
 
-INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `status`, `created_at`, `updated_at`) VALUES
-(2, 5, 'Culpa harum aut dol', 'culpa-harum-aut-dol', 'Impedit architecto', 'images/website-details_1.jpg', 'Et impedit tempora', 'https://www.voc.tv', '<p><strong>hello</strong></p>', 'Commodi impedit eni', 'Laborum Proident i', 'Consectetur volupta', 'Ex non ullam ut volu', 'Quis fugiat autem ve', 1, '2024-05-02 02:24:52', '2024-05-03 06:13:05'),
-(3, 1, 'Aut dignissimos sapi', 'aut-dignissimos-sapi', 'Aut incidunt nesciu', 'images/e-commerce-details_2.jpg', 'Omnis rem in rerum n', 'https://www.lucikitazam.org.uk', '<p><em><strong>XasaSsSAs</strong></em></p>', 'Excepturi excepturi', 'Eiusmod quisquam cul', 'Velit illum quis a', 'Aut velit sit numqua', 'Laboris est dolor v', 1, '2024-05-02 03:38:48', '2024-05-03 06:12:50'),
-(4, 1, 'Labore sit iusto am', 'labore-sit-iusto-am', 'Quaerat deleniti eum', 'images/digital-marketing-details_1.jpg', 'Expedita dolores lab', 'https://www.lecali.info', '<p>ZXZXzxzXzxxzxzxzxz<a href=\"https://ahitechno.com/\">https://ahitechno.com/</a></p>', 'Sint deserunt ut im', 'Est alias id et vol', 'Porro amet maxime q', 'Et nobis rerum nemo', 'Eaque excepteur do t', 1, '2024-05-02 03:39:27', '2024-05-03 06:12:40'),
-(5, 2, 'Porro aliquam doloru', 'porro-aliquam-doloru', 'Possimus velit sus', 'images/blog-details.jpg', 'Optio magni totam e', 'https://www.bore.tv', '<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt</p>', 'In sed itaque offici', 'Pariatur Doloremque', 'Exercitationem culpa', 'Sint aut sunt accus', 'Porro laborum Simil', 1, '2024-05-02 04:05:07', '2024-05-03 06:12:30');
+INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `status`, `created_at`, `whatapp`, `facebook`, `linkedin`, `updated_at`) VALUES
+(2, 5, 'Culpa harum aut dol', 'culpa-harum-aut-dol', 'Impedit architecto', 'images/website-details_1.jpg', 'Et impedit tempora', 'https://www.voc.tv', '<p><strong>hello</strong></p>', 'Commodi impedit eni', 'Laborum Proident i', 'Consectetur volupta', 'Ex non ullam ut volu', 'Quis fugiat autem ve', 1, '2024-05-02 02:24:52', NULL, NULL, NULL, '2024-05-03 06:13:05'),
+(3, 1, 'Aut dignissimos sapi', 'aut-dignissimos-sapi', 'Aut incidunt nesciu', 'images/e-commerce-details_2.jpg', 'Omnis rem in rerum n', 'https://www.lucikitazam.org.uk', '<p><em><strong>XasaSsSAs</strong></em></p>', 'Excepturi excepturi', 'Eiusmod quisquam cul', 'Velit illum quis a', 'Aut velit sit numqua', 'Laboris est dolor v', 1, '2024-05-02 03:38:48', NULL, NULL, NULL, '2024-05-03 06:12:50'),
+(4, 1, 'Labore sit iusto am', 'labore-sit-iusto-am', 'Quaerat deleniti eum', 'images/digital-marketing-details_1.jpg', 'Expedita dolores lab', 'https://www.lecali.info', '<p>ZXZXzxzXzxxzxzxzxz<a href=\"https://ahitechno.com/\">https://ahitechno.com/</a></p>', 'Sint deserunt ut im', 'Est alias id et vol', 'Porro amet maxime q', 'Et nobis rerum nemo', 'Eaque excepteur do t', 1, '2024-05-02 03:39:27', NULL, NULL, NULL, '2024-05-03 06:12:40'),
+(5, 2, 'Porro aliquam doloru', 'porro-aliquam-doloru', 'This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:', 'images/blog-details.jpg', 'Optio magni totam e', 'https://www.bore.tv', '<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<br />\r\n<br />\r\n&nbsp;</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>', 'In sed itaque offici', 'Pariatur Doloremque', 'Exercitationem culpa', 'Sint aut sunt accus', 'Porro laborum Simil', 1, '2024-05-02 04:05:07', 'https://web.whatsapp.com/', 'https://web.whatsapp.com/', 'https://web.whatsapp.com/', '2024-08-29 23:22:37');
 
 -- --------------------------------------------------------
 
@@ -670,7 +705,8 @@ INSERT INTO `blog_category` (`id`, `name`, `slug`, `seo_title`, `seo_description
 
 CREATE TABLE `contact` (
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lname` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `phone` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -678,7 +714,7 @@ CREATE TABLE `contact` (
   `company_website` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `subject` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `budget` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `message` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -687,11 +723,8 @@ CREATE TABLE `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id`, `name`, `email`, `phone`, `image`, `company`, `company_website`, `subject`, `budget`, `message`, `created_at`, `updated_at`) VALUES
-(16, 'ClarkSchwartz', 'xuqowenu@mailinator.com', '+13526236307', '', 'Larson and Kidd Trading', 'Pacheco and George LLC', 'How can we help?', 'What\'s your ideal budget?', 'Voluptatibus non Nam', '2024-05-02 01:24:29', '2024-05-02 01:24:29'),
-(17, 'DorothyAshley', 'litahu@mailinator.com', '+19285658557', NULL, 'Hill Bishop Plc', 'Noble and Hansen Trading', 'Online Marketing [SEO, SMO]', '₹15,000 - ₹30,000', 'Iste dolore cum omni', '2024-08-12 06:11:22', '2024-08-12 06:11:22'),
-(18, 'ChandlerWiggins', 'bifekos@mailinator.com', '+15332082144', 'images/Fullmetal Alchemist.jpg', 'Powers and Freeman Inc', 'Ballard and Levy LLC', 'Mobile App Development', '₹250,000+', 'Aliquid laboris ad m', '2024-08-12 06:15:33', '2024-08-12 06:25:14'),
-(19, 'GeorgiaReeves', 'repegixep@mailinator.com', '+11355498217', '1723463772.jpg', 'Church and Richardson Trading', 'Harmon King Plc', 'Branding', 'Less than ₹15,000', 'Velit nostrum offic', '2024-08-12 06:26:12', '2024-08-12 06:26:12');
+INSERT INTO `contact` (`id`, `fname`, `lname`, `email`, `phone`, `image`, `company`, `company_website`, `subject`, `budget`, `message`, `created_at`, `updated_at`) VALUES
+(20, 'first name', 'last name', 'email@emal.com', '12323213', '1724944913.jpg', NULL, NULL, NULL, NULL, 'qwedqweqeqw', '2024-08-29 22:21:53', '2024-08-29 22:21:53');
 
 -- --------------------------------------------------------
 
@@ -901,6 +934,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'user', 'user@gmail.com', NULL, '$2y$12$Ub.Rpdym7e.KaKCo.joKGuYShhRM7UVw0l8OlEF1bYTnQuo67FLXG', NULL, '2024-08-30 00:13:04', '2024-08-30 00:13:04');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -1048,7 +1088,7 @@ ALTER TABLE `admin_menu`
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=361;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=393;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1084,7 +1124,7 @@ ALTER TABLE `blog_category`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1126,7 +1166,7 @@ ALTER TABLE `title`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

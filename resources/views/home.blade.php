@@ -235,68 +235,26 @@
       <div class="row">
         <div class="col-xl-12 mb-5">
           <div class="service_inner">
-            <h4>Tranding Services <img src="./assets/images/icons/line_1.svg" alt="">
+            <h4>Tranding Services <img src="{{url('assets/images/icons/line_1.svg')}}" alt="">
             </h4>
             <p>Try UAH Expert Study Abroad Counseling Services!</p>
           </div>
         </div>
+
+        @foreach ($servicelist as $servicelist)
+            
         <div class="col-xl-4 col-md-6 mb-3">
           <div class="service_box  ">
-            <img src="./assets/images/vactor/ser_1.svg" alt="">
-            <span>Writing & Proofreading Serv.</span>
+            <img src="{{url('uploads/'.$servicelist->home_image)}}" alt="logo">
+            <span>{{$servicelist->serviceCategory['name']}}</span>
           </div>
         </div>
-        <div class="col-xl-4 col-md-6 mb-3">
-          <div class="service_box colo_s_1">
-            <img src="./assets/images/vactor/ser_2.svg" alt="">
-            <span>Turnitin Services</span>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-3">
-          <div class="service_box colo_s_2">
-            <img src="./assets/images/vactor/ser_3.svg" alt="">
-            <span>Website Blogs and Content</span>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-3">
-          <div class="service_box colo_s_3">
-            <img src="./assets/images/vactor/ser_4.svg" alt="">
-            <span>Custom Paper Writing</span>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-3">
-          <div class="service_box colo_s_4">
-            <img src="./assets/images/vactor/ser_5.svg" alt="">
-            <span>Resume/CV Writing Help</span>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-3">
-          <div class="service_box colo_s_5">
-            <img src="./assets/images/vactor/ser_6.svg" alt="">
-            <span>Urgent Assignment Help</span>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-3">
-          <div class="service_box colo_s_6">
-            <img src="./assets/images/vactor/ser_7.svg" alt="">
-            <span>Reference Citation Help</span>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-3">
-          <div class="service_box colo_s_7">
-            <img src="./assets/images/vactor/ser_8.svg" alt="">
-            <span>Resume/CV Writing Help</span>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-3">
-          <div class="service_box colo_s_8">
-            <img src="./assets/images/vactor/ser_9.svg" alt="">
-            <span>Website Blogs and Content</span>
-          </div>
-        </div>
+        @endforeach
+     
+
         <div class="col-xl-12">
           <div class="service_button">
-            <a href="" class="custom_button">View More</a>
+            <a href="{{route('services')}}" class="custom_button">View More</a>
           </div>
         </div>
       </div>
@@ -382,12 +340,12 @@
           <div class="sample_area_inner">
             <h3> ALL <span>Services</span> Sampel Available <img src="./assets/images/icons/line_1.svg" alt="">
             </h3>
-            <div class="search_sample">
+            {{-- <div class="search_sample">
               <input type="text" placeholder="Find the service you need">
               <button>
                 <i class="fa-solid fa-magnifying-glass"></i>
               </button>
-            </div>
+            </div> --}}
           </div>
         </div>
         <div class="col-xl-12 mb-4">

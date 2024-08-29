@@ -33,7 +33,7 @@
           <div class="content">
             <a href="{{ route('genrater.pdf', $item->id) }}" style="text-decoration: none">
             <h3>{{$item->module_name}} {{$item->module_title}}</h3>
-            <p>{{$item->pages}} |{{$item->words}} |24-Feb-2024</p>
+            <p>{{$item->pages}} |{{$item->words}} | {{ \Carbon\Carbon::parse($item->created_at)->format('d-M-Y') }}</p>
           </a>
           </div>
       

@@ -28,7 +28,7 @@ class ContactController extends AdminController
         $grid = new Grid(new Contact());
 
         // $grid->column('id', __('Id'));
-        $grid->column('fname', __('Fname Name'));
+        $grid->column('fname', __('First Name'));
         $grid->column('lname', __('Last Name'));
         $grid->column('email', __('Email'));
         $grid->column('phone', __('Phone'));
