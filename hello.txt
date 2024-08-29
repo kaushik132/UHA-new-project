@@ -2,3 +2,6 @@ hello kaushik
 git user.name = kaushik132
 git user.email = kaushik.dey.ahit@gmail.com
 git password = TEz7dzmi6DZk5Dv
+
+
+hello this is my profile settings
