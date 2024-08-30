@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2024 at 07:14 PM
+-- Generation Time: Aug 30, 2024 at 06:59 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -63,7 +63,8 @@ INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `p
 (17, 21, 18, 'Service-categories', 'icon-file', 'service-categories', NULL, '2024-05-02 07:47:37', '2024-05-03 05:04:06'),
 (19, 21, 18, 'Services', 'icon-file', 'services', NULL, '2024-05-03 00:17:38', '2024-05-03 05:03:45'),
 (20, 0, 0, 'Blog Section', 'icon-archive', NULL, '*', '2024-05-03 05:01:57', '2024-05-03 05:01:57'),
-(21, 0, 0, 'Service Section', 'icon-briefcase', NULL, '*', '2024-05-03 05:03:27', '2024-05-03 05:03:27');
+(21, 0, 0, 'Service Section', 'icon-briefcase', NULL, '*', '2024-05-03 05:03:27', '2024-05-03 05:03:27'),
+(23, 0, 18, 'Samples', 'icon-file', 'samples', NULL, '2024-08-13 03:33:30', '2024-08-13 03:33:30');
 
 -- --------------------------------------------------------
 
@@ -448,38 +449,291 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (358, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-12 07:02:12', '2024-08-12 07:02:12'),
 (359, 1, 'admin/titles/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-12 07:02:44', '2024-08-12 07:02:44'),
 (360, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-12 07:02:48', '2024-08-12 07:02:48'),
-(361, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-29 22:05:38', '2024-08-29 22:05:38'),
-(362, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-29 22:16:43', '2024-08-29 22:16:43'),
-(363, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-29 22:20:02', '2024-08-29 22:20:02'),
-(364, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-29 22:20:04', '2024-08-29 22:20:04'),
-(365, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-29 22:22:05', '2024-08-29 22:22:05'),
-(366, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-29 22:22:41', '2024-08-29 22:22:41'),
-(367, 1, 'admin/contacts/20/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 22:22:45', '2024-08-29 22:22:45'),
-(368, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-29 22:23:05', '2024-08-29 22:23:05'),
-(369, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:31:04', '2024-08-29 22:31:04'),
-(370, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2024-08-29 22:31:06', '2024-08-29 22:31:06'),
-(371, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:42:30', '2024-08-29 22:42:30'),
-(372, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 22:45:50', '2024-08-29 22:45:50'),
-(373, 1, 'admin/blogs/5', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"Porro aliquam doloru\",\"slug\":\"porro-aliquam-doloru\",\"short_content\":\"This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:\",\"alt\":\"Optio magni totam e\",\"url\":\"https:\\/\\/www.bore.tv\",\"description\":\"<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<\\/p>\",\"seo_title\":\"In sed itaque offici\",\"seo_description\":\"Pariatur Doloremque\",\"seo_keyword\":\"Exercitationem culpa\",\"question\":\"Sint aut sunt accus\",\"answer\":\"Porro laborum Simil\",\"_token\":\"QpiXhPyXF15eKZ4Vliwt2pKFpR3JN39Ggd3HJ4fp\",\"_method\":\"PUT\"}', '2024-08-29 22:45:59', '2024-08-29 22:45:59'),
-(374, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:45:59', '2024-08-29 22:45:59'),
-(375, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:56:49', '2024-08-29 22:56:49'),
-(376, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 22:56:53', '2024-08-29 22:56:53'),
-(377, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 22:57:34', '2024-08-29 22:57:34'),
-(378, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:04:49', '2024-08-29 23:04:49'),
-(379, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:06:08', '2024-08-29 23:06:08'),
-(380, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:09:50', '2024-08-29 23:09:50'),
-(381, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:12:54', '2024-08-29 23:12:54'),
-(382, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:13:00', '2024-08-29 23:13:00'),
-(383, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:21:24', '2024-08-29 23:21:24'),
-(384, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:21:27', '2024-08-29 23:21:27'),
-(385, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:21:32', '2024-08-29 23:21:32'),
-(386, 1, 'admin/blogs/5', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"Porro aliquam doloru\",\"slug\":\"porro-aliquam-doloru\",\"short_content\":\"This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:\",\"alt\":\"Optio magni totam e\",\"url\":\"https:\\/\\/www.bore.tv\",\"description\":\"<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<br \\/>\\r\\n<br \\/>\\r\\n&nbsp;<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\",\"seo_title\":\"In sed itaque offici\",\"seo_description\":\"Pariatur Doloremque\",\"seo_keyword\":\"Exercitationem culpa\",\"question\":\"Sint aut sunt accus\",\"answer\":\"Porro laborum Simil\",\"whatapp\":null,\"facebook\":null,\"linkedin\":null,\"_token\":\"QpiXhPyXF15eKZ4Vliwt2pKFpR3JN39Ggd3HJ4fp\",\"_method\":\"PUT\"}', '2024-08-29 23:21:42', '2024-08-29 23:21:42'),
-(387, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:21:42', '2024-08-29 23:21:42'),
-(388, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:22:27', '2024-08-29 23:22:27'),
-(389, 1, 'admin/blogs/5', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"Porro aliquam doloru\",\"slug\":\"porro-aliquam-doloru\",\"short_content\":\"This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:\",\"alt\":\"Optio magni totam e\",\"url\":\"https:\\/\\/www.bore.tv\",\"description\":\"<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<br \\/>\\r\\n<br \\/>\\r\\n&nbsp;<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\\r\\n\\r\\n<p>Generic Conventions: Assignmen...<\\/p>\\r\\n\\r\\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.<\\/p>\",\"seo_title\":\"In sed itaque offici\",\"seo_description\":\"Pariatur Doloremque\",\"seo_keyword\":\"Exercitationem culpa\",\"question\":\"Sint aut sunt accus\",\"answer\":\"Porro laborum Simil\",\"whatapp\":\"https:\\/\\/web.whatsapp.com\\/\",\"facebook\":\"https:\\/\\/web.whatsapp.com\\/\",\"linkedin\":\"https:\\/\\/web.whatsapp.com\\/\",\"_token\":\"QpiXhPyXF15eKZ4Vliwt2pKFpR3JN39Ggd3HJ4fp\",\"_method\":\"PUT\"}', '2024-08-29 23:22:37', '2024-08-29 23:22:37'),
-(390, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-29 23:22:38', '2024-08-29 23:22:38'),
-(391, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-29 23:54:36', '2024-08-29 23:54:36'),
-(392, 1, 'admin/services/6/edit', 'GET', '127.0.0.1', '[]', '2024-08-29 23:55:28', '2024-08-29 23:55:28');
+(361, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 00:54:43', '2024-08-13 00:54:43'),
+(362, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-13 00:54:54', '2024-08-13 00:54:54'),
+(363, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"sampla\",\"model_name\":\"App\\\\Models\\\\Sample\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\SampleController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"module_code\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"module_name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"assignment_title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"pages\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"pricing\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"words\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"category\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"status\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":\"index\",\"default\":\"1\",\"comment\":null},{\"name\":null,\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"VfBfIRIeqeH5x2bFttc3NeCN0HMDuXgJv9pXRpOq\"}', '2024-08-13 00:58:32', '2024-08-13 00:58:32'),
+(364, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-13 00:58:35', '2024-08-13 00:58:35'),
+(365, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-13 00:58:52', '2024-08-13 00:58:52'),
+(366, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 00:58:54', '2024-08-13 00:58:54'),
+(367, 1, 'admin/samples/create', 'GET', '127.0.0.1', '[]', '2024-08-13 01:03:21', '2024-08-13 01:03:21'),
+(368, 1, 'admin/service-categories', 'GET', '127.0.0.1', '[]', '2024-08-13 01:04:32', '2024-08-13 01:04:32'),
+(369, 1, 'admin/service-categories', 'GET', '127.0.0.1', '[]', '2024-08-13 01:08:54', '2024-08-13 01:08:54'),
+(370, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:08:55', '2024-08-13 01:08:55'),
+(371, 1, 'admin/samples/create', 'GET', '127.0.0.1', '[]', '2024-08-13 01:08:58', '2024-08-13 01:08:58'),
+(372, 1, 'admin/samples/create', 'GET', '127.0.0.1', '[]', '2024-08-13 01:09:32', '2024-08-13 01:09:32'),
+(373, 1, 'admin/samples', 'POST', '127.0.0.1', '{\"category\":\"7\",\"search_terms\":null,\"module_code\":\"001\",\"module_name\":\"Module Name\",\"assignment_title\":\"Assignment title\",\"pages\":\"12\",\"pricing\":\"28\",\"words\":\"1200\",\"status\":\"1\",\"_token\":\"VfBfIRIeqeH5x2bFttc3NeCN0HMDuXgJv9pXRpOq\"}', '2024-08-13 01:10:23', '2024-08-13 01:10:23'),
+(374, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:10:23', '2024-08-13 01:10:23'),
+(375, 1, 'admin/service-categories', 'GET', '127.0.0.1', '[]', '2024-08-13 01:10:27', '2024-08-13 01:10:27'),
+(376, 1, 'admin/services', 'GET', '127.0.0.1', '[]', '2024-08-13 01:10:28', '2024-08-13 01:10:28'),
+(377, 1, 'admin/service-categories', 'GET', '127.0.0.1', '[]', '2024-08-13 01:10:29', '2024-08-13 01:10:29'),
+(378, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-13 01:10:33', '2024-08-13 01:10:33'),
+(379, 1, 'admin/blog-categories', 'GET', '127.0.0.1', '[]', '2024-08-13 01:10:34', '2024-08-13 01:10:34'),
+(380, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:11:25', '2024-08-13 01:11:25'),
+(381, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 01:11:37', '2024-08-13 01:11:37'),
+(382, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"category\":\"7\",\"search_terms\":null,\"module_code\":\"001\",\"module_name\":\"Module Name\",\"assignment_title\":\"Assignment title\",\"pages\":\"12\",\"pricing\":\"28\",\"words\":\"1200\",\"status\":\"1\",\"_token\":\"VfBfIRIeqeH5x2bFttc3NeCN0HMDuXgJv9pXRpOq\",\"_method\":\"PUT\"}', '2024-08-13 01:11:43', '2024-08-13 01:11:43'),
+(383, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:11:44', '2024-08-13 01:11:44'),
+(384, 1, 'admin/samples/create', 'GET', '127.0.0.1', '[]', '2024-08-13 01:11:45', '2024-08-13 01:11:45'),
+(385, 1, 'admin/samples', 'POST', '127.0.0.1', '{\"category\":\"8\",\"search_terms\":null,\"module_code\":\"002\",\"module_name\":\"Module Name\",\"assignment_title\":\"Assignment Title\",\"pages\":\"90\",\"pricing\":\"234\",\"words\":\"1233\",\"status\":\"1\",\"_token\":\"VfBfIRIeqeH5x2bFttc3NeCN0HMDuXgJv9pXRpOq\"}', '2024-08-13 01:12:25', '2024-08-13 01:12:25'),
+(386, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:12:26', '2024-08-13 01:12:26'),
+(387, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:12:37', '2024-08-13 01:12:37'),
+(388, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:13:10', '2024-08-13 01:13:10'),
+(389, 1, 'admin/auth/setting', 'GET', '127.0.0.1', '[]', '2024-08-13 01:13:16', '2024-08-13 01:13:16'),
+(390, 1, 'admin/auth/setting', 'PUT', '127.0.0.1', '{\"name\":\"Administrators\",\"password\":\"*****-filtered-out-*****\",\"password_confirmation\":\"$2y$12$UgWURSXv5Odv0QDp2Wd2Rub8veZ3hA6wiFO0R9\\/mIiQPyhPsWi7gC\",\"_token\":\"VfBfIRIeqeH5x2bFttc3NeCN0HMDuXgJv9pXRpOq\",\"_method\":\"PUT\"}', '2024-08-13 01:13:26', '2024-08-13 01:13:26'),
+(391, 1, 'admin/auth/setting', 'GET', '127.0.0.1', '[]', '2024-08-13 01:13:26', '2024-08-13 01:13:26'),
+(392, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:13:29', '2024-08-13 01:13:29'),
+(393, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:13:31', '2024-08-13 01:13:31'),
+(394, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 01:33:41', '2024-08-13 01:33:41'),
+(395, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"category\":\"7\",\"search_terms\":null,\"module_code\":\"001\",\"module_name\":\"Module Name\",\"assignment_title\":\"Assignment title\",\"pages\":\"12\",\"pricing\":\"28\",\"words\":\"1200\",\"status\":\"0\",\"_token\":\"VfBfIRIeqeH5x2bFttc3NeCN0HMDuXgJv9pXRpOq\",\"_method\":\"PUT\"}', '2024-08-13 01:33:45', '2024-08-13 01:33:45'),
+(396, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:33:46', '2024-08-13 01:33:46'),
+(397, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 01:33:53', '2024-08-13 01:33:53'),
+(398, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"category\":\"7\",\"search_terms\":null,\"module_code\":\"001\",\"module_name\":\"Module Name\",\"assignment_title\":\"Assignment title\",\"pages\":\"12\",\"pricing\":\"28\",\"words\":\"1200\",\"status\":\"1\",\"_token\":\"VfBfIRIeqeH5x2bFttc3NeCN0HMDuXgJv9pXRpOq\",\"_method\":\"PUT\"}', '2024-08-13 01:33:55', '2024-08-13 01:33:55'),
+(399, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:33:56', '2024-08-13 01:33:56'),
+(400, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:37:50', '2024-08-13 01:37:50'),
+(401, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:37:52', '2024-08-13 01:37:52'),
+(402, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:37:54', '2024-08-13 01:37:54'),
+(403, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:38:43', '2024-08-13 01:38:43'),
+(404, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:38:45', '2024-08-13 01:38:45'),
+(405, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:38:45', '2024-08-13 01:38:45'),
+(406, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 01:38:46', '2024-08-13 01:38:46'),
+(407, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:38:46', '2024-08-13 01:38:46'),
+(408, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:38:47', '2024-08-13 01:38:47'),
+(409, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 01:38:47', '2024-08-13 01:38:47'),
+(410, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:38:48', '2024-08-13 01:38:48'),
+(411, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:38:48', '2024-08-13 01:38:48'),
+(412, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:38:56', '2024-08-13 01:38:56'),
+(413, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:38:57', '2024-08-13 01:38:57'),
+(414, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 01:38:58', '2024-08-13 01:38:58'),
+(415, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:38:59', '2024-08-13 01:38:59'),
+(416, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:38:59', '2024-08-13 01:38:59'),
+(417, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:39:01', '2024-08-13 01:39:01'),
+(418, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:39:02', '2024-08-13 01:39:02'),
+(419, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 01:39:05', '2024-08-13 01:39:05'),
+(420, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:39:05', '2024-08-13 01:39:05'),
+(421, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:39:10', '2024-08-13 01:39:10'),
+(422, 1, 'admin/auth/logout', 'GET', '127.0.0.1', '[]', '2024-08-13 01:39:22', '2024-08-13 01:39:22'),
+(423, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 01:39:31', '2024-08-13 01:39:31'),
+(424, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:39:35', '2024-08-13 01:39:35'),
+(425, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:39:36', '2024-08-13 01:39:36'),
+(426, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:39:36', '2024-08-13 01:39:36'),
+(427, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 01:39:49', '2024-08-13 01:39:49'),
+(428, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:39:50', '2024-08-13 01:39:50'),
+(429, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:40:17', '2024-08-13 01:40:17'),
+(430, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:40:19', '2024-08-13 01:40:19'),
+(431, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:40:19', '2024-08-13 01:40:19'),
+(432, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:41:50', '2024-08-13 01:41:50'),
+(433, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:41:52', '2024-08-13 01:41:52'),
+(434, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:41:52', '2024-08-13 01:41:52'),
+(435, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 01:41:54', '2024-08-13 01:41:54'),
+(436, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:41:55', '2024-08-13 01:41:55'),
+(437, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 01:41:55', '2024-08-13 01:41:55'),
+(438, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:41:56', '2024-08-13 01:41:56'),
+(439, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 01:44:12', '2024-08-13 01:44:12'),
+(440, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 01:44:31', '2024-08-13 01:44:31'),
+(441, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-08-13 01:44:39', '2024-08-13 01:44:39'),
+(442, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 01:44:41', '2024-08-13 01:44:41'),
+(443, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 01:47:03', '2024-08-13 01:47:03'),
+(444, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 01:47:07', '2024-08-13 01:47:07'),
+(445, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 01:47:50', '2024-08-13 01:47:50'),
+(446, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 01:50:08', '2024-08-13 01:50:08'),
+(447, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-08-13 01:50:17', '2024-08-13 01:50:17'),
+(448, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 01:50:17', '2024-08-13 01:50:17'),
+(449, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 03:24:26', '2024-08-13 03:24:26'),
+(450, 1, 'admin/auth/roles', 'GET', '127.0.0.1', '[]', '2024-08-13 03:25:30', '2024-08-13 03:25:30'),
+(451, 1, 'admin/auth/permissions', 'GET', '127.0.0.1', '[]', '2024-08-13 03:25:32', '2024-08-13 03:25:32'),
+(452, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-13 03:25:33', '2024-08-13 03:25:33'),
+(453, 1, 'admin/auth/menu/22', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"j7JW6IriK2oV1GsVfU4Wwf8HMkHdECmkWCYl2R7p\"}', '2024-08-13 03:25:40', '2024-08-13 03:25:40'),
+(454, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-13 03:25:41', '2024-08-13 03:25:41'),
+(455, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-13 03:26:20', '2024-08-13 03:26:20'),
+(456, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-13 03:26:23', '2024-08-13 03:26:23'),
+(457, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2024-08-13 03:26:58', '2024-08-13 03:26:58'),
+(458, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-08-13 03:27:02', '2024-08-13 03:27:02'),
+(459, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-13 03:29:33', '2024-08-13 03:29:33'),
+(460, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"sample\",\"model_name\":\"App\\\\Models\\\\sample\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\SampleController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"category\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"module_name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"module_title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"price\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"assignment_title\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"pages\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"words\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"details\",\"type\":\"text\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"status\",\"type\":\"integer\",\"nullable\":\"on\",\"key\":null,\"default\":\"1\",\"comment\":null},{\"name\":null,\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"j7JW6IriK2oV1GsVfU4Wwf8HMkHdECmkWCYl2R7p\"}', '2024-08-13 03:33:28', '2024-08-13 03:33:28'),
+(461, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-13 03:33:31', '2024-08-13 03:33:31'),
+(462, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-13 03:33:46', '2024-08-13 03:33:46'),
+(463, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 03:33:48', '2024-08-13 03:33:48'),
+(464, 1, 'admin/samples/create', 'GET', '127.0.0.1', '[]', '2024-08-13 03:33:50', '2024-08-13 03:33:50'),
+(465, 1, 'admin/samples/create', 'GET', '127.0.0.1', '[]', '2024-08-13 03:35:05', '2024-08-13 03:35:05'),
+(466, 1, 'admin/samples/create', 'GET', '127.0.0.1', '[]', '2024-08-13 03:37:26', '2024-08-13 03:37:26'),
+(467, 1, 'admin/samples', 'POST', '127.0.0.1', '{\"category\":\"7\",\"search_terms\":null,\"module_name\":\"Audra Tran\",\"module_title\":\"Ut dolore eveniet q\",\"price\":\"958\",\"assignment_title\":\"Iste voluptatem ut d\",\"pages\":\"Officia quia enim al\",\"words\":\"Dolor atque omnis in\",\"details\":\"<p>dsadsads<\\/p>\",\"status\":\"1\",\"_token\":\"j7JW6IriK2oV1GsVfU4Wwf8HMkHdECmkWCYl2R7p\",\"after-save\":\"view\"}', '2024-08-13 03:37:37', '2024-08-13 03:37:37'),
+(468, 1, 'admin/samples/1', 'GET', '127.0.0.1', '[]', '2024-08-13 03:37:37', '2024-08-13 03:37:37'),
+(469, 1, 'admin/samples/create', 'GET', '127.0.0.1', '[]', '2024-08-13 03:37:40', '2024-08-13 03:37:40'),
+(470, 1, 'admin/samples', 'POST', '127.0.0.1', '{\"category\":\"8\",\"search_terms\":null,\"module_name\":\"Rhiannon Grimes\",\"module_title\":\"Asperiores minim et\",\"price\":\"779\",\"assignment_title\":\"Dolor dolores dolore\",\"pages\":\"Ipsum fugiat esse d\",\"words\":\"Ut veniam voluptati\",\"details\":\"<p>weryybgbbb<\\/p>\",\"status\":\"1\",\"_token\":\"j7JW6IriK2oV1GsVfU4Wwf8HMkHdECmkWCYl2R7p\"}', '2024-08-13 03:37:55', '2024-08-13 03:37:55'),
+(471, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 03:37:55', '2024-08-13 03:37:55'),
+(472, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 03:40:43', '2024-08-13 03:40:43'),
+(473, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 03:41:00', '2024-08-13 03:41:00'),
+(474, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 03:41:30', '2024-08-13 03:41:30'),
+(475, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 03:42:02', '2024-08-13 03:42:02'),
+(476, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 03:44:57', '2024-08-13 03:44:57'),
+(477, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-08-13 04:05:43', '2024-08-13 04:05:43'),
+(478, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 04:05:44', '2024-08-13 04:05:44'),
+(479, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 04:05:50', '2024-08-13 04:05:50'),
+(480, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-13 04:05:58', '2024-08-13 04:05:58'),
+(481, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 04:05:59', '2024-08-13 04:05:59'),
+(482, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 06:42:43', '2024-08-13 06:42:43'),
+(483, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:42:46', '2024-08-13 06:42:46'),
+(484, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 06:42:49', '2024-08-13 06:42:49'),
+(485, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:42:49', '2024-08-13 06:42:49'),
+(486, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:43:09', '2024-08-13 06:43:09'),
+(487, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:43:12', '2024-08-13 06:43:12'),
+(488, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"category\":\"7\",\"search_terms\":null,\"module_name\":\"Audra Tran\",\"module_title\":\"Ut dolore eveniet q\",\"price\":\"958\",\"assignment_title\":\"Iste voluptatem ut d\",\"pages\":\"Officia quia enim al\",\"words\":\"Dolor atque omnis in\",\"details\":\"<p>dsadsads<\\/p>\",\"status\":\"0\",\"_token\":\"GP71Ts8fYzN0VoDeqJgN3NHqjseBy1Qrk5vYSagx\",\"_method\":\"PUT\"}', '2024-08-13 06:43:17', '2024-08-13 06:43:17'),
+(489, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:43:18', '2024-08-13 06:43:18'),
+(490, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:43:20', '2024-08-13 06:43:20'),
+(491, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:43:23', '2024-08-13 06:43:23'),
+(492, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:43:23', '2024-08-13 06:43:23'),
+(493, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:44:03', '2024-08-13 06:44:03'),
+(494, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:44:05', '2024-08-13 06:44:05'),
+(495, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:44:05', '2024-08-13 06:44:05'),
+(496, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:44:23', '2024-08-13 06:44:23'),
+(497, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:44:25', '2024-08-13 06:44:25'),
+(498, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:44:25', '2024-08-13 06:44:25'),
+(499, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:18', '2024-08-13 06:45:18'),
+(500, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:45:20', '2024-08-13 06:45:20'),
+(501, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:21', '2024-08-13 06:45:21'),
+(502, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:24', '2024-08-13 06:45:24'),
+(503, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:26', '2024-08-13 06:45:26'),
+(504, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:27', '2024-08-13 06:45:27'),
+(505, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:27', '2024-08-13 06:45:27'),
+(506, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:28', '2024-08-13 06:45:28'),
+(507, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:28', '2024-08-13 06:45:28'),
+(508, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:29', '2024-08-13 06:45:29'),
+(509, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:29', '2024-08-13 06:45:29'),
+(510, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:30', '2024-08-13 06:45:30'),
+(511, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:30', '2024-08-13 06:45:30'),
+(512, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:31', '2024-08-13 06:45:31'),
+(513, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:31', '2024-08-13 06:45:31'),
+(514, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:32', '2024-08-13 06:45:32'),
+(515, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:33', '2024-08-13 06:45:33'),
+(516, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:33', '2024-08-13 06:45:33'),
+(517, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:34', '2024-08-13 06:45:34'),
+(518, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:34', '2024-08-13 06:45:34'),
+(519, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:35', '2024-08-13 06:45:35'),
+(520, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:35', '2024-08-13 06:45:35'),
+(521, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:36', '2024-08-13 06:45:36'),
+(522, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:36', '2024-08-13 06:45:36'),
+(523, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:37', '2024-08-13 06:45:37'),
+(524, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:38', '2024-08-13 06:45:38'),
+(525, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:38', '2024-08-13 06:45:38'),
+(526, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:39', '2024-08-13 06:45:39'),
+(527, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:39', '2024-08-13 06:45:39'),
+(528, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:40', '2024-08-13 06:45:40'),
+(529, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:40', '2024-08-13 06:45:40'),
+(530, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:41', '2024-08-13 06:45:41'),
+(531, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:41', '2024-08-13 06:45:41'),
+(532, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:42', '2024-08-13 06:45:42'),
+(533, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:43', '2024-08-13 06:45:43'),
+(534, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:43', '2024-08-13 06:45:43'),
+(535, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:44', '2024-08-13 06:45:44'),
+(536, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:44', '2024-08-13 06:45:44'),
+(537, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:45', '2024-08-13 06:45:45'),
+(538, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:45', '2024-08-13 06:45:45'),
+(539, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:46', '2024-08-13 06:45:46'),
+(540, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:46', '2024-08-13 06:45:46'),
+(541, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:47', '2024-08-13 06:45:47'),
+(542, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:48', '2024-08-13 06:45:48'),
+(543, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:48', '2024-08-13 06:45:48'),
+(544, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:45:49', '2024-08-13 06:45:49'),
+(545, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:09', '2024-08-13 06:46:09'),
+(546, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:09', '2024-08-13 06:46:09'),
+(547, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:10', '2024-08-13 06:46:10'),
+(548, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:10', '2024-08-13 06:46:10'),
+(549, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:11', '2024-08-13 06:46:11'),
+(550, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:46:11', '2024-08-13 06:46:11'),
+(551, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:12', '2024-08-13 06:46:12'),
+(552, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:12', '2024-08-13 06:46:12'),
+(553, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:13', '2024-08-13 06:46:13'),
+(554, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 06:46:14', '2024-08-13 06:46:14'),
+(555, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:14', '2024-08-13 06:46:14'),
+(556, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:46:15', '2024-08-13 06:46:15'),
+(557, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:15', '2024-08-13 06:46:15'),
+(558, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:16', '2024-08-13 06:46:16'),
+(559, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:16', '2024-08-13 06:46:16'),
+(560, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:17', '2024-08-13 06:46:17'),
+(561, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:17', '2024-08-13 06:46:17'),
+(562, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:18', '2024-08-13 06:46:18'),
+(563, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:18', '2024-08-13 06:46:18'),
+(564, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:19', '2024-08-13 06:46:19'),
+(565, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:20', '2024-08-13 06:46:20'),
+(566, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:20', '2024-08-13 06:46:20'),
+(567, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:21', '2024-08-13 06:46:21'),
+(568, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:21', '2024-08-13 06:46:21'),
+(569, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 06:46:22', '2024-08-13 06:46:22'),
+(570, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:22', '2024-08-13 06:46:22'),
+(571, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:46:23', '2024-08-13 06:46:23'),
+(572, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:23', '2024-08-13 06:46:23'),
+(573, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:24', '2024-08-13 06:46:24'),
+(574, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:25', '2024-08-13 06:46:25'),
+(575, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:25', '2024-08-13 06:46:25'),
+(576, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:26', '2024-08-13 06:46:26'),
+(577, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:26', '2024-08-13 06:46:26'),
+(578, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:27', '2024-08-13 06:46:27'),
+(579, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:27', '2024-08-13 06:46:27'),
+(580, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:28', '2024-08-13 06:46:28'),
+(581, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:46:28', '2024-08-13 06:46:28'),
+(582, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:47:19', '2024-08-13 06:47:19');
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+(583, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-13 06:48:44', '2024-08-13 06:48:44'),
+(584, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"category\":\"7\",\"search_terms\":null,\"module_name\":\"Audra Tran\",\"module_title\":\"Ut dolore eveniet q\",\"price\":\"958\",\"assignment_title\":\"Iste voluptatem ut d\",\"pages\":\"Officia quia enim al\",\"words\":\"Dolor atque omnis in\",\"details\":\"<p>dsadsads<\\/p>\",\"status\":\"on\",\"status_cb\":\"on\",\"_token\":\"GP71Ts8fYzN0VoDeqJgN3NHqjseBy1Qrk5vYSagx\",\"_method\":\"PUT\"}', '2024-08-13 06:48:49', '2024-08-13 06:48:49'),
+(585, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:48:49', '2024-08-13 06:48:49'),
+(586, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 06:48:51', '2024-08-13 06:48:51'),
+(587, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 06:48:53', '2024-08-13 06:48:53'),
+(588, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:48:54', '2024-08-13 06:48:54'),
+(589, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:48:55', '2024-08-13 06:48:55'),
+(590, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 06:49:01', '2024-08-13 06:49:01'),
+(591, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-13 06:49:02', '2024-08-13 06:49:02'),
+(592, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:49:03', '2024-08-13 06:49:03'),
+(593, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-13 06:49:04', '2024-08-13 06:49:04'),
+(594, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-13 06:49:07', '2024-08-13 06:49:07'),
+(595, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-13 23:37:55', '2024-08-13 23:37:55'),
+(596, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-14 01:21:51', '2024-08-14 01:21:51'),
+(597, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-14 01:21:56', '2024-08-14 01:21:56'),
+(598, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-14 01:22:03', '2024-08-14 01:22:03'),
+(599, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-14 01:22:05', '2024-08-14 01:22:05'),
+(600, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-14 01:23:23', '2024-08-14 01:23:23'),
+(601, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-14 01:23:24', '2024-08-14 01:23:24'),
+(602, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-14 07:42:44', '2024-08-14 07:42:44'),
+(603, 1, 'admin/auth/logout', 'GET', '127.0.0.1', '[]', '2024-08-14 07:42:55', '2024-08-14 07:42:55'),
+(604, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-14 07:43:04', '2024-08-14 07:43:04'),
+(605, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-14 07:43:08', '2024-08-14 07:43:08'),
+(606, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-14 07:43:11', '2024-08-14 07:43:11'),
+(607, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-14 07:43:20', '2024-08-14 07:43:20'),
+(608, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-14 07:43:22', '2024-08-14 07:43:22'),
+(609, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-16 00:32:24', '2024-08-16 00:32:24'),
+(610, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-16 00:32:31', '2024-08-16 00:32:31'),
+(611, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-16 00:32:36', '2024-08-16 00:32:36'),
+(612, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-16 00:32:41', '2024-08-16 00:32:41'),
+(613, 1, 'admin/titles', 'GET', '127.0.0.1', '[]', '2024-08-16 00:32:44', '2024-08-16 00:32:44'),
+(614, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-16 00:32:45', '2024-08-16 00:32:45'),
+(615, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-16 00:36:41', '2024-08-16 00:36:41'),
+(616, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-17 01:06:09', '2024-08-17 01:06:09'),
+(617, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-17 01:06:17', '2024-08-17 01:06:17'),
+(618, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:06:22', '2024-08-17 01:06:22'),
+(619, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:12:53', '2024-08-17 01:12:53'),
+(620, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:15:47', '2024-08-17 01:15:47'),
+(621, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:17:13', '2024-08-17 01:17:13'),
+(622, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:17:27', '2024-08-17 01:17:27'),
+(623, 1, 'admin/contacts/16', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"PKWOg3yDBe2QFxyCp8SIxhjQK44n1xEO2ZUiVRoL\"}', '2024-08-17 01:17:38', '2024-08-17 01:17:38'),
+(624, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:17:39', '2024-08-17 01:17:39'),
+(625, 1, 'admin/contacts/17', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"PKWOg3yDBe2QFxyCp8SIxhjQK44n1xEO2ZUiVRoL\"}', '2024-08-17 01:17:42', '2024-08-17 01:17:42'),
+(626, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:17:43', '2024-08-17 01:17:43'),
+(627, 1, 'admin/_handle_action_', 'POST', '127.0.0.1', '{\"_model\":\"App_Models_Contact\",\"_action\":\"OpenAdmin_Admin_Grid_Tools_BatchDelete\",\"_key\":\"18,19\",\"_token\":\"PKWOg3yDBe2QFxyCp8SIxhjQK44n1xEO2ZUiVRoL\"}', '2024-08-17 01:17:48', '2024-08-17 01:17:48'),
+(628, 1, 'admin/contacts/18,19', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"PKWOg3yDBe2QFxyCp8SIxhjQK44n1xEO2ZUiVRoL\"}', '2024-08-17 01:17:51', '2024-08-17 01:17:51'),
+(629, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:17:51', '2024-08-17 01:17:51'),
+(630, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:17:52', '2024-08-17 01:17:52'),
+(631, 1, 'admin/contacts/20/edit', 'GET', '127.0.0.1', '[]', '2024-08-17 01:17:56', '2024-08-17 01:17:56'),
+(632, 1, 'admin/contacts/20/edit', 'GET', '127.0.0.1', '[]', '2024-08-17 01:18:44', '2024-08-17 01:18:44'),
+(633, 1, 'admin/contacts/20', 'PUT', '127.0.0.1', '{\"fname\":\"ShafiraCobb\",\"lname\":\"ClarkSpears\",\"email\":\"wycoronena@mailinator.com\",\"phone\":\"+19512151142\",\"message\":\"Aspernatur culpa su\",\"_token\":\"PKWOg3yDBe2QFxyCp8SIxhjQK44n1xEO2ZUiVRoL\",\"_method\":\"PUT\"}', '2024-08-17 01:18:53', '2024-08-17 01:18:53'),
+(634, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-17 01:18:53', '2024-08-17 01:18:53'),
+(635, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-28 06:26:50', '2024-08-28 06:26:50'),
+(636, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-28 06:27:01', '2024-08-28 06:27:01'),
+(637, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 06:27:07', '2024-08-28 06:27:07'),
+(638, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-28 06:27:23', '2024-08-28 06:27:23'),
+(639, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 07:16:11', '2024-08-28 07:16:11'),
+(640, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-28 07:16:14', '2024-08-28 07:16:14'),
+(641, 1, 'admin/samples/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-28 07:16:18', '2024-08-28 07:16:18'),
+(642, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-28 07:16:25', '2024-08-28 07:16:25'),
+(643, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"off\",\"after-save\":\"exit\"}', '2024-08-28 07:44:00', '2024-08-28 07:44:00'),
+(644, 1, 'admin/samples/1', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-28 07:44:06', '2024-08-28 07:44:06');
 
 -- --------------------------------------------------------
 
@@ -614,7 +868,7 @@ CREATE TABLE `admin_users` (
 --
 
 INSERT INTO `admin_users` (`id`, `username`, `password`, `name`, `avatar`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '$2y$12$UgWURSXv5Odv0QDp2Wd2Rub8veZ3hA6wiFO0R9/mIiQPyhPsWi7gC', 'Administrators', NULL, NULL, '2024-05-01 00:07:00', '2024-05-02 23:47:17');
+(1, 'admin', '$2y$12$UgWURSXv5Odv0QDp2Wd2Rub8veZ3hA6wiFO0R9/mIiQPyhPsWi7gC', 'Administrators', 'images/Heaven\'s Lost Property.jpg', NULL, '2024-05-01 00:07:00', '2024-08-13 01:13:26');
 
 -- --------------------------------------------------------
 
@@ -651,10 +905,10 @@ CREATE TABLE `blogs` (
   `question` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `answer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 1,
+  `whatapp` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facebook` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
-  `whatapp` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `facebook` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `linkedin` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -662,11 +916,11 @@ CREATE TABLE `blogs` (
 -- Dumping data for table `blogs`
 --
 
-INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `status`, `created_at`, `whatapp`, `facebook`, `linkedin`, `updated_at`) VALUES
-(2, 5, 'Culpa harum aut dol', 'culpa-harum-aut-dol', 'Impedit architecto', 'images/website-details_1.jpg', 'Et impedit tempora', 'https://www.voc.tv', '<p><strong>hello</strong></p>', 'Commodi impedit eni', 'Laborum Proident i', 'Consectetur volupta', 'Ex non ullam ut volu', 'Quis fugiat autem ve', 1, '2024-05-02 02:24:52', NULL, NULL, NULL, '2024-05-03 06:13:05'),
-(3, 1, 'Aut dignissimos sapi', 'aut-dignissimos-sapi', 'Aut incidunt nesciu', 'images/e-commerce-details_2.jpg', 'Omnis rem in rerum n', 'https://www.lucikitazam.org.uk', '<p><em><strong>XasaSsSAs</strong></em></p>', 'Excepturi excepturi', 'Eiusmod quisquam cul', 'Velit illum quis a', 'Aut velit sit numqua', 'Laboris est dolor v', 1, '2024-05-02 03:38:48', NULL, NULL, NULL, '2024-05-03 06:12:50'),
-(4, 1, 'Labore sit iusto am', 'labore-sit-iusto-am', 'Quaerat deleniti eum', 'images/digital-marketing-details_1.jpg', 'Expedita dolores lab', 'https://www.lecali.info', '<p>ZXZXzxzXzxxzxzxzxz<a href=\"https://ahitechno.com/\">https://ahitechno.com/</a></p>', 'Sint deserunt ut im', 'Est alias id et vol', 'Porro amet maxime q', 'Et nobis rerum nemo', 'Eaque excepteur do t', 1, '2024-05-02 03:39:27', NULL, NULL, NULL, '2024-05-03 06:12:40'),
-(5, 2, 'Porro aliquam doloru', 'porro-aliquam-doloru', 'This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:This will give you the total count of all the blog categories. If you want to store the count and pass it to a view, your controller method might look like this:', 'images/blog-details.jpg', 'Optio magni totam e', 'https://www.bore.tv', '<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<br />\r\n<br />\r\n&nbsp;</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>\r\n\r\n<p>Generic Conventions: Assignmen...</p>\r\n\r\n<p>It is easy to understand generic conventions. The universal appeal of movies and books is evident.It is easy to understand generic conventions.</p>', 'In sed itaque offici', 'Pariatur Doloremque', 'Exercitationem culpa', 'Sint aut sunt accus', 'Porro laborum Simil', 1, '2024-05-02 04:05:07', 'https://web.whatsapp.com/', 'https://web.whatsapp.com/', 'https://web.whatsapp.com/', '2024-08-29 23:22:37');
+INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `status`, `whatapp`, `facebook`, `linkedin`, `created_at`, `updated_at`) VALUES
+(2, 5, 'Culpa harum aut dol', 'culpa-harum-aut-dol', 'Impedit architecto', 'images/website-details_1.jpg', 'Et impedit tempora', 'https://www.voc.tv', '<p><strong>hello</strong></p>', 'Commodi impedit eni', 'Laborum Proident i', 'Consectetur volupta', 'Ex non ullam ut volu', 'Quis fugiat autem ve', 1, NULL, NULL, NULL, '2024-05-02 02:24:52', '2024-05-03 06:13:05'),
+(3, 1, 'Aut dignissimos sapi', 'aut-dignissimos-sapi', 'Aut incidunt nesciu', 'images/e-commerce-details_2.jpg', 'Omnis rem in rerum n', 'https://www.lucikitazam.org.uk', '<p><em><strong>XasaSsSAs</strong></em></p>', 'Excepturi excepturi', 'Eiusmod quisquam cul', 'Velit illum quis a', 'Aut velit sit numqua', 'Laboris est dolor v', 1, NULL, NULL, NULL, '2024-05-02 03:38:48', '2024-05-03 06:12:50'),
+(4, 1, 'Labore sit iusto am', 'labore-sit-iusto-am', 'Quaerat deleniti eum', 'images/digital-marketing-details_1.jpg', 'Expedita dolores lab', 'https://www.lecali.info', '<p>ZXZXzxzXzxxzxzxzxz<a href=\"https://ahitechno.com/\">https://ahitechno.com/</a></p>', 'Sint deserunt ut im', 'Est alias id et vol', 'Porro amet maxime q', 'Et nobis rerum nemo', 'Eaque excepteur do t', 1, NULL, NULL, NULL, '2024-05-02 03:39:27', '2024-05-03 06:12:40'),
+(5, 2, 'Porro aliquam doloru', 'porro-aliquam-doloru', 'Possimus velit sus', 'images/blog-details.jpg', 'Optio magni totam e', 'https://www.bore.tv', '<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt</p>', 'In sed itaque offici', 'Pariatur Doloremque', 'Exercitationem culpa', 'Sint aut sunt accus', 'Porro laborum Simil', 1, NULL, NULL, NULL, '2024-05-02 04:05:07', '2024-05-03 06:12:30');
 
 -- --------------------------------------------------------
 
@@ -706,8 +960,8 @@ INSERT INTO `blog_category` (`id`, `name`, `slug`, `seo_title`, `seo_description
 CREATE TABLE `contact` (
   `id` int(10) UNSIGNED NOT NULL,
   `fname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `lname` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lname` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `phone` varchar(225) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `company` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -723,8 +977,8 @@ CREATE TABLE `contact` (
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`id`, `fname`, `lname`, `email`, `phone`, `image`, `company`, `company_website`, `subject`, `budget`, `message`, `created_at`, `updated_at`) VALUES
-(20, 'first name', 'last name', 'email@emal.com', '12323213', '1724944913.jpg', NULL, NULL, NULL, NULL, 'qwedqweqeqw', '2024-08-29 22:21:53', '2024-08-29 22:21:53');
+INSERT INTO `contact` (`id`, `fname`, `email`, `lname`, `phone`, `image`, `company`, `company_website`, `subject`, `budget`, `message`, `created_at`, `updated_at`) VALUES
+(20, 'ShafiraCobb', 'wycoronena@mailinator.com', 'ClarkSpears', '+19512151142', 'images/Tokyo Revengers.jpg', NULL, NULL, NULL, NULL, 'Aspernatur culpa su', '2024-08-17 00:54:16', '2024-08-17 01:18:53');
 
 -- --------------------------------------------------------
 
@@ -769,7 +1023,22 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (8, '2024_05_02_074754_create_blogs_table', 4),
 (9, '2024_05_02_115501_create_title_table', 5),
 (10, '2024_05_02_131737_create_service_category_table', 6),
-(11, '2024_05_03_054737_create_services_table', 7);
+(11, '2024_05_03_054737_create_services_table', 7),
+(12, '2024_08_13_062832_create_sampla_table', 8),
+(13, '2024_08_13_090328_create_sample_table', 9);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `id` int(11) NOT NULL,
+  `email` varchar(551) DEFAULT NULL,
+  `token` varchar(551) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -782,6 +1051,13 @@ CREATE TABLE `password_reset_tokens` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_reset_tokens`
+--
+
+INSERT INTO `password_reset_tokens` (`email`, `token`, `created_at`) VALUES
+('kaushik0077dey@gmail.com', '$2y$12$RbpGHL482xlotPf4tSesEehpXVLKVSZmdFS3BE5fiGR0Q1soBI2Tm', '2024-08-16 01:20:41');
 
 -- --------------------------------------------------------
 
@@ -801,6 +1077,35 @@ CREATE TABLE `personal_access_tokens` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sampla`
+--
+
+CREATE TABLE `sampla` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `image` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `module_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `module_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `assignment_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pages` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pricing` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `words` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `category` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` int(11) NOT NULL DEFAULT 1,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sampla`
+--
+
+INSERT INTO `sampla` (`id`, `image`, `module_code`, `module_name`, `assignment_title`, `pages`, `pricing`, `words`, `category`, `status`, `created_at`, `updated_at`) VALUES
+(1, NULL, '001', 'Module Name', 'Assignment title', '12', '28', '1200', '7', 1, '2024-08-13 01:10:23', '2024-08-13 01:33:55'),
+(2, NULL, '002', 'Module Name', 'Assignment Title', '90', '234', '1233', '8', 1, '2024-08-13 01:12:26', '2024-08-13 01:12:26');
 
 -- --------------------------------------------------------
 
@@ -905,6 +1210,12 @@ CREATE TABLE `title` (
   `seo_title_refund` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_des_refund` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `seo_key_refund` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_title_placeorder` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_des_placeorder` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_key_placeorder` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_title_policy` varchar(251) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_des_policy` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `seo_key_policy` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -913,8 +1224,8 @@ CREATE TABLE `title` (
 -- Dumping data for table `title`
 --
 
-INSERT INTO `title` (`id`, `seo_title_home`, `seo_des_home`, `seo_key_home`, `seo_title_about`, `seo_des_about`, `seo_key_about`, `seo_title_services`, `seo_des_services`, `seo_key_services`, `seo_title_blog`, `seo_des_blog`, `seo_key_blog`, `seo_title_case`, `seo_des_case`, `seo_key_case`, `seo_title_contact`, `seo_des_contact`, `seo_key_contact`, `seo_title_search`, `seo_des_search`, `seo_key_search`, `seo_title_sample`, `seo_des_sample`, `seo_key_sample`, `seo_title_refund`, `seo_des_refund`, `seo_key_refund`, `created_at`, `updated_at`) VALUES
-(1, 'home title', 'home des', 'home key', 'about title', 'about des', 'about key', 'services Title', 'services des', 'services key', 'blog title', 'blog des', 'blog key', 'case title', 'case des', 'case key', 'contact title', 'contact des', 'contact key', 'Search Title', 'Search Des', 'Search Key', 'Sample title', 'Sample description', 'Sample keywords', 'Refund Title', 'Refund des', 'Refund Key', '2024-05-02 06:39:39', '2024-05-02 07:17:53');
+INSERT INTO `title` (`id`, `seo_title_home`, `seo_des_home`, `seo_key_home`, `seo_title_about`, `seo_des_about`, `seo_key_about`, `seo_title_services`, `seo_des_services`, `seo_key_services`, `seo_title_blog`, `seo_des_blog`, `seo_key_blog`, `seo_title_case`, `seo_des_case`, `seo_key_case`, `seo_title_contact`, `seo_des_contact`, `seo_key_contact`, `seo_title_search`, `seo_des_search`, `seo_key_search`, `seo_title_sample`, `seo_des_sample`, `seo_key_sample`, `seo_title_refund`, `seo_des_refund`, `seo_key_refund`, `seo_title_placeorder`, `seo_des_placeorder`, `seo_key_placeorder`, `seo_title_policy`, `seo_des_policy`, `seo_key_policy`, `created_at`, `updated_at`) VALUES
+(1, 'home title', 'home des', 'home key', 'about title', 'about des', 'about key', 'services Title', 'services des', 'services key', 'blog title', 'blog des', 'blog key', 'case title', 'case des', 'case key', 'contact title', 'contact des', 'contact key', 'Search Title', 'Search Des', 'Search Key', 'Sample title', 'Sample description', 'Sample keywords', 'Refund Title', 'Refund des', 'Refund Key', 'Place Title', 'Place Description', 'Place Keyword', 'policy title', 'policy des', 'policy key', '2024-05-02 06:39:39', '2024-05-02 07:17:53');
 
 -- --------------------------------------------------------
 
@@ -938,7 +1249,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'user', 'user@gmail.com', NULL, '$2y$12$Ub.Rpdym7e.KaKCo.joKGuYShhRM7UVw0l8OlEF1bYTnQuo67FLXG', NULL, '2024-08-30 00:13:04', '2024-08-30 00:13:04');
+(1, 'Kaushik Dey', 'kaushik0077dey@gmail.com', NULL, '$2y$12$B7TYJruDp722eqlPRzpMUu89gHWTOPwod5ESrGF0o1cclGnQ.K.F.', NULL, '2024-08-14 06:30:20', '2024-08-16 03:45:42'),
+(2, 'HELLO', 'hello@gmail.com', NULL, '$2y$12$jQ/Y0j5i6sDYGfautQtGk.WrtJnOUB2./zk.OCfOQ0Io2q9sZC3T2', NULL, '2024-08-28 06:22:13', '2024-08-28 06:22:13');
 
 --
 -- Indexes for dumped tables
@@ -1036,6 +1348,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `password_reset_tokens`
 --
 ALTER TABLE `password_reset_tokens`
@@ -1048,6 +1366,13 @@ ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
+
+--
+-- Indexes for table `sampla`
+--
+ALTER TABLE `sampla`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sampla_status_index` (`status`);
 
 --
 -- Indexes for table `services`
@@ -1082,13 +1407,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=393;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=645;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1136,13 +1461,25 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `sampla`
+--
+ALTER TABLE `sampla`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `services`
@@ -1166,7 +1503,7 @@ ALTER TABLE `title`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
