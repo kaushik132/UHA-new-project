@@ -94,8 +94,8 @@ class BlogController extends AdminController
         $form->textarea('seo_title', __('Seo title'));
         $form->textarea('seo_description', __('Seo description'));
         $form->textarea('seo_keyword', __('Seo keyword'));
-        $form->text('question', __('Question'));
-        $form->text('answer', __('Answer'));
+        $form->textarea('question', __('Question'));
+        $form->textarea('answer', __('Answer'));
         $form->url('whatapp', __('Whats App'));
         $form->url('facebook', __('FaceBook'));
         $form->url('linkedin', __('Linkedin'));

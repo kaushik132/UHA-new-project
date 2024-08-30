@@ -80,72 +80,40 @@ $date = Carbon::parse($blogData->created_at)->format('d M, Y');
                <img src="{{url('assets/images/icons/icon_2.svg')}}" alt="">Generic Conventions: Assignment Help Services
              </h5>
              <p>Table of contents</p>
+
+             <?php   if($blogData->question!=null){   ?>
              <div class="accordion" id="accordionExample">
+
+              <?php 
+
+              $questions = explode("__",$blogData->question);
+              $answers = explode("__",$blogData->answer);
+
+                foreach ($questions as $key => $value) { 
+
+                   $mainEntity[$key]['@type'] ='Question';
+                   $mainEntity[$key]['name'] =$value.'?';
+                   $mainEntity[$key]['acceptedAnswer']['@type'] ='Answer';
+                   $mainEntity[$key]['acceptedAnswer']['text'] =$answers[$key].'.'; 
+
+               ?>
+
                <div class="accordion-item">
                  <h2 class="accordion-header">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> Generic Features </button>
+                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"> {!! $value !!}? </button>
                  </h2>
                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="">
-                   <div class="accordion-body "> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
+                   <div class="accordion-body ">{!! $answers[$key] !!}</div>
                  </div>
+                 <?php } ?>
                </div>
-               <div class="accordion-item">
-                 <h2 class="accordion-header">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Types of genres in writing </button>
-                 </h2>
-                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                   <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                 </div>
-               </div>
-               <div class="accordion-item">
-                 <h2 class="accordion-header">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Literary conventions </button>
-                 </h2>
-                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                   <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                 </div>
-               </div>
-               <div class="accordion-item">
-                 <h2 class="accordion-header">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Common features of literary genres that are not reprinted often </button>
-                 </h2>
-                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                   <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                 </div>
-               </div>
-               <div class="accordion-item">
-                 <h2 class="accordion-header">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Story conventions </button>
-                 </h2>
-                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                   <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                 </div>
-               </div>
-               <div class="accordion-item">
-                 <h2 class="accordion-header">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"> A short story about conventions </button>
-                 </h2>
-                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                   <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                 </div>
-               </div>
-               <div class="accordion-item">
-                 <h2 class="accordion-header">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"> Film genre </button>
-                 </h2>
-                 <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                   <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                 </div>
-               </div>
-               <div class="accordion-item">
-                 <h2 class="accordion-header">
-                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight"> Technical conventions vs. theatrical conventions </button>
-                 </h2>
-                 <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                   <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                 </div>
-               </div>
+
+        
+            
+        
+       
              </div>
+             <?php } ?>
            </div>
            <div  class="blog_p">
             {!!$blogData->description!!}
