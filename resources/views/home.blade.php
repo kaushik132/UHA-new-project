@@ -354,15 +354,16 @@
               <div class="swiper-wrapper">
 
 
-                @foreach ($servicesSample as $servicesSample)
-                    
-                <div class="swiper-slide">
-                  <div class="filter_btn">
-                    <a href=""> {{$servicesSample->name}} </a>
-                  </div>
-                </div>
-                @endforeach
-            
+              <!-- Services Category List -->
+@foreach ($servicesSample as $service)
+<div class="swiper-slide">
+    <div class="filter_btn">
+        <a  class="service-link" data-service-id="{{ $service->id }}"> 
+            {{$service->name}} 
+        </a>
+    </div>
+</div>
+@endforeach
                
           
             
@@ -377,23 +378,27 @@
           </div>
         </div>
         
-        
-        <div class="col-xl-4 col-md-6 mb-4">
+     <!-- Sample Files -->
+
+  @foreach ($sampalfiles as $sample)
+      <div class="col-xl-4 col-md-6 mb-4 sample-file" data-service-id="{{ $sample->category }}">
           <div class="sample_box">
-            <div class="image">
-              <img src="./assets/images/sample/sample_1.svg" alt="">
-            </div>
-            <div class="content">
-              <h3>EM001 Critical Analysis O...</h3>
-              <p>8pages |2500words |24-Feb-2024</p>
-            </div>
+              <div class="image">
+                  <img src="{{url('uploads/'.$sample->image)}}" alt="Sample Image">
+              </div>
+              <div class="content">
+                  <h3>{{$sample->module_code}} {{$sample->module_name}}</h3>
+                  <p>{{$sample->pages}} pages | {{$sample->words}} words | {{ $sample->created_at->format('d-M-Y') }}</p>
+              </div>
           </div>
-        </div>
+      </div>
+  @endforeach
+
 
   
         <div class="col-xl-12">
           <div class="sample_btn_1">
-            <a href="" class="custom_button">View More</a>
+            <a href="{{route('sample')}}" class="custom_button">View More</a>
           </div>
         </div>
       </div>
@@ -736,5 +741,36 @@
       </div>
     </div>
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const serviceLinks = document.querySelectorAll('.service-link');
+    const sampleFiles = document.querySelectorAll('.sample-file');
+
+    // Check if the elements are being selected correctly
+    console.log('Service Links:', serviceLinks);
+    console.log('Sample Files:', sampleFiles);
+
+    serviceLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const serviceId = this.getAttribute('data-service-id');
+            console.log('Clicked Service ID:', serviceId);
+
+            // Filter sample files based on the selected service
+            sampleFiles.forEach(file => {
+                console.log('Sample File Service ID:', file.getAttribute('data-service-id'));
+                if (file.getAttribute('data-service-id') === serviceId) {
+                    file.style.display = 'block'; // Show matching samples
+                } else {
+                    file.style.display = 'none'; // Hide non-matching samples
+                }
+            });
+        });
+    });
+});
+
+  </script>
 
 @endsection

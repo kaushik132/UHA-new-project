@@ -207,7 +207,11 @@ nav {
     padding: 15px 35px !important;
     transition: all ease 0.5s;
 }
-
+.nav_btn>form>button{
+    background-color: transparent !important;
+    border: none !important;
+    outline: 0 ;
+}
 .nav_btn:hover {
     background-color: #14A4F5;
     color: var(--white-color);
@@ -2109,7 +2113,7 @@ line-height: 21.86px;
 text-align: left;
 
 }
-.contact_inner_1 .form_box2>a{
+.contact_inner_1 .form_box2>input{
     display: flex;
     align-items: center;
     justify-content: center;

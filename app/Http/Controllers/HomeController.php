@@ -24,12 +24,13 @@ class HomeController extends Controller
     {
         $servicelist = Service::latest()->get();
         $servicesSample = ServiceCategory::all();
+        $sampalfiles = Sample::latest()->get();
         $homepage = Title::first();
         $seo_data['seo_title'] = $homepage->seo_title_home;
         $seo_data['seo_description'] = $homepage->seo_des_home;
         $seo_data['keywords'] = $homepage->seo_key_home;
         $canocial ='https://codepin.org';
-        return view('home',compact('seo_data','servicelist','canocial','servicesSample'));
+        return view('home',compact('seo_data','servicelist','canocial','servicesSample','sampalfiles'));
     }
 
     public function about()
