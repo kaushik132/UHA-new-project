@@ -13,7 +13,7 @@ class CreateSampleTable extends Migration
      */
     public function up()
     {
-        Schema::create('sample', function (Blueprint $table) {
+        Schema::create('sampla', function (Blueprint $table) {
             $table->increments('id');
             $table->string('category')->nullable();
             $table->string('module_name')->nullable();

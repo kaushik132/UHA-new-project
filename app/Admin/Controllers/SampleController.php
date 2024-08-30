@@ -6,7 +6,7 @@ use OpenAdmin\Admin\Controllers\AdminController;
 use OpenAdmin\Admin\Form;
 use OpenAdmin\Admin\Grid;
 use OpenAdmin\Admin\Show;
-use \App\Models\sample;
+use \App\Models\Sample;
 use \App\Models\ServiceCategory;
 
 class SampleController extends AdminController
@@ -25,12 +25,12 @@ class SampleController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new sample());
+        $grid = new Grid(new Sample());
 
         $grid->column('id', __('Id'));
         $grid->column('sampleCategory.name', __('Category'));
         $grid->column('module_name', __('Module name'));
-        $grid->column('module_title', __('Module title'));
+        $grid->column('module_code', __('Module Code'));
         $grid->column('assignment_title', __('Assignment title'));
       // $grid->column('course_category.name', __('Category'));
       $states = [
@@ -51,13 +51,13 @@ class SampleController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(sample::findOrFail($id));
+        $show = new Show(Sample::findOrFail($id));
 
         $show->field('id', __('Id'));
         $show->field('category', __('Category'));
         $show->field('module_name', __('Module name'));
-        $show->field('module_title', __('Module title'));
-        $show->field('price', __('Price'));
+        $show->field('module_code', __('Module Code'));
+        $show->field('pricing', __('Price'));
         $show->field('assignment_title', __('Assignment title'));
         $show->field('pages', __('Pages'));
         $show->field('words', __('Words'));
@@ -77,12 +77,12 @@ class SampleController extends AdminController
      */
     protected function form()
     {
-        $form = new Form(new sample());
+        $form = new Form(new Sample());
 
         $form->select('category', __('Service Category Name'))->options(ServiceCategory::pluck('name','id'))->default(null)->rules('required');
         $form->text('module_name', __('Module name'));
-        $form->text('module_title', __('Module title'));
-        $form->text('price', __('Price'));
+        $form->text('module_code', __('Module Code'));
+        $form->text('pricing', __('Price'));
         $form->text('assignment_title', __('Assignment title'));
         $form->text('pages', __('Pages'));
         $form->text('words', __('Words'));

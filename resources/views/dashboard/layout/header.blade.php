@@ -113,9 +113,22 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{route('contact')}}">Contact</a>
               </li>
+
+              @if (Auth::check())
+
+              <li class="nav-link nav_btn">
+             {{-- <a href="#"><button class="" >{{ Auth::user()->name ?? ""}}</button></a> --}}
+                 <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="" type="submit">Logout</button>
+                 </form>
+              </li>
+              @else
+                  
               <li>
                 <a class="nav-link nav_btn" href="{{route('login')}}"> Sign IN</a>
               </li>
+              @endif
             </ul>
           </div>
         </div>

@@ -352,36 +352,20 @@
           <div class="sample_filters">
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
+
+
+                @foreach ($servicesSample as $servicesSample)
+                    
                 <div class="swiper-slide">
                   <div class="filter_btn">
-                    <a href=""> Writing </a>
+                    <a href=""> {{$servicesSample->name}} </a>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="filter_btn">
-                    <a href=""> Finance </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="filter_btn">
-                    <a href=""> Nursing </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="filter_btn">
-                    <a href=""> Managment </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="filter_btn">
-                    <a href=""> Finance </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="filter_btn">
-                    <a href=""> Writing </a>
-                  </div>
-                </div>
+                @endforeach
+            
+               
+          
+            
               </div>
             </div>
             <div class="swiper-button-next">
@@ -392,6 +376,8 @@
             </div>
           </div>
         </div>
+        
+        
         <div class="col-xl-4 col-md-6 mb-4">
           <div class="sample_box">
             <div class="image">
@@ -403,61 +389,8 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4 col-md-6 mb-4">
-          <div class="sample_box">
-            <div class="image">
-              <img src="./assets/images/sample/sample_1.svg" alt="">
-            </div>
-            <div class="content">
-              <h3>EM001 Critical Analysis O...</h3>
-              <p>8pages |2500words |24-Feb-2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-4">
-          <div class="sample_box">
-            <div class="image">
-              <img src="./assets/images/sample/sample_1.svg" alt="">
-            </div>
-            <div class="content">
-              <h3>EM001 Critical Analysis O...</h3>
-              <p>8pages |2500words |24-Feb-2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-4">
-          <div class="sample_box">
-            <div class="image">
-              <img src="./assets/images/sample/sample_1.svg" alt="">
-            </div>
-            <div class="content">
-              <h3>EM001 Critical Analysis O...</h3>
-              <p>8pages |2500words |24-Feb-2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-4">
-          <div class="sample_box">
-            <div class="image">
-              <img src="./assets/images/sample/sample_1.svg" alt="">
-            </div>
-            <div class="content">
-              <h3>EM001 Critical Analysis O...</h3>
-              <p>8pages |2500words |24-Feb-2024</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-4 col-md-6 mb-4">
-          <div class="sample_box">
-            <div class="image">
-              <img src="./assets/images/sample/sample_1.svg" alt="">
-            </div>
-            <div class="content">
-              <h3>EM001 Critical Analysis O...</h3>
-              <p>8pages |2500words |24-Feb-2024</p>
-            </div>
-          </div>
-        </div>
+
+  
         <div class="col-xl-12">
           <div class="sample_btn_1">
             <a href="" class="custom_button">View More</a>

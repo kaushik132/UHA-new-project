@@ -15,7 +15,7 @@ class ServiceCategory extends Model
     }
     public function samples()
     {
-        return $this->hasMany(sample::class,'category');
+        return $this->hasMany(Sample::class,'category');
     }
 
 

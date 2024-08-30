@@ -27,13 +27,13 @@
       <div class="col-xl-4 col-md-6 mb-4">
         <div class="sample_box">
           <div class="image">
-            <img src="./assets/images/sample/sample_1.svg" alt="">
+            <img src="{{url('uploads/'.$item->image)}}" alt="Sample Page">
           </div>
          
           <div class="content">
             <a href="{{ route('genrater.pdf', $item->id) }}" style="text-decoration: none">
-            <h3>{{$item->module_name}} {{$item->module_title}}</h3>
-            <p>{{$item->pages}} |{{$item->words}} | {{ \Carbon\Carbon::parse($item->created_at)->format('d-M-Y') }}</p>
+            <h3>{{$item->module_code}} {{$item->module_name}}</h3>
+            <p>{{$item->pages}} Page |{{$item->words}} Words | {{ \Carbon\Carbon::parse($item->created_at)->format('d-M-Y') }}</p>
           </a>
           </div>
       

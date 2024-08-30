@@ -14,7 +14,7 @@ use App\Models\BlogCategory;
 use App\Models\Title;
 use App\Models\Service;
 use App\Models\ServiceCategory;
-use App\Models\sample;
+use App\Models\Sample;
 use App\Models\User;
 use PDF;
 
@@ -23,12 +23,13 @@ class HomeController extends Controller
     public function index() 
     {
         $servicelist = Service::latest()->get();
+        $servicesSample = ServiceCategory::all();
         $homepage = Title::first();
         $seo_data['seo_title'] = $homepage->seo_title_home;
         $seo_data['seo_description'] = $homepage->seo_des_home;
         $seo_data['keywords'] = $homepage->seo_key_home;
         $canocial ='https://codepin.org';
-        return view('home',compact('seo_data','servicelist','canocial'));
+        return view('home',compact('seo_data','servicelist','canocial','servicesSample'));
     }
 
     public function about()
