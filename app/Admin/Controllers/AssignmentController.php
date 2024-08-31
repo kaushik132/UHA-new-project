@@ -29,12 +29,9 @@ class AssignmentController extends AdminController
         $grid->column('id', __('Id'));
         $grid->column('topic', __('Topic'));
         $grid->column('email', __('Email'));
-        $grid->column('phone', __('Phone'));
+
         $grid->column('stu_name', __('Stu name'));
-        $grid->column('deadline', __('Deadline'));
-        $grid->column('course', __('Course'));
-        $grid->column('description', __('Description'));
-        $grid->column('image', __('Image'));
+       
  
         return $grid;
     }
@@ -79,7 +76,7 @@ class AssignmentController extends AdminController
         $form->text('stu_name', __('Stu name'));
         $form->text('deadline', __('Deadline'));
         $form->text('course', __('Course'));
-        $form->text('description', __('Description'));
+        $form->textarea('description', __('Description'));
         $form->image('image', __('Image'));
 
         return $form;

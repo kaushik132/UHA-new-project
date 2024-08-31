@@ -17,12 +17,16 @@ use App\Models\ServiceCategory;
 use App\Models\Sample;
 use App\Models\User;
 use App\Models\Assignment;
+use App\Models\StudentTestimonial;
+use App\Models\Projectnum;
 use PDF;
 
 class HomeController extends Controller
 {
     public function index() 
     {
+        $client = Projectnum::all();
+        $stu_tm = StudentTestimonial::latest()->get();
         $servicelist = Service::latest()->get();
         $servicesSample = ServiceCategory::all();
         $sampalfiles = Sample::latest()->get();
@@ -31,7 +35,7 @@ class HomeController extends Controller
         $seo_data['seo_description'] = $homepage->seo_des_home;
         $seo_data['keywords'] = $homepage->seo_key_home;
         $canocial ='https://codepin.org';
-        return view('home',compact('seo_data','servicelist','canocial','servicesSample','sampalfiles'));
+        return view('home',compact('seo_data','servicelist','canocial','servicesSample','sampalfiles','stu_tm','client'));
     }
 
     public function about()
@@ -197,7 +201,7 @@ class HomeController extends Controller
  
   $contact_obj->save();
  
-  return back()->with('message', 'Form Submitted Successfully!');
+  return back()->with('message', 'Form submitted successfully!');
     }
 
 
@@ -347,8 +351,8 @@ public function assignmentPost(Request $request)
     ]);
 
     
-$assignment_obj = new Contact;
-$assignment_obj->topic   =$request->topic;
+$assignment_obj = new Assignment;
+$assignment_obj->topic=$request->topic;
 $assignment_obj->email  =$request->email;
 $assignment_obj->phone=$request->phone;
 $assignment_obj->stu_name=$request->stu_name;
@@ -372,7 +376,7 @@ $assignment_obj->image = $filename; // Save the filename in the database
 
 $assignment_obj->save();
 
-return back()->with('message', 'Form Submitted Successfully!');
+return back()->with('message', 'Assignment Form Submitted Successfully!');
 }
 
 

@@ -20,5 +20,9 @@ Route::group([
     $router->resource('services', ServiceController::class);
     $router->resource('samples', SampleController::class);
     $router->resource('assignments', AssignmentController::class);
+    $router->resource('student-testimonials', StudentTestimonialController::class);
+    $router->resource('projectnums', ProjectNumberController::class);
+
+
 
 });

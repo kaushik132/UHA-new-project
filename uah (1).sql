@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2024 at 11:48 AM
+-- Generation Time: Aug 31, 2024 at 02:36 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -65,7 +65,9 @@ INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `p
 (20, 0, 0, 'Blog Section', 'icon-archive', NULL, '*', '2024-05-03 05:01:57', '2024-05-03 05:01:57'),
 (21, 0, 0, 'Service Section', 'icon-briefcase', NULL, '*', '2024-05-03 05:03:27', '2024-05-03 05:03:27'),
 (23, 0, 18, 'Samples', 'icon-file', 'samples', NULL, '2024-08-13 03:33:30', '2024-08-13 03:33:30'),
-(24, 0, 18, 'Assignments', 'icon-file', 'assignments', NULL, '2024-08-31 03:52:39', '2024-08-31 03:52:39');
+(24, 0, 18, 'Assignments', 'icon-file', 'assignments', NULL, '2024-08-31 03:52:39', '2024-08-31 03:52:39'),
+(25, 0, 18, 'Student-testimonials', 'icon-file', 'student-testimonials', NULL, '2024-08-31 05:12:20', '2024-08-31 05:12:20'),
+(26, 0, 18, 'Projectnums', 'icon-file', 'projectnums', NULL, '2024-08-31 06:56:45', '2024-08-31 06:56:45');
 
 -- --------------------------------------------------------
 
@@ -794,7 +796,118 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (701, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"assignment\",\"model_name\":\"App\\\\Models\\\\Assignment\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\AssignmentController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"topic\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"email\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"phone\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"stu_name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"deadline\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"course\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"description\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 03:52:38', '2024-08-31 03:52:38'),
 (702, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 03:52:41', '2024-08-31 03:52:41'),
 (703, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 03:52:54', '2024-08-31 03:52:54'),
-(704, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 03:52:56', '2024-08-31 03:52:56');
+(704, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 03:52:56', '2024-08-31 03:52:56'),
+(705, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:32:08', '2024-08-31 04:32:08'),
+(706, 1, 'admin/assignments/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 04:32:24', '2024-08-31 04:32:24'),
+(707, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:32:36', '2024-08-31 04:32:36'),
+(708, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:34:14', '2024-08-31 04:34:14'),
+(709, 1, 'admin/assignments/1', 'GET', '127.0.0.1', '[]', '2024-08-31 04:34:35', '2024-08-31 04:34:35'),
+(710, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:34:37', '2024-08-31 04:34:37'),
+(711, 1, 'admin/assignments/2', 'GET', '127.0.0.1', '[]', '2024-08-31 04:34:40', '2024-08-31 04:34:40'),
+(712, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:34:42', '2024-08-31 04:34:42'),
+(713, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:35:00', '2024-08-31 04:35:00'),
+(714, 1, 'admin/assignments/1', 'GET', '127.0.0.1', '[]', '2024-08-31 04:35:06', '2024-08-31 04:35:06'),
+(715, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:35:09', '2024-08-31 04:35:09'),
+(716, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:46:40', '2024-08-31 04:46:40'),
+(717, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-31 04:46:43', '2024-08-31 04:46:43'),
+(718, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-31 04:56:10', '2024-08-31 04:56:10'),
+(719, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:56:15', '2024-08-31 04:56:15'),
+(720, 1, 'admin/_handle_action_', 'POST', '127.0.0.1', '{\"_model\":\"App_Models_Assignment\",\"_action\":\"OpenAdmin_Admin_Grid_Tools_BatchDelete\",\"_key\":\"1,2,3,4\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 04:56:25', '2024-08-31 04:56:25'),
+(721, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:56:26', '2024-08-31 04:56:26'),
+(722, 1, 'admin/assignments/1,2,3,4', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 04:56:26', '2024-08-31 04:56:26'),
+(723, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 04:56:26', '2024-08-31 04:56:26'),
+(724, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-31 04:56:29', '2024-08-31 04:56:29'),
+(725, 1, 'admin/_handle_action_', 'POST', '127.0.0.1', '{\"_model\":\"App_Models_Contact\",\"_action\":\"OpenAdmin_Admin_Grid_Tools_BatchDelete\",\"_key\":\"20,21,22,23\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 04:56:38', '2024-08-31 04:56:38'),
+(726, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-31 04:56:38', '2024-08-31 04:56:38'),
+(727, 1, 'admin/contacts/20,21,22,23', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 04:56:39', '2024-08-31 04:56:39'),
+(728, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-08-31 04:56:39', '2024-08-31 04:56:39'),
+(729, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 05:10:32', '2024-08-31 05:10:32'),
+(730, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"student_testimonial\",\"model_name\":\"App\\\\Models\\\\StudentTestimonial\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\StudentTestimonialController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"star\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"des\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"profession\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"country\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 05:12:19', '2024-08-31 05:12:19'),
+(731, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 05:12:20', '2024-08-31 05:12:20'),
+(732, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 05:12:45', '2024-08-31 05:12:45'),
+(733, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:12:47', '2024-08-31 05:12:47'),
+(734, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:05', '2024-08-31 05:15:05'),
+(735, 1, 'admin/student-testimonials/create', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:07', '2024-08-31 05:15:07'),
+(736, 1, 'admin/student-testimonials', 'POST', '127.0.0.1', '{\"star\":\"5\",\"des\":null,\"name\":null,\"profession\":null,\"country\":null,\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 05:15:15', '2024-08-31 05:15:15'),
+(737, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:15', '2024-08-31 05:15:15'),
+(738, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:17', '2024-08-31 05:15:17'),
+(739, 1, 'admin/student-testimonials/1', 'PUT', '127.0.0.1', '{\"star\":\"5\",\"des\":null,\"name\":null,\"profession\":null,\"country\":null,\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:15:19', '2024-08-31 05:15:19'),
+(740, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:20', '2024-08-31 05:15:20'),
+(741, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:22', '2024-08-31 05:15:22'),
+(742, 1, 'admin/student-testimonials/1', 'PUT', '127.0.0.1', '{\"star\":\"5\",\"des\":null,\"name\":null,\"profession\":null,\"country\":null,\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:15:26', '2024-08-31 05:15:26'),
+(743, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:26', '2024-08-31 05:15:26'),
+(744, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:30', '2024-08-31 05:15:30'),
+(745, 1, 'admin/student-testimonials/1', 'PUT', '127.0.0.1', '{\"star\":\"2\",\"des\":null,\"name\":null,\"profession\":null,\"country\":null,\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:15:36', '2024-08-31 05:15:36'),
+(746, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:36', '2024-08-31 05:15:36'),
+(747, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:15:50', '2024-08-31 05:15:50'),
+(748, 1, 'admin/student-testimonials/1', 'PUT', '127.0.0.1', '{\"star\":\"1\",\"des\":null,\"name\":null,\"profession\":null,\"country\":null,\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:16:06', '2024-08-31 05:16:06'),
+(749, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:16:06', '2024-08-31 05:16:06'),
+(750, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:16:09', '2024-08-31 05:16:09'),
+(751, 1, 'admin/student-testimonials/1', 'PUT', '127.0.0.1', '{\"star\":\"3\",\"des\":\"i am a student\",\"name\":\"lisa\",\"profession\":\"UX - Designer\",\"country\":\"USA\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:17:22', '2024-08-31 05:17:22'),
+(752, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:17:22', '2024-08-31 05:17:22'),
+(753, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:17:50', '2024-08-31 05:17:50'),
+(754, 1, 'admin/student-testimonials/create', 'GET', '127.0.0.1', '[]', '2024-08-31 05:18:54', '2024-08-31 05:18:54');
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+(755, 1, 'admin/student-testimonials', 'POST', '127.0.0.1', '{\"star\":\"1\",\"des\":\"Ratione libero nisi\",\"name\":\"Chandler Goodwin\",\"profession\":\"Necessitatibus tempo\",\"country\":\"Velit dolore consect\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 05:19:10', '2024-08-31 05:19:10'),
+(756, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:19:10', '2024-08-31 05:19:10'),
+(757, 1, 'admin/student-testimonials/create', 'GET', '127.0.0.1', '[]', '2024-08-31 05:19:14', '2024-08-31 05:19:14'),
+(758, 1, 'admin/student-testimonials', 'POST', '127.0.0.1', '{\"star\":\"4\",\"des\":\"Pariatur Porro nequ\",\"name\":\"Haley Bauer\",\"profession\":\"Est consequatur exc\",\"country\":\"Aperiam quae a quia\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"after-save\":\"view\"}', '2024-08-31 05:19:26', '2024-08-31 05:19:26'),
+(759, 1, 'admin/student-testimonials/3', 'GET', '127.0.0.1', '[]', '2024-08-31 05:19:26', '2024-08-31 05:19:26'),
+(760, 1, 'admin/student-testimonials/create', 'GET', '127.0.0.1', '[]', '2024-08-31 05:19:28', '2024-08-31 05:19:28'),
+(761, 1, 'admin/student-testimonials', 'POST', '127.0.0.1', '{\"star\":\"5\",\"des\":\"Eligendi necessitati\",\"name\":\"Nelle Bruce\",\"profession\":\"Aut et voluptatem de\",\"country\":\"Molestias expedita i\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"after-save\":\"view\"}', '2024-08-31 05:19:41', '2024-08-31 05:19:41'),
+(762, 1, 'admin/student-testimonials/4', 'GET', '127.0.0.1', '[]', '2024-08-31 05:19:41', '2024-08-31 05:19:41'),
+(763, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:19:44', '2024-08-31 05:19:44'),
+(764, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:24:58', '2024-08-31 05:24:58'),
+(765, 1, 'admin/student-testimonials/1', 'PUT', '127.0.0.1', '{\"star\":\"3\",\"des\":\"My time at the university was transformative. The Computer Science program not only provided me with a solid foundation in coding and algorithms, but it also encouraged me to think critically and solve problems creatively. The professors were incredibly supportive, always willing to go the extra mile to ensure we understood the material. The hands-on projects were particularly valuable, giving me practical experience that I now apply in my career as a software developer. I\\u2019m proud to be an alumna of such an innovative and forward-thinking institution\",\"name\":\"lisa\",\"profession\":\"UX - Designer\",\"country\":\"USA\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:25:04', '2024-08-31 05:25:04'),
+(766, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:25:05', '2024-08-31 05:25:05'),
+(767, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:25:29', '2024-08-31 05:25:29'),
+(768, 1, 'admin/student-testimonials/1', 'PUT', '127.0.0.1', '{\"star\":\"3\",\"des\":\"My time at the university was transformative. The Computer Science program not only provided me with a solid foundation in coding and algorithms, but it also encouraged me to think critically and solve problems creatively. The professors were incredibly supportive, always willing to go the extra mile to ensure we understood the material. The hands-on projects were particularly valuable, giving me practical experience that I now apply in my career as a software developer. I\\u2019m proud to be an alumna of such an innovative and forward-thinking institution\",\"name\":\"lisa\",\"profession\":\"UX - Designer\",\"country\":\"USA\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:25:34', '2024-08-31 05:25:34'),
+(769, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:25:34', '2024-08-31 05:25:34'),
+(770, 1, 'admin/student-testimonials/2/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:25:44', '2024-08-31 05:25:44'),
+(771, 1, 'admin/student-testimonials/2', 'PUT', '127.0.0.1', '{\"star\":\"1\",\"des\":\"As a Business Administration student, I\\u2019ve had the opportunity to learn from some of the best minds in the industry. The program is well-rounded, combining theoretical knowledge with practical case studies and real-world applications. What I appreciate most is the emphasis on leadership and ethical business practices, which are crucial in today\\u2019s global market. The networking opportunities have also been phenomenal, helping me secure internships and build connections that will be invaluable in my career. I\\u2019m grateful for the comprehensive education and support I\\u2019ve received.\\\"\",\"name\":\"Chandler Goodwin\",\"profession\":\"Necessitatibus tempo\",\"country\":\"Velit dolore consect\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:25:47', '2024-08-31 05:25:47'),
+(772, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:25:48', '2024-08-31 05:25:48'),
+(773, 1, 'admin/student-testimonials/3/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:25:54', '2024-08-31 05:25:54'),
+(774, 1, 'admin/student-testimonials/3', 'PUT', '127.0.0.1', '{\"star\":\"4\",\"des\":\"Studying Engineering here has been an incredible journey. The program is rigorous, but it\\u2019s also incredibly rewarding. The faculty are experts in their fields, and they bring a wealth of knowledge and experience to the classroom. I\\u2019ve particularly enjoyed the hands-on labs and group projects, where we\\u2019ve had the chance to apply theoretical concepts to real-world challenges. The campus itself is also equipped with state-of-the-art facilities that have made learning even more engaging. I\\u2019m looking forward to starting my career with the strong foundation this program has provided\",\"name\":\"Haley Bauer\",\"profession\":\"Est consequatur exc\",\"country\":\"Aperiam quae a quia\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:26:09', '2024-08-31 05:26:09'),
+(775, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:26:09', '2024-08-31 05:26:09'),
+(776, 1, 'admin/student-testimonials/4/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:26:11', '2024-08-31 05:26:11'),
+(777, 1, 'admin/student-testimonials/4', 'PUT', '127.0.0.1', '{\"star\":\"5\",\"des\":\"The Nursing program exceeded all my expectations. The rigorous curriculum was challenging, but it prepared me well for the realities of the healthcare field. The clinical rotations were a highlight, allowing me to gain hands-on experience in various medical settings. The instructors were passionate and knowledgeable, always encouraging us to do our best. What stood out to me the most was the sense of community among the students and faculty \\u2013 we truly supported one another through the tough times. I feel confident and ready to make a positive impact as a registered nurse, thanks to the excellent training I received.\",\"name\":\"Nelle Bruce\",\"profession\":\"Aut et voluptatem de\",\"country\":\"Molestias expedita i\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:26:21', '2024-08-31 05:26:21'),
+(778, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:26:21', '2024-08-31 05:26:21'),
+(779, 1, 'admin/student-testimonials/3/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:29:30', '2024-08-31 05:29:30'),
+(780, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:29:33', '2024-08-31 05:29:33'),
+(781, 1, 'admin/student-testimonials/4/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:29:35', '2024-08-31 05:29:35'),
+(782, 1, 'admin/student-testimonials/4', 'PUT', '127.0.0.1', '{\"star\":\"5\",\"des\":\"The Nursing program exceeded all my expectations. The rigorous curriculum was challenging, but it prepared me well for the realities of the healthcare field. The clinical rotations were a highlight, allowing me to gain hands-on experience in various medical settings. The instructors were passionate and knowledgeable, always encouraging us to do our best. What stood out to me the most was the sense of community among the students and faculty \\u2013 we truly supported one another through the tough times. I feel confident and ready to make a positive impact as a registered nurse, thanks to the excellent training I received.\",\"name\":\"Nelle Bruce\",\"profession\":\"Aut et voluptatem de\",\"country\":\"Molestias expedita i\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:32:58', '2024-08-31 05:32:58'),
+(783, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:32:59', '2024-08-31 05:32:59'),
+(784, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:34:06', '2024-08-31 05:34:06'),
+(785, 1, 'admin/student-testimonials/4/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:34:10', '2024-08-31 05:34:10'),
+(786, 1, 'admin/student-testimonials/4', 'PUT', '127.0.0.1', '{\"star\":\"5\",\"des\":\"The Nursing program exceeded all my expectations. The rigorous curriculum was challenging, but it prepared me well for the realities of the healthcare field. The clinical rotations were a highlight, allowing me to gain hands-on experience in various medical settings. The instructors were passionate and knowledgeable, always encouraging us to do our best. What stood out to me the most was the sense of community among the students and faculty \\u2013 we truly supported one another through the tough times. I feel confident and ready to make a positive impact as a registered nurse, thanks to the excellent training I received.\",\"name\":\"Nelle Bruce\",\"profession\":\"Aut et voluptatem de\",\"country\":\"Molestias expedita i\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:34:15', '2024-08-31 05:34:15'),
+(787, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:34:15', '2024-08-31 05:34:15'),
+(788, 1, 'admin/student-testimonials/1/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:06', '2024-08-31 05:38:06'),
+(789, 1, 'admin/student-testimonials/1', 'PUT', '127.0.0.1', '{\"star\":\"3\",\"des\":\"My time at the university was transformative. The Computer Science program not only provided me with a solid foundation in coding and algorithms, but it also encouraged me to think critically and solve problems creatively. The professors were incredibly supportive, always willing to go the extra mile to ensure we understood the material. The hands-on projects were particularly valuable, giving me practical experience that I now apply in my career as a software developer. I\\u2019m proud to be an alumna of such an innovative and forward-thinking institution\",\"name\":\"lisa\",\"profession\":\"UX - Designer\",\"country\":\"USA\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:38:11', '2024-08-31 05:38:11'),
+(790, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:11', '2024-08-31 05:38:11'),
+(791, 1, 'admin/student-testimonials/2/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:13', '2024-08-31 05:38:13'),
+(792, 1, 'admin/student-testimonials/2', 'PUT', '127.0.0.1', '{\"star\":\"1\",\"des\":\"As a Business Administration student, I\\u2019ve had the opportunity to learn from some of the best minds in the industry. The program is well-rounded, combining theoretical knowledge with practical case studies and real-world applications. What I appreciate most is the emphasis on leadership and ethical business practices, which are crucial in today\\u2019s global market. The networking opportunities have also been phenomenal, helping me secure internships and build connections that will be invaluable in my career. I\\u2019m grateful for the comprehensive education and support I\\u2019ve received.\\\"\",\"name\":\"Chandler Goodwin\",\"profession\":\"Necessitatibus tempo\",\"country\":\"Velit dolore consect\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:38:15', '2024-08-31 05:38:15'),
+(793, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:15', '2024-08-31 05:38:15'),
+(794, 1, 'admin/student-testimonials/3/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:16', '2024-08-31 05:38:16'),
+(795, 1, 'admin/student-testimonials/3', 'PUT', '127.0.0.1', '{\"star\":\"4\",\"des\":\"Studying Engineering here has been an incredible journey. The program is rigorous, but it\\u2019s also incredibly rewarding. The faculty are experts in their fields, and they bring a wealth of knowledge and experience to the classroom. I\\u2019ve particularly enjoyed the hands-on labs and group projects, where we\\u2019ve had the chance to apply theoretical concepts to real-world challenges. The campus itself is also equipped with state-of-the-art facilities that have made learning even more engaging. I\\u2019m looking forward to starting my career with the strong foundation this program has provided\",\"name\":\"Haley Bauer\",\"profession\":\"Est consequatur exc\",\"country\":\"Aperiam quae a quia\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:38:18', '2024-08-31 05:38:18'),
+(796, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:18', '2024-08-31 05:38:18'),
+(797, 1, 'admin/student-testimonials/4/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:20', '2024-08-31 05:38:20'),
+(798, 1, 'admin/student-testimonials/4', 'PUT', '127.0.0.1', '{\"star\":\"1\",\"des\":\"The Nursing program exceeded all my expectations. The rigorous curriculum was challenging, but it prepared me well for the realities of the healthcare field. The clinical rotations were a highlight, allowing me to gain hands-on experience in various medical settings. The instructors were passionate and knowledgeable, always encouraging us to do our best. What stood out to me the most was the sense of community among the students and faculty \\u2013 we truly supported one another through the tough times. I feel confident and ready to make a positive impact as a registered nurse, thanks to the excellent training I received.\",\"name\":\"Nelle Bruce\",\"profession\":\"Aut et voluptatem de\",\"country\":\"Molestias expedita i\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:38:24', '2024-08-31 05:38:24'),
+(799, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:25', '2024-08-31 05:38:25'),
+(800, 1, 'admin/student-testimonials/4/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:36', '2024-08-31 05:38:36'),
+(801, 1, 'admin/student-testimonials/4', 'PUT', '127.0.0.1', '{\"star\":\"4\",\"des\":\"The Nursing program exceeded all my expectations. The rigorous curriculum was challenging, but it prepared me well for the realities of the healthcare field. The clinical rotations were a highlight, allowing me to gain hands-on experience in various medical settings. The instructors were passionate and knowledgeable, always encouraging us to do our best. What stood out to me the most was the sense of community among the students and faculty \\u2013 we truly supported one another through the tough times. I feel confident and ready to make a positive impact as a registered nurse, thanks to the excellent training I received.\",\"name\":\"Nelle Bruce\",\"profession\":\"Aut et voluptatem de\",\"country\":\"Molestias expedita i\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:38:40', '2024-08-31 05:38:40'),
+(802, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:40', '2024-08-31 05:38:40'),
+(803, 1, 'admin/student-testimonials/4/edit', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:46', '2024-08-31 05:38:46'),
+(804, 1, 'admin/student-testimonials/4', 'PUT', '127.0.0.1', '{\"star\":\"5\",\"des\":\"The Nursing program exceeded all my expectations. The rigorous curriculum was challenging, but it prepared me well for the realities of the healthcare field. The clinical rotations were a highlight, allowing me to gain hands-on experience in various medical settings. The instructors were passionate and knowledgeable, always encouraging us to do our best. What stood out to me the most was the sense of community among the students and faculty \\u2013 we truly supported one another through the tough times. I feel confident and ready to make a positive impact as a registered nurse, thanks to the excellent training I received.\",\"name\":\"Nelle Bruce\",\"profession\":\"Aut et voluptatem de\",\"country\":\"Molestias expedita i\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\",\"_method\":\"PUT\"}', '2024-08-31 05:38:49', '2024-08-31 05:38:49'),
+(805, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-08-31 05:38:49', '2024-08-31 05:38:49'),
+(806, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-31 06:00:12', '2024-08-31 06:00:12'),
+(807, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 06:00:18', '2024-08-31 06:00:18'),
+(808, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"projectnum\",\"model_name\":\"App\\\\Models\\\\Projectnum\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\ProjectNumberController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"project_num\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"member_num\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"love_us_num\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"happy_client_num\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 06:56:45', '2024-08-31 06:56:45'),
+(809, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 06:56:45', '2024-08-31 06:56:45'),
+(810, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 06:57:06', '2024-08-31 06:57:06'),
+(811, 1, 'admin/projectnums', 'GET', '127.0.0.1', '[]', '2024-08-31 06:57:07', '2024-08-31 06:57:07'),
+(812, 1, 'admin/projectnums/create', 'GET', '127.0.0.1', '[]', '2024-08-31 06:57:23', '2024-08-31 06:57:23'),
+(813, 1, 'admin/projectnums', 'POST', '127.0.0.1', '{\"project_num\":\"23\",\"member_num\":\"150\",\"love_us_num\":\"130\",\"happy_client_num\":\"100\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 06:57:55', '2024-08-31 06:57:55'),
+(814, 1, 'admin/projectnums', 'GET', '127.0.0.1', '[]', '2024-08-31 06:57:55', '2024-08-31 06:57:55');
 
 -- --------------------------------------------------------
 
@@ -958,7 +1071,7 @@ CREATE TABLE `assignment` (
   `stu_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `deadline` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `course` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -1054,13 +1167,6 @@ CREATE TABLE `contact` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `contact`
---
-
-INSERT INTO `contact` (`id`, `fname`, `email`, `lname`, `phone`, `image`, `company`, `company_website`, `subject`, `budget`, `message`, `created_at`, `updated_at`) VALUES
-(20, 'ShafiraCobb', 'wycoronena@mailinator.com', 'ClarkSpears', '+19512151142', 'images/Tokyo Revengers.jpg', NULL, NULL, NULL, NULL, 'Aspernatur culpa su', '2024-08-17 00:54:16', '2024-08-17 01:18:53');
-
 -- --------------------------------------------------------
 
 --
@@ -1107,7 +1213,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (11, '2024_05_03_054737_create_services_table', 7),
 (12, '2024_08_13_062832_create_sampla_table', 8),
 (13, '2024_08_13_090328_create_sample_table', 9),
-(14, '2024_08_31_092238_create_assignment_table', 10);
+(14, '2024_08_31_092238_create_assignment_table', 10),
+(15, '2024_08_31_104220_create_student_testimonial_table', 11),
+(16, '2024_08_31_122645_create_projectnum_table', 12);
 
 -- --------------------------------------------------------
 
@@ -1159,6 +1267,29 @@ CREATE TABLE `personal_access_tokens` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projectnum`
+--
+
+CREATE TABLE `projectnum` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `project_num` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `member_num` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `love_us_num` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `happy_client_num` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `projectnum`
+--
+
+INSERT INTO `projectnum` (`id`, `project_num`, `member_num`, `love_us_num`, `happy_client_num`, `created_at`, `updated_at`) VALUES
+(1, '23', '150', '130', '100', '2024-08-31 06:57:55', '2024-08-31 06:57:55');
 
 -- --------------------------------------------------------
 
@@ -1257,6 +1388,34 @@ INSERT INTO `service_category` (`id`, `name`, `slug`, `seo_title`, `seo_des`, `s
 (6, 'Website Design & Development', 'website-design-development', 'Qui eaque sequi mole', 'Incidunt nostrum el', 'Nulla hic iure conse', '2024-05-02 23:59:09', '2024-05-02 23:59:09'),
 (7, 'APP Design & Development', 'app-design-development', 'Consequuntur volupta', 'Pariatur Ea perfere', 'Consectetur aut ex', '2024-05-02 23:59:33', '2024-05-02 23:59:33'),
 (8, 'Custom Software Development', 'custom-software-development', 'Consequatur Assumen', 'Deserunt laborum nes', 'Aut quas iusto non v', '2024-05-02 23:59:46', '2024-05-02 23:59:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `student_testimonial`
+--
+
+CREATE TABLE `student_testimonial` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `star` int(11) DEFAULT NULL,
+  `des` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `profession` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `country` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `student_testimonial`
+--
+
+INSERT INTO `student_testimonial` (`id`, `image`, `star`, `des`, `name`, `profession`, `country`, `created_at`, `updated_at`) VALUES
+(1, 'images/team-4.jpg', 3, 'My time at the university was transformative. The Computer Science program not only provided me with a solid foundation in coding and algorithms, but it also encouraged me to think critically and solve problems creatively. The professors were incredibly supportive, always willing to go the extra mile to ensure we understood the material. The hands-on projects were particularly valuable, giving me practical experience that I now apply in my career as a software developer. I’m proud to be an alumna of such an innovative and forward-thinking institution', 'lisa', 'UX - Designer', 'USA', '2024-08-31 05:15:15', '2024-08-31 05:25:34'),
+(2, 'images/testimonial-2.jpg', 1, 'As a Business Administration student, I’ve had the opportunity to learn from some of the best minds in the industry. The program is well-rounded, combining theoretical knowledge with practical case studies and real-world applications. What I appreciate most is the emphasis on leadership and ethical business practices, which are crucial in today’s global market. The networking opportunities have also been phenomenal, helping me secure internships and build connections that will be invaluable in my career. I’m grateful for the comprehensive education and support I’ve received.\"', 'Chandler Goodwin', 'Necessitatibus tempo', 'Velit dolore consect', '2024-08-31 05:19:10', '2024-08-31 05:25:47'),
+(3, 'images/team-3.jpg', 4, 'Studying Engineering here has been an incredible journey. The program is rigorous, but it’s also incredibly rewarding. The faculty are experts in their fields, and they bring a wealth of knowledge and experience to the classroom. I’ve particularly enjoyed the hands-on labs and group projects, where we’ve had the chance to apply theoretical concepts to real-world challenges. The campus itself is also equipped with state-of-the-art facilities that have made learning even more engaging. I’m looking forward to starting my career with the strong foundation this program has provided', 'Haley Bauer', 'Est consequatur exc', 'Aperiam quae a quia', '2024-08-31 05:19:26', '2024-08-31 05:26:09'),
+(4, 'images/testimonial-3.jpg', 5, 'The Nursing program exceeded all my expectations. The rigorous curriculum was challenging, but it prepared me well for the realities of the healthcare field. The clinical rotations were a highlight, allowing me to gain hands-on experience in various medical settings. The instructors were passionate and knowledgeable, always encouraging us to do our best. What stood out to me the most was the sense of community among the students and faculty – we truly supported one another through the tough times. I feel confident and ready to make a positive impact as a registered nurse, thanks to the excellent training I received.', 'Nelle Bruce', 'Aut et voluptatem de', 'Molestias expedita i', '2024-08-31 05:19:41', '2024-08-31 05:38:49');
 
 -- --------------------------------------------------------
 
@@ -1457,6 +1616,12 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
+-- Indexes for table `projectnum`
+--
+ALTER TABLE `projectnum`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sampla`
 --
 ALTER TABLE `sampla`
@@ -1473,6 +1638,12 @@ ALTER TABLE `services`
 -- Indexes for table `service_category`
 --
 ALTER TABLE `service_category`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `student_testimonial`
+--
+ALTER TABLE `student_testimonial`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1496,13 +1667,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=705;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=815;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1526,7 +1697,7 @@ ALTER TABLE `admin_users`
 -- AUTO_INCREMENT for table `assignment`
 --
 ALTER TABLE `assignment`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `blogs`
@@ -1544,7 +1715,7 @@ ALTER TABLE `blog_category`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -1556,7 +1727,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `password_resets`
@@ -1569,6 +1740,12 @@ ALTER TABLE `password_resets`
 --
 ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `projectnum`
+--
+ALTER TABLE `projectnum`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `sampla`
@@ -1587,6 +1764,12 @@ ALTER TABLE `services`
 --
 ALTER TABLE `service_category`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `student_testimonial`
+--
+ALTER TABLE `student_testimonial`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `title`

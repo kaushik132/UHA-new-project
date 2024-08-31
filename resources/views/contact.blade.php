@@ -98,7 +98,7 @@
              </div>
              <div class="col-xl-6 mb-3">
                <div class="form_box">
-                 <input type="file" name="image"  placeholder="Password**">
+                 <input type="file" name="image"  placeholder="File Uploads**">
                  <span class="text-danger">
                   @error('image')
                      {{$message}}
