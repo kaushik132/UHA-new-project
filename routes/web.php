@@ -34,6 +34,11 @@ Route::get('/contact',[HomeController::class, 'contact'])->name('contact');
 Route::post('/contact-post',[HomeController::class, 'contactPost'])->name('contactPost');
 
 
+Route::post('/assignment-post',[HomeController::class, 'assignmentPost'])->name('assignmentPost');
+
+
+
+
  
 
 Route::get('/genrater-pdf/{id}', [HomeController::class, 'genraterPDF'])->name('genrater.pdf');

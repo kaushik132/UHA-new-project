@@ -19,5 +19,6 @@ Route::group([
     $router->resource('service-categories', ServiceCategoryController::class);
     $router->resource('services', ServiceController::class);
     $router->resource('samples', SampleController::class);
+    $router->resource('assignments', AssignmentController::class);
 
 });

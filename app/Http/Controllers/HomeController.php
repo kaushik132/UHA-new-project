@@ -16,6 +16,7 @@ use App\Models\Service;
 use App\Models\ServiceCategory;
 use App\Models\Sample;
 use App\Models\User;
+use App\Models\Assignment;
 use PDF;
 
 class HomeController extends Controller
@@ -315,6 +316,67 @@ public function showResetRequestForm()
 
     return redirect()->route('login')->with('status', 'Password has been reset!');
 }
+
+
+
+public function assignmentPost(Request $request)    
+{
+    $this->validate(request(), [
+        'topic' => "required",
+        'email' => "required",
+        'phone' => "required",
+        'stu_name' => "required",
+        'deadline' => "required",
+        'course' => "required",
+        'description' => "required",
+
+        'image' => "required",
+     
+      ], [], 
+    [
+      'topic' => 'Topic Name',
+      'email' => 'Email',
+      'phone' => 'Number',
+      'stu_name' => 'Student Name',
+      'deadline' => 'Deadline',
+      'course' => 'Course',
+      'description' => 'Description',
+        'image' => "File",
+      
+     
+    ]);
+
+    
+$assignment_obj = new Contact;
+$assignment_obj->topic   =$request->topic;
+$assignment_obj->email  =$request->email;
+$assignment_obj->phone=$request->phone;
+$assignment_obj->stu_name=$request->stu_name;
+$assignment_obj->deadline=$request->deadline;
+$assignment_obj->course=$request->course;
+$assignment_obj->description=$request->description;
+
+
+
+
+
+
+
+if ($request->hasFile('image')) {
+$file = $request->file('image'); // Get the uploaded file
+$extension = $file->getClientOriginalExtension(); // Get the file extension
+$filename = time() . '.' . $extension; // Create a unique filename
+$file->move('uploads/', $filename); // Move the file to the uploads directory
+$assignment_obj->image = $filename; // Save the filename in the database
+}
+
+$assignment_obj->save();
+
+return back()->with('message', 'Form Submitted Successfully!');
+}
+
+
+
 
 
 

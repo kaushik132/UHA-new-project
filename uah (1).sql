@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 30, 2024 at 11:23 AM
+-- Generation Time: Aug 31, 2024 at 11:48 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -64,7 +64,8 @@ INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `p
 (19, 21, 18, 'Services', 'icon-file', 'services', NULL, '2024-05-03 00:17:38', '2024-05-03 05:03:45'),
 (20, 0, 0, 'Blog Section', 'icon-archive', NULL, '*', '2024-05-03 05:01:57', '2024-05-03 05:01:57'),
 (21, 0, 0, 'Service Section', 'icon-briefcase', NULL, '*', '2024-05-03 05:03:27', '2024-05-03 05:03:27'),
-(23, 0, 18, 'Samples', 'icon-file', 'samples', NULL, '2024-08-13 03:33:30', '2024-08-13 03:33:30');
+(23, 0, 18, 'Samples', 'icon-file', 'samples', NULL, '2024-08-13 03:33:30', '2024-08-13 03:33:30'),
+(24, 0, 18, 'Assignments', 'icon-file', 'assignments', NULL, '2024-08-31 03:52:39', '2024-08-31 03:52:39');
 
 -- --------------------------------------------------------
 
@@ -781,7 +782,19 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (689, 1, 'admin/samples/2/edit', 'GET', '127.0.0.1', '[]', '2024-08-30 03:50:38', '2024-08-30 03:50:38'),
 (690, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"category\":\"8\",\"search_terms\":null,\"module_name\":\"Module Name\",\"module_code\":\"002\",\"pricing\":\"234\",\"assignment_title\":\"Assignment Title\",\"pages\":\"90\",\"words\":\"1233\",\"details\":\"<h3><strong>Assignment Title:<\\/strong> E-commerce Application Development with Payment Gateway Integration<\\/h3>\\r\\n\\r\\n<h3><strong>Objective:<\\/strong><\\/h3>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Develop an e-commerce web application and integrate a payment gateway to handle transactions securely.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<h3><strong>Background:<\\/strong><\\/h3>\\r\\n\\r\\n<ul>\\r\\n\\t<li>E-commerce applications require secure and efficient payment processing to ensure smooth transactions between buyers and sellers. This assignment focuses on developing a functional e-commerce platform and implementing a payment gateway for real-time transaction processing.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<h3><strong>Instructions:<\\/strong><\\/h3>\\r\\n\\r\\n<ol>\\r\\n\\t<li>\\r\\n\\t<p><strong>Task Breakdown:<\\/strong><\\/p>\\r\\n\\r\\n\\t<ul>\\r\\n\\t\\t<li>\\r\\n\\t\\t<p><strong>Project Setup:<\\/strong><\\/p>\\r\\n\\r\\n\\t\\t<ul>\\r\\n\\t\\t\\t<li>Set up a web development environment using a suitable framework (e.g., Laravel, Django, Node.js).<\\/li>\\r\\n\\t\\t\\t<li>Initialize a new project repository with version control (e.g., Git).<\\/li>\\r\\n\\t\\t<\\/ul>\\r\\n\\t\\t<\\/li>\\r\\n\\t\\t<li>\\r\\n\\t\\t<p><strong>E-commerce Features Development:<\\/strong><\\/p>\\r\\n\\r\\n\\t\\t<ul>\\r\\n\\t\\t\\t<li>Implement core e-commerce features such as product listing, shopping cart, user authentication, and order management.<\\/li>\\r\\n\\t\\t\\t<li>Ensure that the product pages are dynamic, allowing easy addition and removal of products.<\\/li>\\r\\n\\t\\t<\\/ul>\\r\\n\\t\\t<\\/li>\\r\\n\\t\\t<li>\\r\\n\\t\\t<p><strong>Payment Gateway Integration:<\\/strong><\\/p>\\r\\n\\r\\n\\t\\t<ul>\\r\\n\\t\\t\\t<li>Research and select a payment gateway (e.g., PayU, Stripe, PayPal).<\\/li>\\r\\n\\t\\t\\t<li>Integrate the payment gateway into the application following best practices.<\\/li>\\r\\n\\t\\t\\t<li>Implement payment processing functionality, including order validation and payment confirmation.<\\/li>\\r\\n\\t\\t<\\/ul>\\r\\n\\t\\t<\\/li>\\r\\n\\t\\t<li>\\r\\n\\t\\t<p><strong>Testing:<\\/strong><\\/p>\\r\\n\\r\\n\\t\\t<ul>\\r\\n\\t\\t\\t<li>Conduct unit tests and integration tests to ensure all components work as expected.<\\/li>\\r\\n\\t\\t\\t<li>Simulate transactions to test the payment gateway integration.<\\/li>\\r\\n\\t\\t<\\/ul>\\r\\n\\t\\t<\\/li>\\r\\n\\t\\t<li>\\r\\n\\t\\t<p><strong>Documentation:<\\/strong><\\/p>\\r\\n\\r\\n\\t\\t<ul>\\r\\n\\t\\t\\t<li>Document the steps taken to integrate the payment gateway.<\\/li>\\r\\n\\t\\t\\t<li>Provide a user guide on how to navigate and use the e-commerce platform.<\\/li>\\r\\n\\t\\t<\\/ul>\\r\\n\\t\\t<\\/li>\\r\\n\\t<\\/ul>\\r\\n\\t<\\/li>\\r\\n\\t<li>\\r\\n\\t<p><strong>Tools and Resources:<\\/strong><\\/p>\\r\\n\\r\\n\\t<ul>\\r\\n\\t\\t<li>Web development framework (e.g., Laravel, Django)<\\/li>\\r\\n\\t\\t<li>Payment gateway API documentation (e.g., PayU API)<\\/li>\\r\\n\\t\\t<li>Version control system (e.g., Git)<\\/li>\\r\\n\\t\\t<li>Testing tools (e.g., PHPUnit for PHP, PyTest for Python)<\\/li>\\r\\n\\t<\\/ul>\\r\\n\\t<\\/li>\\r\\n\\t<li>\\r\\n\\t<p><strong>Submission Guidelines:<\\/strong><\\/p>\\r\\n\\r\\n\\t<ul>\\r\\n\\t\\t<li>Submit the complete project repository, including all source code, in a ZIP file.<\\/li>\\r\\n\\t\\t<li>Include a README file with instructions on how to set up and run the application.<\\/li>\\r\\n\\t\\t<li>Submit a PDF report explaining the payment gateway integration process and any challenges encountered.<\\/li>\\r\\n\\t<\\/ul>\\r\\n\\t<\\/li>\\r\\n\\t<li>\\r\\n\\t<p><strong>Evaluation Criteria:<\\/strong><\\/p>\\r\\n\\r\\n\\t<ul>\\r\\n\\t\\t<li>Functionality of the e-commerce features<\\/li>\\r\\n\\t\\t<li>Successful integration of the payment gateway<\\/li>\\r\\n\\t\\t<li>Quality of code (modularity, adherence to coding standards)<\\/li>\\r\\n\\t\\t<li>Thoroughness of testing<\\/li>\\r\\n\\t\\t<li>Clarity and completeness of documentation<\\/li>\\r\\n\\t<\\/ul>\\r\\n\\t<\\/li>\\r\\n\\t<li>\\r\\n\\t<p><strong>Deliverables:<\\/strong><\\/p>\\r\\n\\r\\n\\t<ul>\\r\\n\\t\\t<li>Source code files (in a ZIP folder)<\\/li>\\r\\n\\t\\t<li>PDF report<\\/li>\\r\\n\\t\\t<li>README file with setup instructions<\\/li>\\r\\n\\t\\t<li>Test results and logs<\\/li>\\r\\n\\t<\\/ul>\\r\\n\\t<\\/li>\\r\\n<\\/ol>\\r\\n\\r\\n<h3><strong>Additional Notes:<\\/strong><\\/h3>\\r\\n\\r\\n<ul>\\r\\n\\t<li>Ensure that the payment gateway integration follows secure coding practices to protect sensitive user data.<\\/li>\\r\\n\\t<li>Consider edge cases, such as failed transactions, and implement appropriate error handling.<\\/li>\\r\\n<\\/ul>\\r\\n\\r\\n<h3><strong>Deadline:<\\/strong><\\/h3>\\r\\n\\r\\n<ul>\\r\\n\\t<li>The assignment is due by [Insert Date and Time Here].<\\/li>\\r\\n<\\/ul>\",\"status\":\"off\",\"_token\":\"9bI2V2ibcZ0TFneIh5wkvVbda3Ui9PV5Jvfrm019\",\"_method\":\"PUT\"}', '2024-08-30 03:50:45', '2024-08-30 03:50:45'),
 (691, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-30 03:50:45', '2024-08-30 03:50:45'),
-(692, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-30 03:50:47', '2024-08-30 03:50:47');
+(692, 1, 'admin/samples/2', 'PUT', '127.0.0.1', '{\"_method\":\"PUT\",\"status\":\"on\",\"after-save\":\"exit\"}', '2024-08-30 03:50:47', '2024-08-30 03:50:47'),
+(693, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-30 05:03:32', '2024-08-30 05:03:32'),
+(694, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-08-30 05:03:36', '2024-08-30 05:03:36'),
+(695, 1, 'admin/auth/login', 'GET', '127.0.0.1', '[]', '2024-08-31 03:50:10', '2024-08-31 03:50:10'),
+(696, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-31 03:50:11', '2024-08-31 03:50:11'),
+(697, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-08-31 03:50:17', '2024-08-31 03:50:17'),
+(698, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 03:50:30', '2024-08-31 03:50:30'),
+(699, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"Assignment\",\"model_name\":\"App\\\\Models\\\\\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":null,\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 03:50:45', '2024-08-31 03:50:45'),
+(700, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 03:50:46', '2024-08-31 03:50:46'),
+(701, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"assignment\",\"model_name\":\"App\\\\Models\\\\Assignment\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\AssignmentController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"topic\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"email\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"phone\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"stu_name\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"deadline\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"course\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"description\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"image\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 03:52:38', '2024-08-31 03:52:38'),
+(702, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 03:52:41', '2024-08-31 03:52:41'),
+(703, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-08-31 03:52:54', '2024-08-31 03:52:54'),
+(704, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-08-31 03:52:56', '2024-08-31 03:52:56');
 
 -- --------------------------------------------------------
 
@@ -934,6 +947,26 @@ CREATE TABLE `admin_user_permissions` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `assignment`
+--
+
+CREATE TABLE `assignment` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `topic` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `stu_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deadline` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `course` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `blogs`
 --
 
@@ -1073,7 +1106,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (10, '2024_05_02_131737_create_service_category_table', 6),
 (11, '2024_05_03_054737_create_services_table', 7),
 (12, '2024_08_13_062832_create_sampla_table', 8),
-(13, '2024_08_13_090328_create_sample_table', 9);
+(13, '2024_08_13_090328_create_sample_table', 9),
+(14, '2024_08_31_092238_create_assignment_table', 10);
 
 -- --------------------------------------------------------
 
@@ -1366,6 +1400,12 @@ ALTER TABLE `admin_user_permissions`
   ADD KEY `admin_user_permissions_user_id_permission_id_index` (`user_id`,`permission_id`);
 
 --
+-- Indexes for table `assignment`
+--
+ALTER TABLE `assignment`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `blogs`
 --
 ALTER TABLE `blogs`
@@ -1456,13 +1496,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=693;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=705;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1481,6 +1521,12 @@ ALTER TABLE `admin_roles`
 --
 ALTER TABLE `admin_users`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `assignment`
+--
+ALTER TABLE `assignment`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `blogs`
@@ -1510,7 +1556,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `password_resets`

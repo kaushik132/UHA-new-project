@@ -16,7 +16,7 @@
           <meta name="keywords"  content="{{$seo_data['keywords']}}" />
           @endif  
   
-    <link href="{{url('assets/images/logo/favicon.png')}}" rel="shortcut icon" type="image/x-icon">
+    {{-- <link href="{{url('assets/images/logo/favicon.png')}}" rel="shortcut icon" type="image/x-icon"> --}}
     <!-------------------------------- bootstrap.css ------------------------------------>
     <link rel="stylesheet" href="{{url('assets/Bootstrap/bootstrap.min.css')}}">
     <!-------------------------------- style.css ------------------------------------>

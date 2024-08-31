@@ -68,7 +68,7 @@
            <div class="row">
              <div class="col-xl-6 mb-3">
                <div class="form_box">
-                 <input type="text" name="fname" placeholder="First Name*">
+                 <input type="text" name="fname" placeholder="First Name*" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                  <span class="text-danger">
                   @error('fname')
                      {{$message}}
@@ -78,7 +78,7 @@
              </div>
              <div class="col-xl-6 mb-3">
                <div class="form_box">
-                 <input type="text" name="lname" placeholder="Last Name*">
+                 <input type="text" name="lname" placeholder="Last Name*" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                  <span class="text-danger">
                   @error('lname')
                      {{$message}}
@@ -108,7 +108,7 @@
              </div>
              <div class="col-xl-12 mb-3">
                <div class="form_box">
-                 <input type="text" name="phone" placeholder="Number*">
+                 <input type="text" name="phone" placeholder="Number*" maxlength="10" oninput="this.value = this.value.replace(/[^0-9+.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                  <span class="text-danger">
                   @error('phone')
                      {{$message}}

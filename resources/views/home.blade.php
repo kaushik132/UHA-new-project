@@ -41,182 +41,137 @@
             <div class="tabs_box">
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link active" id="writing-tab" data-bs-toggle="tab" data-bs-target="#writing-tab-pane" type="button" role="tab" aria-controls="writing-tab-pane" aria-selected="true">
-                    <img src="./assets/images/icons/writing.svg" alt="">Writing </button>
+                    <button class="nav-link active" id="writing-tab" type="button" data-value="Writing">
+                        <img src="./assets/images/icons/writing.svg" alt="">Writing 
+                    </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="rewriting-tab" data-bs-toggle="tab" data-bs-target="#rewriting-tab-pane" type="button" role="tab" aria-controls="rewriting-tab-pane" aria-selected="false">
-                    <img src="./assets/images/icons/writing.svg" alt="">ReWriting </button>
+                    <button class="nav-link" id="rewriting-tab" type="button" data-value="ReWriting">
+                        <img src="./assets/images/icons/writing.svg" alt="">ReWriting 
+                    </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="editing-tab" data-bs-toggle="tab" data-bs-target="#editing-tab-pane" type="button" role="tab" aria-controls="editing-tab-pane" aria-selected="false">
-                    <img src="./assets/images/icons/editing.svg" alt="">Editing </button>
+                    <button class="nav-link" id="editing-tab" type="button" data-value="Editing">
+                        <img src="./assets/images/icons/editing.svg" alt="">Editing 
+                    </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                  <button class="nav-link" id="it-tab" data-bs-toggle="tab" data-bs-target="#it-tab-pane" type="button" role="tab" aria-controls="it-tab-pane" aria-selected="false">
-                    <img src="./assets/images/icons/it.svg" alt="">It Service </button>
+                    <button class="nav-link" id="it-tab" type="button" data-value="It Service">
+                        <img src="./assets/images/icons/it.svg" alt="">IT Service 
+                    </button>
                 </li>
-              </ul>
+            </ul>
+            
+            <!-- Hidden input field -->
+          
+            
               <div class="tab-content" id="myTabContent">
+                @if (session()->has('message'))
+                <div class="alert alert-success">
+                   
+                   
+                   {{session()->get('message')}}
+                </div>
+                    
+                @endif
                 <div class="tab-pane fade show active" id="writing-tab-pane" role="tabpanel" aria-labelledby="writing-tab" tabindex="0">
+                 
+                 <form action="{{route('assignmentPost')}}" method="POST" enctype="multipart/form-data">
+                  @csrf
+                  <input type="hidden" name="topic" id="selectedService" name="selectedService" value="Writing">
+                  <span class="text-danger">
+                    @error('topic')
+                       {{$message}}
+                    @enderror
+                  </span>
                   <div class="tab_form">
                     <div class="row">
                       <div class="col-xl-6 mb-4">
                         <div class="form_box">
-                          <input type="text" placeholder="Email">
+                          <input name="email" type="email" placeholder="Email">
+                          <span class="text-danger">
+                            @error('email')
+                               {{$message}}
+                            @enderror
+                          </span>
                         </div>
                       </div>
                       <div class="col-xl-6 mb-4">
                         <div class="form_box">
-                          <input type="number" placeholder="Phone no.">
+                          <input name="phone" type="text" placeholder="Phone no." maxlength="10"  oninput="this.value = this.value.replace(/[^0-9+.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                          <span class="text-danger">
+                            @error('phone')
+                               {{$message}}
+                            @enderror
+                          </span>
                         </div>
                       </div>
                       <div class="col-xl-6 mb-4">
                         <div class="form_box mb-4">
-                          <input type="text" placeholder="Student Name">
+                          <input name="stu_name" type="text" placeholder="Student Name" oninput="this.value = this.value.replace(/[^A-Za-z+.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                          <span class="text-danger">
+                            @error('stu_name')
+                               {{$message}}
+                            @enderror
+                          </span>
                         </div>
                         <div class="form_box mb-4">
-                          <input type="text" placeholder="Deadline">
+                          <input name="deadline" type="text" placeholder="Deadline">
+                          <span class="text-danger">
+                            @error('deadline')
+                               {{$message}}
+                            @enderror
+                          </span>
                         </div>
                         <div class="form_box  ">
-                          <input type="text" placeholder="Student Name">
+                          <input name="course" type="text" placeholder="Course Name">
+                          <span class="text-danger">
+                            @error('course')
+                               {{$message}}
+                            @enderror
+                          </span>
                         </div>
                       </div>
                       <div class="col-xl-6 mb-4">
                         <div class="form_box h-100">
                           <div class="file-att_box">
-                            <textarea name="" id="" placeholder="Description (write/attach)"></textarea>
-                            <input type="file" class="uploadfild">
+                            <textarea name="description" id=""  placeholder="Description (write/attach)"></textarea>
+                            <span class="text-danger">
+                              @error('description')
+                                 {{$message}}
+                              @enderror
+                            </span>
+
+                            <input name="image" type="file" class="uploadfild">
+                            <span class="text-danger">
+                              @error('image')
+                                 {{$message}}
+                              @enderror
+                            </span>
                           </div>
                         </div>
                       </div>
+
                       <div class="col-xl-12 mb-4">
                         <div class="form_box h-100">
-                          <a href="" class="custom_button">Submit</a>
+                          <button type="submit" class="custom_button">
+                            Submit
+                          </button>
+                      
                         </div>
                       </div>
                     </div>
                   </div>
+                </form>
                 </div>
                 <div class="tab-pane fade" id="rewriting-tab-pane" role="tabpanel" aria-labelledby="rewriting-tab" tabindex="0">
-                  <div class="tab_form">
-                    <div class="row">
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box">
-                          <input type="text" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box">
-                          <input type="number" placeholder="Phone no.">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box mb-4">
-                          <input type="text" placeholder="Student Name">
-                        </div>
-                        <div class="form_box mb-4">
-                          <input type="text" placeholder="Deadline">
-                        </div>
-                        <div class="form_box  ">
-                          <input type="text" placeholder="Student Name">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box h-100">
-                          <div class="file-att_box">
-                            <textarea name="" id="" placeholder="Description (write/attach)"></textarea>
-                            <input type="file" class="uploadfild">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-12 mb-4">
-                        <div class="form_box h-100">
-                          <a href="" class="custom_button">Submit</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                 
                 </div>
                 <div class="tab-pane fade" id="editing-tab-pane" role="tabpanel" aria-labelledby="editing-tab" tabindex="0">
-                  <div class="tab_form">
-                    <div class="row">
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box">
-                          <input type="text" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box">
-                          <input type="number" placeholder="Phone no.">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box mb-4">
-                          <input type="text" placeholder="Student Name">
-                        </div>
-                        <div class="form_box mb-4">
-                          <input type="text" placeholder="Deadline">
-                        </div>
-                        <div class="form_box  ">
-                          <input type="text" placeholder="Student Name">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box h-100">
-                          <div class="file-att_box">
-                            <textarea name="" id="" placeholder="Description (write/attach)"></textarea>
-                            <input type="file" class="uploadfild">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-12 mb-4">
-                        <div class="form_box h-100">
-                          <a href="" class="custom_button">Submit</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+             
                 </div>
                 <div class="tab-pane fade" id="it-tab-pane" role="tabpanel" aria-labelledby="it-tab" tabindex="0">
-                  <div class="tab_form">
-                    <div class="row">
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box">
-                          <input type="text" placeholder="Email">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box">
-                          <input type="number" placeholder="Phone no.">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box mb-4">
-                          <input type="text" placeholder="Student Name">
-                        </div>
-                        <div class="form_box mb-4">
-                          <input type="text" placeholder="Deadline">
-                        </div>
-                        <div class="form_box  ">
-                          <input type="text" placeholder="Student Name">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 mb-4">
-                        <div class="form_box h-100">
-                          <div class="file-att_box">
-                            <textarea name="" id="" placeholder="Description (write/attach)"></textarea>
-                            <input type="file" class="uploadfild">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xl-12 mb-4">
-                        <div class="form_box h-100">
-                          <a href="" class="custom_button">Submit</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                   
                 </div>
               </div>
             </div>
@@ -767,6 +722,47 @@
                     file.style.display = 'none'; // Hide non-matching samples
                 }
             });
+        });
+    });
+});
+
+  </script>
+
+  <script>
+    $(document).ready(function() {
+    // Handle the click event on any tab
+    $('.nav-link').on('click', function() {
+        // Get the data-value of the clicked tab
+        var selectedValue = $(this).data('value');
+        
+        // Update the hidden input field with the selected value
+        $('#selectedService').val(selectedValue);
+
+        // Remove the 'active' class from all tabs and add it to the clicked tab
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active');
+    });
+});
+
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const tabs = document.querySelectorAll('.nav-link');
+    const hiddenInput = document.getElementById('selectedService');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const selectedValue = this.getAttribute('data-value');
+            
+            // Update hidden input field
+            hiddenInput.value = selectedValue;
+
+            // Remove 'active' class from all tabs
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Add 'active' class to the clicked tab
+            this.classList.add('active');
         });
     });
 });
