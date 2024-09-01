@@ -1,6 +1,12 @@
 @extends('dashboard.layout.main')
 @section('main-containers')
 
+@php
+use App\Models\Info; // Assuming 'Info' is the correct model
+
+$info = Info::first(); // Get the first record from the 'Info' model
+@endphp
+
 <section class="hero_area">
     <div class="container z-11">
       <div class="row">
@@ -531,7 +537,7 @@
               </span>
               <div class="get-cont-call-locateicn">
                 <p>Call Us Anytime</p>
-                <h5>+91 8000306984</h5>
+                <h5>{{ $info ? $info->mobile_number : 'No number available' }}</h5>
               </div>
             </div>
             <div class="d-flex mt-4">
@@ -540,7 +546,7 @@
               </sapn>
               <div class="get-cont-call-locateicn">
                 <p>Address</p>
-                <h5>43-A pratap negarh Ramgarh Mode , Jaipur , Rajastion , India</h5>
+                <h5>{{ $info ? $info->address : 'No address available' }}</h5>
               </div>
             </div>
           </div>

@@ -40,21 +40,21 @@
          <div class="col-xl-8 mt-xl-0 mt-4">
            <div class="row">
 
-               @foreach ($blogList as $blogList)
+               @foreach ($blogList as $blogLists)
                    
                <div class="col-xl-6 mb-4">
                  <div class="blog_box">
                    <div class="image">
-                     <img src="{{url('uploads/'.$blogList->image)}}" alt="">
+                     <img src="{{url('uploads/'.$blogLists->image)}}" alt="">
                    </div>
                    <div class="content">
-                     <span>{{ \Carbon\Carbon::parse($blogList->created_at)->format('F jS , Y') }} </span>
-                     <h5>{{$blogList->title}}</h5>
-                     <p>{{ Str::limit($blogList->short_content, 135) }}</p>
+                     <span>{{ \Carbon\Carbon::parse($blogLists->created_at)->format('F jS , Y') }} </span>
+                     <h5>{{$blogLists->title}}</h5>
+                     <p>{{ Str::limit($blogLists->short_content, 135) }}</p>
                      <div class="box">
                        <span>
-                         <i class="fa-solid fa-eye"></i>{{$blogList->view_user}} </span>
-                       <a href="{{url('blog-details/'.$blogList->slug)}}">View More</a>
+                         <i class="fa-solid fa-eye"></i>{{$blogLists->view_user}} </span>
+                       <a href="{{url('blog-details/'.$blogLists->slug)}}">View More</a>
                      </div>
                    </div>
                  </div>
@@ -62,23 +62,18 @@
                @endforeach
 
      
-      
+   
   
       
-    
        
       
              <div class="col-xl-12">
                <div class="panget_button_sample">
                  <ul>
-                   <li class="prev">
-                     <i class="fa-solid fa-arrow-left-long"></i>
-                   </li>
-                   <li class="numb">{{$blogList->links()}}</li>
                   
-                   <li class="next">
-                     <i class="fa-solid fa-arrow-right-long"></i>
-                   </li>
+                      {{$blogList->onEachSide(1)->links()}}
+                 
+                  
                  </ul>
                </div>
              </div>

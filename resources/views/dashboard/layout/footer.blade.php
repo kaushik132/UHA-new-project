@@ -1,5 +1,12 @@
 
 <footer class="main-footer-bg">
+
+
+  @php
+  use App\Models\Info; // Assuming 'Info' is the correct model
+
+  $info = Info::first(); // Get the first record from the 'Info' model
+@endphp
     <div class="footer-border-1">
       <img src="{{url('assets/images/Border.png')}}" alt="border" class="img-fluid border-img-size">
     </div>
@@ -24,16 +31,17 @@
           </h6>
           <ul class="ftr-timeline">
             <li class="footer-list-size">
-              <a href="#" class="text-decoration-none text-white">About Us</a>
+              <a href="{{route('blogs')}}" class="text-decoration-none text-white">Blog</a>
             </li>
             <li class="footer-list-size mt-3">
-              <a href="#" class="text-decoration-none text-white">Become An Affiliate</a>
+              <a href="{{route('contact')}}" class="text-decoration-none text-white">Contact</a>
+            </li>
+            
+            <li class="footer-list-size mt-3">
+              <a href="{{route('services')}}" class="text-decoration-none text-white">Services</a>
             </li>
             <li class="footer-list-size mt-3">
-              <a href="#" class="text-decoration-none text-white">FL Registration</a>
-            </li>
-            <li class="footer-list-size mt-3">
-              <a href="#" class="text-decoration-none text-white">Video Gallery</a>
+              <a href="{{route('sample')}}" class="text-decoration-none text-white">Sample Page</a>
             </li>
           </ul>
         </div>
@@ -48,7 +56,7 @@
               <a href="#" class="text-decoration-none text-white">Terms And Conditions</a>
             </li>
             <li class="footer-list-size mt-3">
-              <a href="#" class="text-decoration-none text-white">Privacy Policy</a>
+              <a href="{{route('policy')}}" class="text-decoration-none text-white">Privacy Policy</a>
             </li>
             <li class="footer-list-size mt-3">
               <a href="#" class="text-decoration-none text-white">Refund And Return</a>
@@ -104,30 +112,16 @@
           <div class="d-flex">
             <ul class="ftr-timeline">
               <li class="footer-list-size">
-                <a href="#" class="text-decoration-none text-white">Instragram</a>
+                <a href="{{ $info ? $info->facebook_link : '#' }}" target="_blank" class="text-decoration-none text-white">Facebook</a>
               </li>
               <li class="footer-list-size mt-3">
-                <a href="#" class="text-decoration-none text-white">Facebook</a>
+                <a href="{{ $info ? $info->twitter_link : '#' }}" target="_blank"  class="text-decoration-none text-white">Twitter</a>
               </li>
               <li class="footer-list-size mt-3">
-                <a href="#" class="text-decoration-none text-white">Youtube</a>
+                <a href="{{ $info ? $info->skype_link : '#' }}" target="_blank"  class="text-decoration-none text-white">Skype</a>
               </li>
               <li class="footer-list-size mt-3">
-                <a href="#" class="text-decoration-none text-white">Twitter</a>
-              </li>
-            </ul>
-            <ul class="ftr-timeline ms-4">
-              <li class="footer-list-size">
-                <a href="#" class="text-decoration-none text-white">Linkedin</a>
-              </li>
-              <li class="footer-list-size mt-3">
-                <a href="#" class="text-decoration-none text-white">Pinterest</a>
-              </li>
-              <li class="footer-list-size mt-3">
-                <a href="#" class="text-decoration-none text-white">Reddit</a>
-              </li>
-              <li class="footer-list-size mt-3">
-                <a href="#" class="text-decoration-none text-white">Tumblr</a>
+                <a href="{{ $info ? $info->instagram_link : '#' }}" target="_blank"  class="text-decoration-none text-white">Instagram</a>
               </li>
             </ul>
           </div>
@@ -135,7 +129,9 @@
       </div>
       <div class="ftr-lineshow"></div>
       <div class="d-flex justify-content-between flex-wrap">
-        <div class="mt-2 copy-right-ftr">© 2021-2024 UAH | Powered by Academic Help &amp; E-Counselling</div>
+        <div class="mt-2 copy-right-ftr">
+          © <span id="startYear">2021</span>-<span id="currentYear"></span> UAH | Powered by Academic Help &amp; E-Counselling
+        </div>
         <div class="mt-2">
           <img src="{{url('assets/images/dcma.png')}}" alt="dcma" class="img-fluid">
         </div>
@@ -153,5 +149,12 @@
   <script src="{{url('assets/js/main.js')}}"></script>
   <!-------------------------------- jquery-2.2.0.min.js ------------------------------------>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+
+  <script>
+    const startYear = 2021; // Replace with your start year if it changes
+    const currentYear = new Date().getFullYear();
+    document.getElementById("startYear").textContent = startYear;
+    document.getElementById("currentYear").textContent = currentYear;
+</script>
 </body>
 </html>

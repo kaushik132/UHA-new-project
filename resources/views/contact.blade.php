@@ -1,6 +1,12 @@
 @extends('dashboard.layout.main')
 @section('main-containers')
 
+@php
+    use App\Models\Info; // Assuming 'Info' is the correct model
+
+    $info = Info::first(); // Get the first record from the 'Info' model
+@endphp
+
 
 <section class="page_display_area">
    <div class="container">
@@ -29,7 +35,7 @@
                </span>
                <div class="content">
                  <span>Call Us Anytime</span>
-                 <h5>+91 8000306984</h5>
+                 <h5>{{ $info ? $info->mobile_number : 'No number available' }}</h5>
                </div>
              </li>
              <li>
@@ -37,8 +43,8 @@
                  <i class="fa-solid fa-location-dot"></i>
                </span>
                <div class="content">
-                 <span>Location :</span>
-                 <h5>JAIPUR</h5>
+                 <span>Address :</span>
+                 <h5>{{ $info ? $info->address : 'No address available' }}</h5>
                </div>
              </li>
              <li>
@@ -47,7 +53,7 @@
                </span>
                <div class="content">
                  <span>Email</span>
-                 <h5>UAH@gmail.com</h5>
+                 <h5>{{ $info ? $info->email_address : 'No email available' }}</h5>
                </div>
              </li>
            </ul>

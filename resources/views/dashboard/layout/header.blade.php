@@ -41,6 +41,12 @@
 {{--End toster --}}
   </head>
   <body>
+
+    @php
+    use App\Models\Info; // Assuming 'Info' is the correct model
+
+    $info = Info::first(); // Get the first record from the 'Info' model
+@endphp
     <!---------------------------------------------------------------------------------- header-start ----------------------------------------------------------------------------->
     <header>
       <div class="top_header">
@@ -55,13 +61,13 @@
                 <li>
                   <a href="">
                     <i class="fa-solid fa-phone-volume"></i>
-                    <span>(970) 262-1413</span>
+                    <span>{{ $info ? $info->mobile_number : 'No number available' }}</span>
                   </a>
                 </li>
                 <li>
                   <a href="">
                     <i class="fa-regular fa-envelope"></i>
-                    <span>address@gmail.com</span>
+                    <span>{{ $info ? $info->email_address : 'No email available' }}</span>
                   </a>
                 </li>
               </ul>
@@ -69,22 +75,22 @@
             <div class="social">
               <ul>
                 <li>
-                  <a href="">
+                  <a href="{{ $info ? $info->facebook_link : '#' }}" target="_blank" >
                     <i class="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="{{ $info ? $info->twitter_link : '#' }}" target="_blank" >
                     <i class="fa-brands fa-twitter"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                 <a href="{{ $info ? $info->skype_link : '#' }}" target="_blank" >
                     <i class="fa-brands fa-skype"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                 <a href="{{ $info ? $info->instagram_link : '#' }}" target="_blank" >
                     <i class="fa-brands fa-instagram"></i>
                   </a>
                 </li>
