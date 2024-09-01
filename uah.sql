@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2024 at 02:36 PM
+-- Generation Time: Sep 01, 2024 at 06:02 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -67,7 +67,9 @@ INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `p
 (23, 0, 18, 'Samples', 'icon-file', 'samples', NULL, '2024-08-13 03:33:30', '2024-08-13 03:33:30'),
 (24, 0, 18, 'Assignments', 'icon-file', 'assignments', NULL, '2024-08-31 03:52:39', '2024-08-31 03:52:39'),
 (25, 0, 18, 'Student-testimonials', 'icon-file', 'student-testimonials', NULL, '2024-08-31 05:12:20', '2024-08-31 05:12:20'),
-(26, 0, 18, 'Projectnums', 'icon-file', 'projectnums', NULL, '2024-08-31 06:56:45', '2024-08-31 06:56:45');
+(26, 0, 18, 'Projectnums', 'icon-file', 'projectnums', NULL, '2024-08-31 06:56:45', '2024-08-31 06:56:45'),
+(27, 0, 18, 'Faqs', 'icon-file', 'faqs', NULL, '2024-09-01 21:19:01', '2024-09-01 21:19:01'),
+(28, 0, 18, 'Infos', 'icon-file', 'infos', NULL, '2024-09-01 22:25:59', '2024-09-01 22:25:59');
 
 -- --------------------------------------------------------
 
@@ -907,7 +909,64 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (811, 1, 'admin/projectnums', 'GET', '127.0.0.1', '[]', '2024-08-31 06:57:07', '2024-08-31 06:57:07'),
 (812, 1, 'admin/projectnums/create', 'GET', '127.0.0.1', '[]', '2024-08-31 06:57:23', '2024-08-31 06:57:23'),
 (813, 1, 'admin/projectnums', 'POST', '127.0.0.1', '{\"project_num\":\"23\",\"member_num\":\"150\",\"love_us_num\":\"130\",\"happy_client_num\":\"100\",\"_token\":\"XYRWYDoI6qQfn49chj58YUioXyVZVhq07jBbOXJ7\"}', '2024-08-31 06:57:55', '2024-08-31 06:57:55'),
-(814, 1, 'admin/projectnums', 'GET', '127.0.0.1', '[]', '2024-08-31 06:57:55', '2024-08-31 06:57:55');
+(814, 1, 'admin/projectnums', 'GET', '127.0.0.1', '[]', '2024-08-31 06:57:55', '2024-08-31 06:57:55'),
+(815, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-09-01 21:13:04', '2024-09-01 21:13:04'),
+(816, 1, 'admin/contacts', 'GET', '127.0.0.1', '[]', '2024-09-01 21:13:41', '2024-09-01 21:13:41'),
+(817, 1, 'admin/samples', 'GET', '127.0.0.1', '[]', '2024-09-01 21:13:44', '2024-09-01 21:13:44'),
+(818, 1, 'admin/assignments', 'GET', '127.0.0.1', '[]', '2024-09-01 21:13:46', '2024-09-01 21:13:46'),
+(819, 1, 'admin/student-testimonials', 'GET', '127.0.0.1', '[]', '2024-09-01 21:13:47', '2024-09-01 21:13:47'),
+(820, 1, 'admin/projectnums', 'GET', '127.0.0.1', '[]', '2024-09-01 21:13:49', '2024-09-01 21:13:49'),
+(821, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-09-01 21:13:54', '2024-09-01 21:13:54'),
+(822, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"faq\",\"model_name\":\"App\\\\Models\\\\Faq\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\FaqController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"question\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"answer\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 21:18:59', '2024-09-01 21:18:59'),
+(823, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-09-01 21:19:02', '2024-09-01 21:19:02'),
+(824, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-09-01 21:19:27', '2024-09-01 21:19:27'),
+(825, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:19:29', '2024-09-01 21:19:29'),
+(826, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2024-09-01 21:23:42', '2024-09-01 21:23:42'),
+(827, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"What types of assignments can you assist with?\",\"answer\":\"We can assist with a wide range of assignments, including essays, research papers, case studies, lab reports, presentations, and more. Our expertise covers various subjects such as humanities, sciences, business, and technical fields.\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 21:24:04', '2024-09-01 21:24:04'),
+(828, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:24:04', '2024-09-01 21:24:04'),
+(829, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2024-09-01 21:24:07', '2024-09-01 21:24:07'),
+(830, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"How do I submit my assignment for help?\",\"answer\":\"You can submit your assignment through our online submission form on our website. Simply upload the assignment instructions, any relevant materials, and specify the deadline. Our team will review it and get in touch with you promptly.\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 21:24:32', '2024-09-01 21:24:32'),
+(831, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:24:32', '2024-09-01 21:24:32'),
+(832, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2024-09-01 21:24:41', '2024-09-01 21:24:41'),
+(833, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"How quickly can I receive help with my assignment?\",\"answer\":\"The turnaround time depends on the complexity and length of the assignment. We offer different delivery options, including urgent help for tight deadlines. Please specify your deadline when submitting your request, and we\\u2019ll do our best to accommodate it.\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 21:25:00', '2024-09-01 21:25:00'),
+(834, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:25:00', '2024-09-01 21:25:00'),
+(835, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2024-09-01 21:25:12', '2024-09-01 21:25:12'),
+(836, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"Will my assignment be original and free of plagiarism?\",\"answer\":\"Yes, all assignments are completed by our experts from scratch to ensure originality. We use plagiarism detection tools to verify that the content is 100% unique before delivering it to you\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 21:25:23', '2024-09-01 21:25:23'),
+(837, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:25:23', '2024-09-01 21:25:23'),
+(838, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2024-09-01 21:25:31', '2024-09-01 21:25:31'),
+(839, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"How do you ensure the quality of the assignments?\",\"answer\":\"Our team consists of experienced professionals with expertise in various academic fields. Each assignment is carefully researched, written, and reviewed to meet high academic standards. Additionally, we have a quality assurance team that checks for clarity, coherence, and adherence to your instructions.\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 21:25:43', '2024-09-01 21:25:43'),
+(840, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:25:43', '2024-09-01 21:25:43'),
+(841, 1, 'admin/faqs/create', 'GET', '127.0.0.1', '[]', '2024-09-01 21:31:58', '2024-09-01 21:31:58'),
+(842, 1, 'admin/faqs', 'POST', '127.0.0.1', '{\"question\":\"What if I\'m not satisfied with the assignment I receive?\",\"answer\":\"If you\\u2019re not satisfied with the assignment, we offer free revisions to ensure it meets your expectations. Simply provide us with detailed feedback on what needs to be improved, and we\\u2019ll make the necessary changes. Your satisfaction is our priority.\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 21:32:12', '2024-09-01 21:32:12'),
+(843, 1, 'admin/faqs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:32:12', '2024-09-01 21:32:12'),
+(844, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-09-01 21:32:53', '2024-09-01 21:32:53'),
+(845, 1, 'admin', 'GET', '127.0.0.1', '[]', '2024-09-01 21:32:53', '2024-09-01 21:32:53'),
+(846, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:34:51', '2024-09-01 21:34:51'),
+(847, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-09-01 21:34:53', '2024-09-01 21:34:53'),
+(848, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:34:59', '2024-09-01 21:34:59'),
+(849, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:36:03', '2024-09-01 21:36:03'),
+(850, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-09-01 21:36:04', '2024-09-01 21:36:04'),
+(851, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-09-01 21:36:11', '2024-09-01 21:36:11'),
+(852, 1, 'admin/blogs/5/edit', 'GET', '127.0.0.1', '[]', '2024-09-01 21:37:35', '2024-09-01 21:37:35'),
+(853, 1, 'admin/blogs/5', 'PUT', '127.0.0.1', '{\"category_id\":\"2\",\"search_terms\":null,\"title\":\"Porro aliquam doloru\",\"slug\":\"porro-aliquam-doloru\",\"short_content\":\"Possimus velit sus\",\"view_user\":\"26\",\"alt\":\"Optio magni totam e\",\"url\":\"https:\\/\\/www.bore.tv\",\"description\":\"<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt<\\/p>\",\"seo_title\":\"In sed itaque offici\",\"seo_description\":\"Pariatur Doloremque\",\"seo_keyword\":\"Exercitationem culpa\",\"question\":\"How can I rank my newly launched website on search engines__\\r\\nWhy are keywords important for my website\'s ranking__\\r\\nHow can I improve my website\'s user experience__\\r\\nHow does social media impact my website\\u2019s ranking__\\r\\nWhat security measures should I take to protect my website\'s ranking\",\"answer\":\"<p>To rank a new website, focus on finding the right keywords, creating a user-friendly website, and regularly updating your content. Additionally, ensure your site is mobile-friendly and optimized for local searches.<\\/p>__\\r\\n<p>Keywords help search engines understand what your site is about. By using relevant and targeted keywords, you increase the chances of your website appearing in search results when users look for related content.<\\/p>__\\r\\n<p>Enhance user experience by ensuring your site is fast, easy to navigate, and accessible on all devices. Use clear menus, readable fonts, and a simple design that guides visitors to the information they need.<\\/p>__\\r\\n<p>Sharing your site on social media can drive more traffic and increase visibility. Engaging content and regular updates on social platforms can lead to higher rankings in search engines.<\\/p>__\\r\\n<p>Protect your website by installing an SSL certificate, using strong passwords, keeping software updated, and regularly backing up your site. A secure website is more likely to rank well and avoid penalties from search engines.<\\/p>\",\"whatapp\":null,\"facebook\":null,\"linkedin\":null,\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\",\"_method\":\"PUT\"}', '2024-09-01 21:37:46', '2024-09-01 21:37:46'),
+(854, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:37:46', '2024-09-01 21:37:46'),
+(855, 1, 'admin/blogs/4/edit', 'GET', '127.0.0.1', '[]', '2024-09-01 21:37:48', '2024-09-01 21:37:48'),
+(856, 1, 'admin/blogs/4', 'PUT', '127.0.0.1', '{\"category_id\":\"1\",\"search_terms\":null,\"title\":\"Labore sit iusto am\",\"slug\":\"labore-sit-iusto-am\",\"short_content\":\"Quaerat deleniti eum\",\"view_user\":\"18\",\"alt\":\"Expedita dolores lab\",\"url\":\"https:\\/\\/www.lecali.info\",\"description\":\"<p>ZXZXzxzXzxxzxzxzxz<a href=\\\"https:\\/\\/ahitechno.com\\/\\\">https:\\/\\/ahitechno.com\\/<\\/a><\\/p>\",\"seo_title\":\"Sint deserunt ut im\",\"seo_description\":\"Est alias id et vol\",\"seo_keyword\":\"Porro amet maxime q\",\"question\":\"Et nobis rerum nemo\",\"answer\":\"Eaque excepteur do t\",\"whatapp\":null,\"facebook\":null,\"linkedin\":null,\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\",\"_method\":\"PUT\"}', '2024-09-01 21:37:52', '2024-09-01 21:37:52'),
+(857, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:37:52', '2024-09-01 21:37:52'),
+(858, 1, 'admin/blogs/3/edit', 'GET', '127.0.0.1', '[]', '2024-09-01 21:37:54', '2024-09-01 21:37:54'),
+(859, 1, 'admin/blogs/3', 'PUT', '127.0.0.1', '{\"category_id\":\"1\",\"search_terms\":null,\"title\":\"Aut dignissimos sapi\",\"slug\":\"aut-dignissimos-sapi\",\"short_content\":\"Aut incidunt nesciu\",\"view_user\":\"36\",\"alt\":\"Omnis rem in rerum n\",\"url\":\"https:\\/\\/www.lucikitazam.org.uk\",\"description\":\"<p><em><strong>XasaSsSAs<\\/strong><\\/em><\\/p>\",\"seo_title\":\"Excepturi excepturi\",\"seo_description\":\"Eiusmod quisquam cul\",\"seo_keyword\":\"Velit illum quis a\",\"question\":\"Aut velit sit numqua\",\"answer\":\"Laboris est dolor v\",\"whatapp\":null,\"facebook\":null,\"linkedin\":null,\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\",\"_method\":\"PUT\"}', '2024-09-01 21:37:58', '2024-09-01 21:37:58'),
+(860, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:37:58', '2024-09-01 21:37:58'),
+(861, 1, 'admin/blogs/2/edit', 'GET', '127.0.0.1', '[]', '2024-09-01 21:38:00', '2024-09-01 21:38:00'),
+(862, 1, 'admin/blogs/2', 'PUT', '127.0.0.1', '{\"category_id\":\"5\",\"search_terms\":null,\"title\":\"Culpa harum aut dol\",\"slug\":\"culpa-harum-aut-dol\",\"short_content\":\"Impedit architecto\",\"view_user\":\"12\",\"alt\":\"Et impedit tempora\",\"url\":\"https:\\/\\/www.voc.tv\",\"description\":\"<p><strong>hello<\\/strong><\\/p>\",\"seo_title\":\"Commodi impedit eni\",\"seo_description\":\"Laborum Proident i\",\"seo_keyword\":\"Consectetur volupta\",\"question\":\"Ex non ullam ut volu\",\"answer\":\"Quis fugiat autem ve\",\"whatapp\":null,\"facebook\":null,\"linkedin\":null,\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\",\"_method\":\"PUT\"}', '2024-09-01 21:38:04', '2024-09-01 21:38:04'),
+(863, 1, 'admin/blogs', 'GET', '127.0.0.1', '[]', '2024-09-01 21:38:04', '2024-09-01 21:38:04'),
+(864, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-09-01 22:21:08', '2024-09-01 22:21:08'),
+(865, 1, 'admin/helpers/scaffold', 'POST', '127.0.0.1', '{\"table_name\":\"info\",\"model_name\":\"App\\\\Models\\\\Info\",\"controller_name\":\"App\\\\Admin\\\\Controllers\\\\InfoController\",\"create\":[\"migration\",\"model\",\"controller\",\"migrate\",\"menu_item\"],\"fields\":[{\"name\":\"mobile_number\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"email_address\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"facebook_link\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"twitter_link\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"skype_link\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"instagram_link\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"whatapp_number\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null},{\"name\":\"address\",\"type\":\"string\",\"nullable\":\"on\",\"key\":null,\"default\":null,\"comment\":null}],\"timestamps\":\"on\",\"primary_key\":\"id\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 22:25:58', '2024-09-01 22:25:58'),
+(866, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-09-01 22:26:00', '2024-09-01 22:26:00'),
+(867, 1, 'admin/helpers/scaffold', 'GET', '127.0.0.1', '[]', '2024-09-01 22:26:36', '2024-09-01 22:26:36'),
+(868, 1, 'admin/infos', 'GET', '127.0.0.1', '[]', '2024-09-01 22:26:39', '2024-09-01 22:26:39'),
+(869, 1, 'admin/infos/create', 'GET', '127.0.0.1', '[]', '2024-09-01 22:26:48', '2024-09-01 22:26:48'),
+(870, 1, 'admin/infos', 'POST', '127.0.0.1', '{\"mobile_number\":\"1234567890\",\"email_address\":\"uah@gmail.com\",\"facebook_link\":\"https:\\/\\/www.facebook.com\\/login.php\\/\",\"twitter_link\":\"https:\\/\\/x.com\\/?lang=en-in\",\"skype_link\":\"https:\\/\\/www.skype.com\\/en\\/\",\"instagram_link\":\"https:\\/\\/www.instagram.com\\/accounts\\/login\\/\",\"whatapp_number\":\"00987654321\",\"address\":\"address new address\",\"_token\":\"wzK3XuOScyMNVKKWsWnpk5ZPD4ThSspJ9AlYxf3q\"}', '2024-09-01 22:29:38', '2024-09-01 22:29:38'),
+(871, 1, 'admin/infos', 'GET', '127.0.0.1', '[]', '2024-09-01 22:29:38', '2024-09-01 22:29:38');
 
 -- --------------------------------------------------------
 
@@ -1089,6 +1148,7 @@ CREATE TABLE `blogs` (
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `short_content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `view_user` int(11) DEFAULT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `alt` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -1110,11 +1170,11 @@ CREATE TABLE `blogs` (
 -- Dumping data for table `blogs`
 --
 
-INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `status`, `whatapp`, `facebook`, `linkedin`, `created_at`, `updated_at`) VALUES
-(2, 5, 'Culpa harum aut dol', 'culpa-harum-aut-dol', 'Impedit architecto', 'images/website-details_1.jpg', 'Et impedit tempora', 'https://www.voc.tv', '<p><strong>hello</strong></p>', 'Commodi impedit eni', 'Laborum Proident i', 'Consectetur volupta', 'Ex non ullam ut volu', 'Quis fugiat autem ve', 1, NULL, NULL, NULL, '2024-05-02 02:24:52', '2024-05-03 06:13:05'),
-(3, 1, 'Aut dignissimos sapi', 'aut-dignissimos-sapi', 'Aut incidunt nesciu', 'images/e-commerce-details_2.jpg', 'Omnis rem in rerum n', 'https://www.lucikitazam.org.uk', '<p><em><strong>XasaSsSAs</strong></em></p>', 'Excepturi excepturi', 'Eiusmod quisquam cul', 'Velit illum quis a', 'Aut velit sit numqua', 'Laboris est dolor v', 1, NULL, NULL, NULL, '2024-05-02 03:38:48', '2024-05-03 06:12:50'),
-(4, 1, 'Labore sit iusto am', 'labore-sit-iusto-am', 'Quaerat deleniti eum', 'images/digital-marketing-details_1.jpg', 'Expedita dolores lab', 'https://www.lecali.info', '<p>ZXZXzxzXzxxzxzxzxz<a href=\"https://ahitechno.com/\">https://ahitechno.com/</a></p>', 'Sint deserunt ut im', 'Est alias id et vol', 'Porro amet maxime q', 'Et nobis rerum nemo', 'Eaque excepteur do t', 1, NULL, NULL, NULL, '2024-05-02 03:39:27', '2024-05-03 06:12:40'),
-(5, 2, 'Porro aliquam doloru', 'porro-aliquam-doloru', 'Possimus velit sus', 'images/blog-details.jpg', 'Optio magni totam e', 'https://www.bore.tv', '<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt</p>', 'In sed itaque offici', 'Pariatur Doloremque', 'Exercitationem culpa', 'How can I rank my newly launched website on search engines__\r\nWhy are keywords important for my website\'s ranking__\r\nHow can I improve my website\'s user experience__\r\nHow does social media impact my website’s ranking__\r\nWhat security measures should I take to protect my website\'s ranking', '<p>To rank a new website, focus on finding the right keywords, creating a user-friendly website, and regularly updating your content. Additionally, ensure your site is mobile-friendly and optimized for local searches.</p>__\r\n<p>Keywords help search engines understand what your site is about. By using relevant and targeted keywords, you increase the chances of your website appearing in search results when users look for related content.</p>__\r\n<p>Enhance user experience by ensuring your site is fast, easy to navigate, and accessible on all devices. Use clear menus, readable fonts, and a simple design that guides visitors to the information they need.</p>__\r\n<p>Sharing your site on social media can drive more traffic and increase visibility. Engaging content and regular updates on social platforms can lead to higher rankings in search engines.</p>__\r\n<p>Protect your website by installing an SSL certificate, using strong passwords, keeping software updated, and regularly backing up your site. A secure website is more likely to rank well and avoid penalties from search engines.</p>', 1, NULL, NULL, NULL, '2024-05-02 04:05:07', '2024-08-29 23:44:11');
+INSERT INTO `blogs` (`id`, `category_id`, `title`, `slug`, `short_content`, `view_user`, `image`, `alt`, `url`, `description`, `seo_title`, `seo_description`, `seo_keyword`, `question`, `answer`, `status`, `whatapp`, `facebook`, `linkedin`, `created_at`, `updated_at`) VALUES
+(2, 5, 'Culpa harum aut dol', 'culpa-harum-aut-dol', 'Impedit architecto', 12, 'images/website-details_1.jpg', 'Et impedit tempora', 'https://www.voc.tv', '<p><strong>hello</strong></p>', 'Commodi impedit eni', 'Laborum Proident i', 'Consectetur volupta', 'Ex non ullam ut volu', 'Quis fugiat autem ve', 1, NULL, NULL, NULL, '2024-05-02 02:24:52', '2024-09-01 21:38:04'),
+(3, 1, 'Aut dignissimos sapi', 'aut-dignissimos-sapi', 'Aut incidunt nesciu', 36, 'images/e-commerce-details_2.jpg', 'Omnis rem in rerum n', 'https://www.lucikitazam.org.uk', '<p><em><strong>XasaSsSAs</strong></em></p>', 'Excepturi excepturi', 'Eiusmod quisquam cul', 'Velit illum quis a', 'Aut velit sit numqua', 'Laboris est dolor v', 1, NULL, NULL, NULL, '2024-05-02 03:38:48', '2024-09-01 21:37:58'),
+(4, 1, 'Labore sit iusto am', 'labore-sit-iusto-am', 'Quaerat deleniti eum', 18, 'images/digital-marketing-details_1.jpg', 'Expedita dolores lab', 'https://www.lecali.info', '<p>ZXZXzxzXzxxzxzxzxz<a href=\"https://ahitechno.com/\">https://ahitechno.com/</a></p>', 'Sint deserunt ut im', 'Est alias id et vol', 'Porro amet maxime q', 'Et nobis rerum nemo', 'Eaque excepteur do t', 1, NULL, NULL, NULL, '2024-05-02 03:39:27', '2024-09-01 21:37:52'),
+(5, 2, 'Porro aliquam doloru', 'porro-aliquam-doloru', 'Possimus velit sus', 26, 'images/blog-details.jpg', 'Optio magni totam e', 'https://www.bore.tv', '<p>utiut7tutuytuytuytuv tu uytuy&nbsp; utu utuytuyt</p>', 'In sed itaque offici', 'Pariatur Doloremque', 'Exercitationem culpa', 'How can I rank my newly launched website on search engines__\r\nWhy are keywords important for my website\'s ranking__\r\nHow can I improve my website\'s user experience__\r\nHow does social media impact my website’s ranking__\r\nWhat security measures should I take to protect my website\'s ranking', '<p>To rank a new website, focus on finding the right keywords, creating a user-friendly website, and regularly updating your content. Additionally, ensure your site is mobile-friendly and optimized for local searches.</p>__\r\n<p>Keywords help search engines understand what your site is about. By using relevant and targeted keywords, you increase the chances of your website appearing in search results when users look for related content.</p>__\r\n<p>Enhance user experience by ensuring your site is fast, easy to navigate, and accessible on all devices. Use clear menus, readable fonts, and a simple design that guides visitors to the information they need.</p>__\r\n<p>Sharing your site on social media can drive more traffic and increase visibility. Engaging content and regular updates on social platforms can lead to higher rankings in search engines.</p>__\r\n<p>Protect your website by installing an SSL certificate, using strong passwords, keeping software updated, and regularly backing up your site. A secure website is more likely to rank well and avoid penalties from search engines.</p>', 1, NULL, NULL, NULL, '2024-05-02 04:05:07', '2024-09-01 21:37:46');
 
 -- --------------------------------------------------------
 
@@ -1186,6 +1246,59 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `faq`
+--
+
+CREATE TABLE `faq` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `question` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `faq`
+--
+
+INSERT INTO `faq` (`id`, `question`, `answer`, `created_at`, `updated_at`) VALUES
+(1, 'What types of assignments can you assist with?', 'We can assist with a wide range of assignments, including essays, research papers, case studies, lab reports, presentations, and more. Our expertise covers various subjects such as humanities, sciences, business, and technical fields.', '2024-09-01 21:24:04', '2024-09-01 21:24:04'),
+(2, 'How do I submit my assignment for help?', 'You can submit your assignment through our online submission form on our website. Simply upload the assignment instructions, any relevant materials, and specify the deadline. Our team will review it and get in touch with you promptly.', '2024-09-01 21:24:32', '2024-09-01 21:24:32'),
+(3, 'How quickly can I receive help with my assignment?', 'The turnaround time depends on the complexity and length of the assignment. We offer different delivery options, including urgent help for tight deadlines. Please specify your deadline when submitting your request, and we’ll do our best to accommodate it.', '2024-09-01 21:25:00', '2024-09-01 21:25:00'),
+(4, 'Will my assignment be original and free of plagiarism?', 'Yes, all assignments are completed by our experts from scratch to ensure originality. We use plagiarism detection tools to verify that the content is 100% unique before delivering it to you', '2024-09-01 21:25:23', '2024-09-01 21:25:23'),
+(5, 'How do you ensure the quality of the assignments?', 'Our team consists of experienced professionals with expertise in various academic fields. Each assignment is carefully researched, written, and reviewed to meet high academic standards. Additionally, we have a quality assurance team that checks for clarity, coherence, and adherence to your instructions.', '2024-09-01 21:25:43', '2024-09-01 21:25:43'),
+(6, 'What if I\'m not satisfied with the assignment I receive?', 'If you’re not satisfied with the assignment, we offer free revisions to ensure it meets your expectations. Simply provide us with detailed feedback on what needs to be improved, and we’ll make the necessary changes. Your satisfaction is our priority.', '2024-09-01 21:32:12', '2024-09-01 21:32:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `info`
+--
+
+CREATE TABLE `info` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `mobile_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facebook_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `skype_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `instagram_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `whatapp_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `info`
+--
+
+INSERT INTO `info` (`id`, `mobile_number`, `email_address`, `facebook_link`, `twitter_link`, `skype_link`, `instagram_link`, `whatapp_number`, `address`, `created_at`, `updated_at`) VALUES
+(1, '1234567890', 'uah@gmail.com', 'https://www.facebook.com/login.php/', 'https://x.com/?lang=en-in', 'https://www.skype.com/en/', 'https://www.instagram.com/accounts/login/', '00987654321', 'address new address', '2024-09-01 22:29:38', '2024-09-01 22:29:38');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `migrations`
 --
 
@@ -1215,7 +1328,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (13, '2024_08_13_090328_create_sample_table', 9),
 (14, '2024_08_31_092238_create_assignment_table', 10),
 (15, '2024_08_31_104220_create_student_testimonial_table', 11),
-(16, '2024_08_31_122645_create_projectnum_table', 12);
+(16, '2024_08_31_122645_create_projectnum_table', 12),
+(17, '2024_09_01_141900_create_faq_table', 13),
+(18, '2024_09_01_152558_create_info_table', 14);
 
 -- --------------------------------------------------------
 
@@ -1590,6 +1705,18 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
+-- Indexes for table `faq`
+--
+ALTER TABLE `faq`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `info`
+--
+ALTER TABLE `info`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
@@ -1667,13 +1794,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=815;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=872;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -1724,10 +1851,22 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `faq`
+--
+ALTER TABLE `faq`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `info`
+--
+ALTER TABLE `info`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `password_resets`
