@@ -53,7 +53,7 @@
                      <p>{{ Str::limit($blogList->short_content, 135) }}</p>
                      <div class="box">
                        <span>
-                         <i class="fa-solid fa-eye"></i>220 </span>
+                         <i class="fa-solid fa-eye"></i>{{$blogList->view_user}} </span>
                        <a href="{{url('blog-details/'.$blogList->slug)}}">View More</a>
                      </div>
                    </div>
@@ -74,10 +74,8 @@
                    <li class="prev">
                      <i class="fa-solid fa-arrow-left-long"></i>
                    </li>
-                   <li class="numb">1</li>
-                   <li class="numb">2</li>
-                   <li class="numb">3</li>
-                   <li class="numb">4</li>
+                   <li class="numb">{{$blogList->links()}}</li>
+                  
                    <li class="next">
                      <i class="fa-solid fa-arrow-right-long"></i>
                    </li>

@@ -434,46 +434,24 @@
         <div class="col-xl-8 ps-xl-5 mt-xl-0 mt-4">
           <div class="choose_inner_2">
             <div class="accordion" id="accordionExample">
+           
+
+              @foreach ($faq as $faq)
+                  
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Can online essay samples be customized for specific requirements? </button>
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{$faq->id}}" aria-expanded="false" aria-controls="collapse{{$faq->id}}"> {{$faq->question}} </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div class="accordion-body "> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
+                <div id="collapse{{$faq->id}}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                  <div class="accordion-body"> {{$faq->answer}} </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> What are online essay samples, and how can they benefit students? </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Are there risks associated with relying too heavily on online essay samples? </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Are there risks associated with relying too heavily on online essay samples? </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Are there risks associated with relying too heavily on online essay samples? </button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body"> Yes, online samples can be customized for specific requirements. Students can buy essay help with free samples as templates. They can adapt their writing styles to meet the unique demands of their homework. Customization allows students to incorporate their individual ideas while maintaining a strong foundation provided by the sample. </div>
-                </div>
-              </div>
+              @endforeach
+
+
+       
+        
+       
             </div>
           </div>
         </div>
@@ -561,8 +539,8 @@
                 <i class="fa-solid fa-location-dot"></i>
               </sapn>
               <div class="get-cont-call-locateicn">
-                <p>Location</p>
-                <h5>JAIPUR</h5>
+                <p>Address</p>
+                <h5>43-A pratap negarh Ramgarh Mode , Jaipur , Rajastion , India</h5>
               </div>
             </div>
           </div>
@@ -657,7 +635,7 @@
               </h4>
             </div>
             <div class="box_2 z-11">
-              <a href="" class="custom_button">Join Now</a>
+              <a href="{{route('contact')}}" class="custom_button">Join Now</a>
             </div>
             <div class="icons">
               <img src="{{url('assets/images/vactor/shap_3.svg')}}" alt="">

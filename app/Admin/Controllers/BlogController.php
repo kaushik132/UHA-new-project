@@ -87,6 +87,7 @@ class BlogController extends AdminController
            $form->slug = strtolower(preg_replace('/[^A-Za-z0-9-]+/', '-',trim($form->title)));
         });
         $form->textarea('short_content', __('Short content'));
+        $form->number('view_user', __('Viwe Blog Number People'));
         $form->image('image', __('Image'))->removable();
         $form->text('alt', __('Alt'));
         $form->url('url', __('Url'));

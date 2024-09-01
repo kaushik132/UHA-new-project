@@ -19,12 +19,14 @@ use App\Models\User;
 use App\Models\Assignment;
 use App\Models\StudentTestimonial;
 use App\Models\Projectnum;
+use App\Models\Faq;
 use PDF;
 
 class HomeController extends Controller
 {
     public function index() 
     {
+        $faq = Faq::latest()->get();
         $client = Projectnum::all();
         $stu_tm = StudentTestimonial::latest()->get();
         $servicelist = Service::latest()->get();
@@ -35,7 +37,7 @@ class HomeController extends Controller
         $seo_data['seo_description'] = $homepage->seo_des_home;
         $seo_data['keywords'] = $homepage->seo_key_home;
         $canocial ='https://codepin.org';
-        return view('home',compact('seo_data','servicelist','canocial','servicesSample','sampalfiles','stu_tm','client'));
+        return view('home',compact('seo_data','servicelist','canocial','servicesSample','sampalfiles','stu_tm','client','faq'));
     }
 
     public function about()
@@ -92,7 +94,7 @@ class HomeController extends Controller
         if($slug!=null){
             $blogCategory = BlogCategory::where('slug',$slug)->first();
             $newBlog =  BlogCategory::all();
-            $blogList = Blog::latest()->with('blogCategory')->where('category_id',$blogCategory->id)->paginate(4);
+            $blogList = Blog::latest()->with('blogCategory')->where('category_id',$blogCategory->id)->paginate(2);
             $seo_data['seo_title'] =$blogCategory->seo_title;
             $seo_data['seo_description'] =$blogCategory->seo_description;
            $seo_data['keywords'] =$blogCategory->seo_keyword;
@@ -102,7 +104,7 @@ class HomeController extends Controller
 
         }else{
             $newBlog =  BlogCategory::all();
-            $blogList = Blog::latest()->with('blogCategory')->paginate(4);
+            $blogList = Blog::latest()->with('blogCategory')->paginate(2);
             $seo_data['seo_title'] =$homepage->seo_title_blog;
             $seo_data['seo_description'] =$homepage->seo_des_blog;
             $seo_data['keywords'] =$homepage->seo_key_blog;

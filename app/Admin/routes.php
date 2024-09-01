@@ -22,6 +22,7 @@ Route::group([
     $router->resource('assignments', AssignmentController::class);
     $router->resource('student-testimonials', StudentTestimonialController::class);
     $router->resource('projectnums', ProjectNumberController::class);
+    $router->resource('faqs', FaqController::class);
 
 
 
