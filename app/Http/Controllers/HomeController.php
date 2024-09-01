@@ -54,6 +54,7 @@ class HomeController extends Controller
     {
         $homepage = Title::select('seo_title_services','seo_des_services','seo_key_services')->first();
         if($slug!=null){
+            $client = Projectnum::all();
             $servicesCategory = ServiceCategory::where('slug',$slug)->first();
             $servicesall = ServiceCategory::all();
             $servicesList = Service::latest()->with('serviceCategory')->where('service_category_id',$servicesCategory->id)->paginate(6);
@@ -65,6 +66,7 @@ class HomeController extends Controller
          
 
         }else{
+            $client = Projectnum::all();
             $servicesall = ServiceCategory::all();
             $servicesList = Service::latest()->with('serviceCategory')->paginate(6);
             $seo_data['seo_title'] =$homepage->seo_title_services;
@@ -73,7 +75,7 @@ class HomeController extends Controller
             $canocial ='https://codepin.org/services';
          
          }
-        return view('services',compact('seo_data','servicesList','canocial','servicesall'));
+        return view('services',compact('seo_data','servicesList','canocial','servicesall','client'));
     }
 
     public function servicesDetails($slug=null)

@@ -163,11 +163,14 @@
   <section class="showcounters_area p-103">
     <div class="container">
       <div class="counter-container">
+        @foreach ($client as $client)
+            
+        
         <div class="counter-box">
           <div class="border-rotate"></div>
           <div class="content">
             <h2>
-              <span class="counter" data-count="50">50</span>K
+              <span class="counter" data-count="50">{{$client->project_num}}</span>K
             </h2>
             <p>Project</p>
           </div>
@@ -176,7 +179,7 @@
           <div class="border-rotate"></div>
           <div class="content">
             <h2>
-              <span class="counter" data-count="74">74</span>K
+              <span class="counter" data-count="74">{{$client->member_num}}</span>K
             </h2>
             <p>Member</p>
           </div>
@@ -185,7 +188,7 @@
           <div class="border-rotate"></div>
           <div class="content">
             <h2>
-              <span class="counter" data-count="3">3</span>M
+              <span class="counter" data-count="3">{{$client->love_us_num}}</span>M
             </h2>
             <p>Love Us</p>
           </div>
@@ -194,11 +197,12 @@
           <div class="border-rotate"></div>
           <div class="content">
             <h2>
-              <span class="counter" data-count="76">76</span>K
+              <span class="counter" data-count="76">{{$client->happy_client_num}}</span>K
             </h2>
             <p>Happy Client</p>
           </div>
         </div>
+        @endforeach
       </div>
     </div>
   </section>
