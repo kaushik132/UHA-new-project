@@ -139,7 +139,10 @@
     </div>
   </footer>
   <span class="whatsapp">
-    <img src="{{url('assets/images/vactor/whatsapp.svg')}}" alt="">
+    <a  href="https://api.whatsapp.com/send?phone={{ $info ? $info->whatapp_number : '#' }}" target="_blank">
+    <img  src="{{url('assets/images/vactor/whatsapp.svg')}}" alt="">
+    
+    </a>
   </span>
   <!-------------------------------- bootstrap.min.js ------------------------------------>
   <script src="{{url('assets/Bootstrap/bootstrap.min.js')}}"></script>
